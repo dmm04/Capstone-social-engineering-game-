@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://b5cb8hi831nnt"]
+[gd_scene load_steps=8 format=3 uid="uid://b5cb8hi831nnt"]
 
 [ext_resource type="PackedScene" uid="uid://cd6x8v5iwhgj3" path="res://character_body_2d.tscn" id="1_80nbo"]
 [ext_resource type="Script" uid="uid://ct2ufhumb20ii" path="res://character_body_2d.gd" id="2_e2o6t"]
 [ext_resource type="Texture2D" uid="uid://rncohtls2uf5" path="res://Assets/office background.png" id="3_feb5d"]
+[ext_resource type="Texture2D" uid="uid://o4r3cyk54meq" path="res://Assets/computer puzzle example.png" id="4_ryrav"]
+[ext_resource type="Texture2D" uid="uid://cs24yy3p02dvx" path="res://Assets/reject button.png" id="5_eow3j"]
+[ext_resource type="Texture2D" uid="uid://ddnsn4h7nphgi" path="res://Assets/accept button.png" id="6_j5wjh"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_e2o6t"]
 distance = -335.0
@@ -26,3 +29,24 @@ shape = SubResource("WorldBoundaryShape2D_e2o6t")
 [node name="OfficeBackground" type="Sprite2D" parent="."]
 position = Vector2(553, 183)
 texture = ExtResource("3_feb5d")
+
+[node name="Window" type="Window" parent="."]
+oversampling_override = 1.0
+title = "Computer Screen"
+initial_position = 1
+size = Vector2i(805, 565)
+
+[node name="ComputerPuzzleExample" type="Sprite2D" parent="Window"]
+position = Vector2(410, 289)
+texture = ExtResource("4_ryrav")
+
+[node name="RejectButton" type="Sprite2D" parent="Window"]
+position = Vector2(556, 342)
+texture = ExtResource("5_eow3j")
+
+[node name="AcceptButton" type="Sprite2D" parent="Window"]
+position = Vector2(302, 352)
+texture = ExtResource("6_j5wjh")
+
+[node name="Camera2D" type="Camera2D" parent="Window"]
+position = Vector2(-53, 380)
