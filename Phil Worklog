@@ -1,11 +1,16 @@
-Week 1
------------------------
-9/22/2025
-Drew concept design for game
 
-9/28/2025
+-----------------------
+9/22/2025 1 hour
+Drew concept design for game
+-----------------------
+9/28/2025 3 hours
 Created the assets - character and office
 Created the Godot project - added character, office, floor, and character movement script. uploaded to git
 Created Git README
 Created work log 
 Added pop up for puzzles 
+-----------------------
+9/29/2025 2 hours
+Made new character asset and added animation to movement, added first npc with idle animation. 
+-----------------------
+
