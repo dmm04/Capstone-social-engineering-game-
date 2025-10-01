@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5cb8hi831nnt"]
+
+[ext_resource type="PackedScene" uid="uid://bnpveoij6ge22" path="res://Godot_Game_Files/Assets/Characters/player.tscn" id="1_l7whm"]
+[ext_resource type="Texture2D" uid="uid://dsuhcbcpm4ryw" path="res://Godot_Game_Files/Assets/Characters/office background.png" id="2_60j76"]
+[ext_resource type="PackedScene" uid="uid://nnlmyeh6m0oq" path="res://Godot_Game_Files/Assets/Characters/npc_boss.tscn" id="3_2s8f0"]
+[ext_resource type="PackedScene" uid="uid://c2d6ehiuccdsh" path="res://Godot_Game_Files/Assets/Characters/npc_1.tscn" id="4_1og58"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_e2o6t"]
+distance = -354.0
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_l7whm"]
+b = Vector2(-1, -510)
+
+[node name="Game" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_l7whm")]
+z_index = 15
+position = Vector2(235, 399)
+
+[node name="OfficeBackground" type="Sprite2D" parent="."]
+position = Vector2(381, 286)
+scale = Vector2(0.635231, 0.635231)
+texture = ExtResource("2_60j76")
+
+[node name="Floor_Walls" type="StaticBody2D" parent="."]
+position = Vector2(333, 421)
+
+[node name="Floor" type="CollisionShape2D" parent="Floor_Walls"]
+position = Vector2(-26, -332)
+shape = SubResource("WorldBoundaryShape2D_e2o6t")
+
+[node name="Left Wall" type="CollisionShape2D" parent="Floor_Walls"]
+position = Vector2(-446, 79)
+shape = SubResource("SegmentShape2D_l7whm")
+
+[node name="Right Wall" type="CollisionShape2D" parent="Floor_Walls"]
+position = Vector2(434, 97)
+shape = SubResource("SegmentShape2D_l7whm")
+
+[node name="NPC BOSS" parent="." instance=ExtResource("3_2s8f0")]
+position = Vector2(804, 407)
+
+[node name="NPC1" parent="." instance=ExtResource("4_1og58")]
+position = Vector2(-18, 397)
