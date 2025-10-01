@@ -1,0 +1,60 @@
+[gd_scene load_steps=10 format=3 uid="uid://b5cb8hi831nnt"]
+
+[ext_resource type="PackedScene" uid="uid://cd6x8v5iwhgj3" path="res://Assets/character_body_2d.tscn" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://ct2ufhumb20ii" path="res://Assets/character_body_2d.gd" id="2_e2o6t"]
+[ext_resource type="Texture2D" uid="uid://rncohtls2uf5" path="res://Assets/office background.png" id="3_feb5d"]
+[ext_resource type="Texture2D" uid="uid://o4r3cyk54meq" path="res://Assets/computer puzzle example.png" id="4_ryrav"]
+[ext_resource type="Texture2D" uid="uid://cs24yy3p02dvx" path="res://Assets/reject button.png" id="5_eow3j"]
+[ext_resource type="Texture2D" uid="uid://ddnsn4h7nphgi" path="res://Assets/accept button.png" id="6_j5wjh"]
+[ext_resource type="PackedScene" uid="uid://ci00aketu8mcg" path="res://Assets/Characters/character_body_2d.tscn" id="7_eow3j"]
+[ext_resource type="Script" uid="uid://c7sld2o2m77tk" path="res://Assets/Characters/character_body_2d.gd" id="8_j5wjh"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_e2o6t"]
+distance = -335.0
+
+[node name="Game" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(63, 130)
+script = ExtResource("2_e2o6t")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(267, 230)
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(333, 421)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(0, -332)
+shape = SubResource("WorldBoundaryShape2D_e2o6t")
+
+[node name="OfficeBackground" type="Sprite2D" parent="."]
+position = Vector2(359.00003, 251)
+scale = Vector2(0.6979287, 0.6752669)
+texture = ExtResource("3_feb5d")
+
+[node name="Window" type="Window" parent="."]
+oversampling_override = 1.0
+title = "Computer Screen"
+initial_position = 1
+size = Vector2i(805, 565)
+visible = false
+
+[node name="ComputerPuzzleExample" type="Sprite2D" parent="Window"]
+position = Vector2(410, 289)
+texture = ExtResource("4_ryrav")
+
+[node name="RejectButton" type="Sprite2D" parent="Window"]
+position = Vector2(556, 342)
+texture = ExtResource("5_eow3j")
+
+[node name="AcceptButton" type="Sprite2D" parent="Window"]
+position = Vector2(302, 352)
+texture = ExtResource("6_j5wjh")
+
+[node name="Camera2D" type="Camera2D" parent="Window"]
+position = Vector2(-53, 380)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("7_eow3j")]
+position = Vector2(-72, 370)
+script = ExtResource("8_j5wjh")
