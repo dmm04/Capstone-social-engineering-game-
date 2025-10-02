@@ -2,21 +2,34 @@
 
 Welcome to our game. It is a cybersecurity game where you learn various ways to stay safe in the cyber world.
 
-
-This is the basic layout below.
-MyCyberGame/
-├── project.godot
-├── scenes/
-├── scripts/
-├── assets/
-│   ├── npc/
-│   └── background/
+You are the Security IT person at a company. There will be pop ups in the office above an infected pc, you will hit enter on it, and then complete the minigame or puzzle - after which you will get a text telling you why that concept is important. If you fail the puzzle or minigame your company will lose money and your boss will be mad. If you complete it he will be happy. Instead of points we have "Boss Salery" Which will go up as you do well. 
 
 
+This is the basic file layout below. if you end up making additional scenes we will add a scene folder.
+Capstone-social-engineering-game--main/
+├── capstone/
+	├── .gotdot (dont put or change anything in here, godot will do that)
+	├── project.godot
+	└── Godot_Game_Files
+		├── Assets
+			├── Buttons
+			├── Characters
+			├──	Environment
+			└── Music_Sounds
+		└── Puzzles 
+├── Work_Logs/
+	├── Dylan Mcdade
+	├──  Emily Tharp
+	├── Phil Gonzales
+	└── Trey Akers
+└── README/
 
 
+MUSIC:
+Created by Philip Gonzales
 
-#CHARACTER BODIES ART CREDIT:
+
+CHARACTER BODIES ART CREDIT:
 body/bodies/female/light.png
 	- Note: see details at https://opengameart.org/content/lpc-character-bases
 	- Licenses:
