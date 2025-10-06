@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgjesj5di2ixk"]
+
+[ext_resource type="Texture2D" uid="uid://cuw4m5opjrwaa" path="res://Godot_Game_Files/Assets/Characters/character_sprite_trey.png" id="1_58fmk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5mj8"]
+atlas = ExtResource("1_58fmk")
+region = Rect2(0, 1600, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hl7xs"]
+atlas = ExtResource("1_58fmk")
+region = Rect2(64, 1600, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bs8cr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s5mj8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hl7xs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="npc_3" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_bs8cr")
+frame_progress = 0.58294535
