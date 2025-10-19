@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://c78uxvq3ytj03"]
+
+[ext_resource type="Script" uid="uid://bpognu288fpnf" path="res://Godot_Game_Files/Assets/Characters/npc_idle.gd" id="1_nee3v"]
+[ext_resource type="Texture2D" uid="uid://bppqeotxkw41c" path="res://Godot_Game_Files/Assets/Characters/character(dylan).png" id="2_u6ysk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ud6fi"]
+atlas = ExtResource("2_u6ysk")
+region = Rect2(0, 1600, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nee3v"]
+atlas = ExtResource("2_u6ysk")
+region = Rect2(64, 1600, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u6ysk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ud6fi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nee3v")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 2.0
+}]
+
+[node name="NPC 2" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_nee3v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_u6ysk")
+animation = &"Idle"
