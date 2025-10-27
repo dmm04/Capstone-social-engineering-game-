@@ -1,0 +1,72 @@
+[gd_scene load_steps=12 format=3 uid="uid://b5cb8hi831nnt"]
+
+[ext_resource type="PackedScene" uid="uid://bnpveoij6ge22" path="res://Godot_Game_Files/Assets/Characters/Player.tscn" id="1_l7whm"]
+[ext_resource type="Texture2D" uid="uid://dsuhcbcpm4ryw" path="res://Godot_Game_Files/Assets/Characters/office background.png" id="2_60j76"]
+[ext_resource type="PackedScene" uid="uid://nnlmyeh6m0oq" path="res://Godot_Game_Files/Assets/Characters/npc_boss.tscn" id="3_2s8f0"]
+[ext_resource type="PackedScene" uid="uid://c2d6ehiuccdsh" path="res://Godot_Game_Files/Assets/Characters/npc_1.tscn" id="4_1og58"]
+[ext_resource type="PackedScene" uid="uid://r1agwgfqfbg4" path="res://Godot_Game_Files/Assets/Music_Sounds/Radio.tscn" id="5_60j76"]
+[ext_resource type="PackedScene" uid="uid://c78uxvq3ytj03" path="res://Godot_Game_Files/Assets/Characters/npc_2.tscn" id="6_w2jga"]
+[ext_resource type="PackedScene" uid="uid://bgjesj5di2ixk" path="res://Godot_Game_Files/Assets/Characters/npc_3.tscn" id="7_woipg"]
+[ext_resource type="PackedScene" uid="uid://cslssty13vqwr" path="res://Godot_Game_Files/Assets/Characters/node_2d.tscn" id="8_prroa"]
+[ext_resource type="PackedScene" uid="uid://dvcynifnfhk4c" path="res://Godot_Game_Files/Assets/Buttons/!alert.tscn" id="9_woipg"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_e2o6t"]
+distance = -354.0
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_l7whm"]
+b = Vector2(-1, -510)
+
+[node name="Game" type="Node2D"]
+
+[node name="NPC\'s" type="Node" parent="."]
+
+[node name="NPC BOSS" parent="NPC\'s" instance=ExtResource("3_2s8f0")]
+position = Vector2(804, 407)
+
+[node name="NPC4" parent="NPC\'s" instance=ExtResource("8_prroa")]
+position = Vector2(235, 400)
+
+[node name="npc_3" parent="NPC\'s" instance=ExtResource("7_woipg")]
+position = Vector2(354, 394)
+
+[node name="Player2" parent="NPC\'s" instance=ExtResource("6_w2jga")]
+position = Vector2(109, 411)
+
+[node name="NPC1" parent="NPC\'s" instance=ExtResource("4_1og58")]
+position = Vector2(-57, 403)
+
+[node name="Background" type="Node" parent="."]
+
+[node name="OfficeBackground" type="Sprite2D" parent="Background"]
+z_index = -2
+position = Vector2(381, 286)
+scale = Vector2(0.635231, 0.635231)
+texture = ExtResource("2_60j76")
+
+[node name="Floor_Walls" type="StaticBody2D" parent="Background"]
+position = Vector2(333, 421)
+
+[node name="Floor" type="CollisionShape2D" parent="Background/Floor_Walls"]
+position = Vector2(-26, -332)
+shape = SubResource("WorldBoundaryShape2D_e2o6t")
+
+[node name="Left Wall" type="CollisionShape2D" parent="Background/Floor_Walls"]
+position = Vector2(-446, 79)
+shape = SubResource("SegmentShape2D_l7whm")
+
+[node name="Right Wall" type="CollisionShape2D" parent="Background/Floor_Walls"]
+position = Vector2(434, 97)
+shape = SubResource("SegmentShape2D_l7whm")
+
+[node name="Player" parent="." instance=ExtResource("1_l7whm")]
+z_index = 5
+position = Vector2(235, 399)
+
+[node name="Radio" parent="." instance=ExtResource("5_60j76")]
+position = Vector2(405, 396)
+
+[node name="Area2D" parent="." instance=ExtResource("9_woipg")]
+position = Vector2(109, 372)
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

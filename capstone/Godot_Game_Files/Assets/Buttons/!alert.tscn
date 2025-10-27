@@ -1,0 +1,120 @@
+[gd_scene load_steps=17 format=3 uid="uid://dvcynifnfhk4c"]
+
+[ext_resource type="Texture2D" uid="uid://5uxvwx0uubex" path="res://Godot_Game_Files/Assets/Buttons/AlertIcon.png" id="1_8hu5k"]
+[ext_resource type="Script" uid="uid://cnypm7dlt5b66" path="res://Godot_Game_Files/Assets/Buttons/!alert.gd" id="1_aovb1"]
+
+[sub_resource type="SystemFont" id="SystemFont_aovb1"]
+font_weight = 350
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 45
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tj4ug"]
+atlas = ExtResource("1_8hu5k")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7c81x"]
+atlas = ExtResource("1_8hu5k")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4y5v"]
+atlas = ExtResource("1_8hu5k")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8taj6"]
+atlas = ExtResource("1_8hu5k")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypjit"]
+atlas = ExtResource("1_8hu5k")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eyky1"]
+atlas = ExtResource("1_8hu5k")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40nt5"]
+atlas = ExtResource("1_8hu5k")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tj5eq"]
+atlas = ExtResource("1_8hu5k")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qbb8"]
+atlas = ExtResource("1_8hu5k")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24vtm"]
+atlas = ExtResource("1_8hu5k")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fjcxa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tj4ug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7c81x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4y5v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8taj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypjit")
+}],
+"loop": true,
+"name": &"float",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eyky1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_40nt5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tj5eq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qbb8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24vtm")
+}],
+"loop": true,
+"name": &"pop",
+"speed": 10.0
+}]
+
+[sub_resource type="GDScript" id="GDScript_tj4ug"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yhow6"]
+size = Vector2(54, 67)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_aovb1")
+
+[node name="AlertLabel" type="Label" parent="."]
+offset_left = 4.0
+offset_top = -10.0
+offset_right = 64.0
+offset_bottom = 7.0
+theme_override_fonts/font = SubResource("SystemFont_aovb1")
+theme_override_font_sizes/font_size = 11
+text = "[E] Interact"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fjcxa")
+animation = &"float"
+frame_progress = 0.19433227
+script = SubResource("GDScript_tj4ug")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5, 41.5)
+shape = SubResource("RectangleShape2D_yhow6")

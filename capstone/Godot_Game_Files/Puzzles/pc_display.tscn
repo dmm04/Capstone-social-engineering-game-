@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqg8cl02ewduy"]
+
+[ext_resource type="Texture2D" uid="uid://o4r3cyk54meq" path="res://Godot_Game_Files/Puzzles/computer puzzle example.png" id="1_vvmy5"]
+
+[node name="PC Display" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="ComputerPuzzleExample" type="Sprite2D" parent="."]
+position = Vector2(-5.2075806, -4.5)
+scale = Vector2(1.4151404, 1.1619217)
+texture = ExtResource("1_vvmy5")
