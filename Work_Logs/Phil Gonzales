@@ -20,4 +20,11 @@ Reorganized the Git folders and assests and whatnot.
 Creating music and putting in a radio with animating notes in the game. office music. 
 -----------------------
 10/19/2025 9:01-12:24
-Added the pop up ! to appear at random intervals above peoples computers. 
+Added the pop up ! to appear at random intervals above peoples computers.
+
+10/26/2025 2:00-8:00
+animated the ! pop up, somewhere it had broken, added the characters that were removed because someone uploaded an old version to git without the updates. 
+wrote the script so that [E] to interact would pop up when the player is in the area
+added script so that it would open the puzzle scene
+created computer screen art so that it looks like we are accessing the users computer
+sent art to discord chat
