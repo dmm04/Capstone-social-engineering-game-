@@ -1,0 +1,99 @@
+[gd_scene load_steps=11 format=3 uid="uid://dk2cmsxd8bsft"]
+
+[ext_resource type="Script" uid="uid://bh0wbj1exe3f1" path="res://Godot_Game_Files/Puzzles/emails/phising emails/phising_email.gd" id="1_nv4bd"]
+[ext_resource type="Texture2D" uid="uid://dewofhjfipxkm" path="res://Godot_Game_Files/Assets/Environment/pc.png" id="2_25ifg"]
+[ext_resource type="Texture2D" uid="uid://b5h0ag10cmp16" path="res://Godot_Game_Files/Puzzles/emails/phising email.png" id="3_afpqk"]
+[ext_resource type="Texture2D" uid="uid://caiomggrkdb7i" path="res://Godot_Game_Files/Puzzles/emails/ACCEPT.png" id="3_al83v"]
+[ext_resource type="Texture2D" uid="uid://dk8hikfnumyxy" path="res://Godot_Game_Files/Puzzles/emails/ACCEPT (5).png" id="3_kt3jf"]
+[ext_resource type="Texture2D" uid="uid://dwj5tjtjqiie5" path="res://Godot_Game_Files/Puzzles/emails/REJECT.png" id="4_0js8u"]
+[ext_resource type="Texture2D" uid="uid://csc0ymb2lq5pt" path="res://Godot_Game_Files/Puzzles/emails/REJECT (2).png" id="5_afpqk"]
+[ext_resource type="Texture2D" uid="uid://e1wsxsgqrjb0" path="res://Godot_Game_Files/Puzzles/emails/HELP (1).png" id="6_amkrs"]
+[ext_resource type="Texture2D" uid="uid://bvn7muqmli1kk" path="res://Godot_Game_Files/Puzzles/emails/HELP.png" id="7_caett"]
+[ext_resource type="Texture2D" uid="uid://ccjvm3f421lyh" path="res://Godot_Game_Files/Puzzles/emails/phising emails/square.png" id="10_amkrs"]
+
+[node name="Phising Email" type="Node2D"]
+script = ExtResource("1_nv4bd")
+
+[node name="Pc" type="Sprite2D" parent="."]
+position = Vector2(494.15222, 256.7033)
+scale = Vector2(8.0637865, 7.5934067)
+texture = ExtResource("2_25ifg")
+
+[node name="PhisingEmail" type="Sprite2D" parent="."]
+position = Vector2(514.6334, 162.25)
+scale = Vector2(0.4671512, 0.4752538)
+texture = ExtResource("3_afpqk")
+
+[node name="Button_manager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Accept" type="TextureButton" parent="Button_manager"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 294.0
+offset_right = 312.0
+offset_bottom = 351.0
+texture_normal = ExtResource("3_al83v")
+texture_hover = ExtResource("3_kt3jf")
+
+[node name="Reject" type="TextureButton" parent="Button_manager"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.81600004
+anchor_bottom = 0.32700002
+offset_left = 715.0
+offset_top = 294.0
+offset_right = 945.36
+offset_bottom = 337.92
+texture_normal = ExtResource("4_0js8u")
+texture_hover = ExtResource("5_afpqk")
+
+[node name="Help" type="TextureButton" parent="Button_manager"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 4.793
+anchor_top = 1.388
+anchor_right = 4.793
+anchor_bottom = 1.388
+offset_left = 230.28
+offset_top = 238.48
+offset_right = 411.28
+offset_bottom = 295.48
+texture_normal = ExtResource("6_amkrs")
+texture_hover = ExtResource("7_caett")
+
+[node name="Label" type="Label" parent="Button_manager/Help"]
+visible = false
+visibility_layer = 4
+z_index = 1
+z_as_relative = false
+layout_mode = 0
+offset_left = -299.0
+offset_top = 91.0
+offset_right = 518.0
+offset_bottom = 193.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_font_sizes/font_size = 23
+text = "⚠️ Warning: This email is suspicious! 
+Never respond to emails asking for credit card info. 
+Legitimate companies will not ask you for sensitive information via email."
+horizontal_alignment = 1
+
+[node name="Square" type="Sprite2D" parent="Button_manager/Help/Label"]
+modulate = Color(0, 0, 0, 0.851)
+z_index = -1
+position = Vector2(407.30515, 51.600994)
+scale = Vector2(1.3897179, 0.37067333)
+texture = ExtResource("10_amkrs")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(495, 261)
+zoom = Vector2(0.94, 0.94)
+
+[connection signal="pressed" from="Button_manager/Accept" to="." method="_on_accept_pressed"]
+[connection signal="pressed" from="Button_manager/Reject" to="." method="_on_reject_pressed"]
+[connection signal="pressed" from="Button_manager/Help" to="." method="_on_help_pressed"]

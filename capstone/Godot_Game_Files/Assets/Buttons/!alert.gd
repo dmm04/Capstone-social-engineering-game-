@@ -25,4 +25,4 @@ func _on_body_exited(body):
 		message_label.visible = false
 
 func open_puzzle_scene():
-	get_tree().change_scene_to_file("res://capstone/Godot_Game_Files/Puzzles/pc_display.tscn")
+	get_tree().change_scene_to_file("res://Godot_Game_Files/Puzzles/emails/phising emails/phising_email.tscn")
