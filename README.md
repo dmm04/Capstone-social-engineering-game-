@@ -28,6 +28,7 @@ Capstone-social-engineering-game--main/
 MUSIC:
 Created by Philip Gonzales
 
+Accept/Reject/Help Font: https://textcraft.net/style/snegos/pixel-art
 
 CHARACTER BODIES ART CREDIT:
 body/bodies/female/light.png
