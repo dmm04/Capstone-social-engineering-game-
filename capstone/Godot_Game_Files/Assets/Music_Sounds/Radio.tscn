@@ -9,7 +9,7 @@ script/source = "extends StaticBody2D
 
 # --- Nodes ---
 @onready var player_audio = $RadioPlayer
-@onready var label = $Label
+@onready var label = $InteractionZone/Label
 @onready var area = $InteractionZone
 
 # --- Music tracks ---
@@ -121,7 +121,7 @@ position = Vector2(1, 0)
 volume_db = -2.862
 autoplay = true
 max_distance = 666.0
-attenuation = 2.928171
+attenuation = 2.92817
 
 [node name="InteractionZone" type="Area2D" parent="."]
 
@@ -150,4 +150,4 @@ script = ExtResource("2_n3c28")
 z_index = 1
 position = Vector2(-12, -9)
 sprite_frames = SubResource("SpriteFrames_6itx7")
-frame_progress = 0.2455255
+frame_progress = 0.245525

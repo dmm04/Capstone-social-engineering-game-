@@ -8,6 +8,8 @@ var player_in_area := false
 func _ready():
 	# Start the popup animation
 	sprite.play("float")
+	$AlertLabel.visible = false
+
 
 # Must include delta parameter to match parent signature
 func _process(delta: float) -> void:

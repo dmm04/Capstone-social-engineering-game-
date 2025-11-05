@@ -1,4 +1,11 @@
-res://Godot_Game_Files/Assets/Buttons/!alert.gd
 res://Godot_Game_Files/Puzzles/emails/phising emails/phising_email.gd
 res://Godot_Game_Files/Puzzles/emails/phising emails/phising_email.tscn
+res://Godot_Game_Files/main_menu.tscn
+res://Godot_Game_Files/game.tscn
+res://Godot_Game_Files/Assets/Buttons/!alert.gd
+res://Godot_Game_Files/Assets/Music_Sounds/Radio.tscn
 res://Godot_Game_Files/Assets/Buttons/!alert.tscn
+res://canvas_layer.gd
+res://Godot_Game_Files/Assets/Characters/npc_2.tscn
+res://Godot_Game_Files/Assets/Characters/animated_sprite_2d.gd
+res://Godot_Game_Files/Assets/phising_email.gd

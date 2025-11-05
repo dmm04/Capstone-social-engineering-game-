@@ -113,7 +113,7 @@ text = "[E] Interact"
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_fjcxa")
 animation = &"float"
-frame_progress = 0.19433227
+frame_progress = 0.194332
 script = SubResource("GDScript_tj4ug")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
