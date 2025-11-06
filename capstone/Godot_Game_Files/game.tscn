@@ -1,16 +1,21 @@
-[gd_scene load_steps=15 format=3 uid="uid://b5cb8hi831nnt"]
+[gd_scene load_steps=20 format=3 uid="uid://b5cb8hi831nnt"]
 
+[ext_resource type="Script" uid="uid://by34sk16ycs2r" path="res://Godot_Game_Files/event_tree.gd" id="1_eqekq"]
 [ext_resource type="PackedScene" uid="uid://bnpveoij6ge22" path="res://Godot_Game_Files/Assets/Characters/Player.tscn" id="1_l7whm"]
+[ext_resource type="PackedScene" uid="uid://chyoixyqe0874" path="res://Godot_Game_Files/Assets/Buttons/alter2.tscn" id="2_7nhs0"]
 [ext_resource type="Texture2D" uid="uid://dsuhcbcpm4ryw" path="res://Godot_Game_Files/Assets/Characters/office background.png" id="2_60j76"]
 [ext_resource type="PackedScene" uid="uid://nnlmyeh6m0oq" path="res://Godot_Game_Files/Assets/Characters/npc_boss.tscn" id="3_2s8f0"]
 [ext_resource type="FontFile" uid="uid://spynjnwq75ou" path="res://Godot_Game_Files/Assets/Fonts/Tokyo.ttf" id="3_prroa"]
 [ext_resource type="PackedScene" uid="uid://c2d6ehiuccdsh" path="res://Godot_Game_Files/Assets/Characters/npc_1.tscn" id="4_1og58"]
 [ext_resource type="PackedScene" uid="uid://r1agwgfqfbg4" path="res://Godot_Game_Files/Assets/Music_Sounds/Radio.tscn" id="5_60j76"]
 [ext_resource type="PackedScene" uid="uid://c78uxvq3ytj03" path="res://Godot_Game_Files/Assets/Characters/npc_2.tscn" id="6_w2jga"]
+[ext_resource type="Texture2D" uid="uid://dmt205xpr5cs" path="res://Godot_Game_Files/Assets/Fonts/chatbubble.png" id="7_gy2er"]
 [ext_resource type="PackedScene" uid="uid://bgjesj5di2ixk" path="res://Godot_Game_Files/Assets/Characters/npc_3.tscn" id="7_woipg"]
 [ext_resource type="PackedScene" uid="uid://cslssty13vqwr" path="res://Godot_Game_Files/Assets/Characters/node_2d.tscn" id="8_prroa"]
 [ext_resource type="Script" uid="uid://ntcob37ojm7b" path="res://Godot_Game_Files/score.gd" id="9_2npts"]
 [ext_resource type="PackedScene" uid="uid://dvcynifnfhk4c" path="res://Godot_Game_Files/Assets/Buttons/!alert.tscn" id="9_woipg"]
+[ext_resource type="FontFile" uid="uid://b34psro2563xl" path="res://Godot_Game_Files/Assets/Fonts/dogicapixel.otf" id="14_1jyk3"]
+[ext_resource type="Script" uid="uid://b14l2wwp0qdu3" path="res://Godot_Game_Files/Assets/Characters/player.gd" id="14_eqekq"]
 
 [sub_resource type="GDScript" id="GDScript_woipg"]
 script/source = "extends Node
@@ -25,6 +30,35 @@ b = Vector2(-1, -510)
 
 [node name="Game" type="Node2D"]
 script = SubResource("GDScript_woipg")
+
+[node name="Event_Tree" type="Node" parent="."]
+script = ExtResource("1_eqekq")
+
+[node name="Area2D" parent="Event_Tree" instance=ExtResource("2_7nhs0")]
+position = Vector2(813.11365, 371.2301)
+scale = Vector2(1.0454545, 0.9541826)
+
+[node name="Label" type="Label" parent="Event_Tree"]
+z_index = 2
+offset_left = 650.0
+offset_top = 296.0
+offset_right = 802.0
+offset_bottom = 429.23004
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_1jyk3")
+theme_override_font_sizes/font_size = 8
+text = "WELCOME! Your job here is simple. Make sure no one does anything. 
+
+The more disastors your prevent, the more money I... I mean we make!"
+autowrap_mode = 2
+
+[node name="Chatbubble" type="Sprite2D" parent="Event_Tree"]
+position = Vector2(721.68085, 337.5)
+scale = Vector2(3.638297, 3.366666)
+texture = ExtResource("7_gy2er")
+
+[node name="Alert" parent="." instance=ExtResource("9_woipg")]
+position = Vector2(110, 372)
 
 [node name="NPC\'s" type="Node" parent="."]
 
@@ -46,8 +80,8 @@ position = Vector2(-57, 403)
 [node name="Background" type="Node" parent="."]
 
 [node name="OfficeBackground" type="Sprite2D" parent="Background"]
-z_index = -2
-position = Vector2(381, 286)
+z_index = -1
+position = Vector2(386, 289)
 scale = Vector2(0.635231, 0.635231)
 texture = ExtResource("2_60j76")
 
@@ -66,9 +100,13 @@ shape = SubResource("SegmentShape2D_l7whm")
 position = Vector2(434, 97)
 shape = SubResource("SegmentShape2D_l7whm")
 
+[node name="Radio" parent="Background" instance=ExtResource("5_60j76")]
+position = Vector2(405, 396)
+
 [node name="Player" parent="." instance=ExtResource("1_l7whm")]
 z_index = 5
 position = Vector2(235, 399)
+script = ExtResource("14_eqekq")
 
 [node name="score" type="Label" parent="Player"]
 z_index = 7
@@ -83,11 +121,7 @@ text = "SCORE: 0"
 horizontal_alignment = 1
 script = ExtResource("9_2npts")
 
-[node name="Radio" parent="." instance=ExtResource("5_60j76")]
-position = Vector2(405, 396)
-
-[node name="Alert" parent="." instance=ExtResource("9_woipg")]
-position = Vector2(110, 372)
-
+[connection signal="body_entered" from="Event_Tree/Area2D" to="Event_Tree/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Event_Tree/Area2D" to="Event_Tree/Area2D" method="_on_body_exited"]
 [connection signal="body_entered" from="Alert" to="Alert" method="_on_body_entered"]
 [connection signal="body_exited" from="Alert" to="Alert" method="_on_body_exited"]

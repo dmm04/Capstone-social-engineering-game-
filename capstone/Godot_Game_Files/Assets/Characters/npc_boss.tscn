@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://nnlmyeh6m0oq"]
 
-[ext_resource type="Script" uid="uid://blbxsl3lugbfr" path="res://Godot_Game_Files/Assets/Characters/boss_character.gd" id="1_0ykxa"]
+[ext_resource type="Script" uid="uid://bpognu288fpnf" path="res://Godot_Game_Files/Assets/Characters/npc_idle.gd" id="1_0ykxa"]
 [ext_resource type="Texture2D" uid="uid://djd7vx6arbfkv" path="res://Godot_Game_Files/Assets/Characters/boss.png" id="1_cw1y4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0ykxa"]
@@ -26,10 +26,8 @@ animations = [{
 }]
 
 [node name="NPC BOSS" type="Node2D"]
-
-[node name="Boss Character" type="CharacterBody2D" parent="."]
 script = ExtResource("1_0ykxa")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Boss Character"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_n6s87")
 animation = &"Idle"

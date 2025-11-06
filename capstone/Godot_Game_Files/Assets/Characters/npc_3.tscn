@@ -26,11 +26,9 @@ animations = [{
 }]
 
 [node name="npc_3" type="Node2D"]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_s5mj8")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_bs8cr")
 animation = &"Idle"

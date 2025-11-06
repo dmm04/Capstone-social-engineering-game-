@@ -1,4 +1,7 @@
 Label
+RichTextLabel
+CollisionShape2D
+Node
 Control
 CanvasLayer
 TextureButton
@@ -6,6 +9,5 @@ Button
 LineEdit
 HBoxContainer
 VBoxContainer
-Node
 Popup
 Camera2D

@@ -23,22 +23,15 @@ var songs = [
 	preload(\"res://Godot_Game_Files/Assets/Music_Sounds/song5.mp3\"),
 	preload(\"res://Godot_Game_Files/Assets/Music_Sounds/song7.mp3\")
 ]
-var num = [1,2,3,4,5,6,7]
-var current_index = num.pick_random()
+
+var current_index = randi() % songs.size()
 var is_on = true
 var player_near = false
-
-# --- Bop timer ---
-var bop_timer = 0.0
 
 func _ready():
 	randomize()
 	play_song(current_index)
 	player_audio.finished.connect(_on_song_finished)
-
-	# Area2D signals
-	area.body_entered.connect(_on_body_entered)
-	area.body_exited.connect(_on_body_exited)
 
 func play_song(index: int):
 	if is_on:
@@ -48,37 +41,6 @@ func play_song(index: int):
 func _on_song_finished():
 	current_index = randi() % songs.size()
 	play_song(current_index)
-
-# --- Input handling ---
-func _input(event):
-	if player_near and event.is_pressed():
-		if event.is_action_pressed(\"radio_skip\"):
-			skip_song()
-		elif event.is_action_pressed(\"radio_toggle\"):
-			toggle_radio()
-
-func skip_song():
-	if is_on:
-		current_index = randi() % songs.size()
-		play_song(current_index)
-
-func toggle_radio():
-	is_on = !is_on
-	if is_on:
-		play_song(current_index)
-	else:
-		player_audio.stop()
-
-# --- Area2D proximity ---
-func _on_body_entered(body):
-	if body.name == \"Player\":  # replace with your player node name
-		player_near = true
-		label.visible = true
-
-func _on_body_exited(body):
-	if body.name == \"Player\":
-		player_near = false
-		label.visible = false
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3bdh"]

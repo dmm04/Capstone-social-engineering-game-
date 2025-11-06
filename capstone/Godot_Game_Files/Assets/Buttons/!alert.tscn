@@ -2,12 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://5uxvwx0uubex" path="res://Godot_Game_Files/Assets/Buttons/AlertIcon.png" id="1_8hu5k"]
 [ext_resource type="Script" uid="uid://cnypm7dlt5b66" path="res://Godot_Game_Files/Assets/Buttons/!alert.gd" id="1_aovb1"]
-
-[sub_resource type="SystemFont" id="SystemFont_aovb1"]
-font_weight = 350
-subpixel_positioning = 0
-msdf_pixel_range = 14
-msdf_size = 45
+[ext_resource type="FontFile" uid="uid://b34psro2563xl" path="res://Godot_Game_Files/Assets/Fonts/dogicapixel.otf" id="2_7c81x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tj4ug"]
 atlas = ExtResource("1_8hu5k")
@@ -95,19 +90,19 @@ animations = [{
 [sub_resource type="GDScript" id="GDScript_tj4ug"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yhow6"]
-size = Vector2(54, 67)
+size = Vector2(56, 67)
 
 [node name="Area2D" type="Area2D"]
 script = ExtResource("1_aovb1")
 
 [node name="AlertLabel" type="Label" parent="."]
 visible = false
-offset_left = 4.0
-offset_top = -10.0
-offset_right = 64.0
-offset_bottom = 7.0
-theme_override_fonts/font = SubResource("SystemFont_aovb1")
-theme_override_font_sizes/font_size = 11
+offset_left = 7.0
+offset_top = -4.0
+offset_right = 77.0
+offset_bottom = 8.0
+theme_override_fonts/font = ExtResource("2_7c81x")
+theme_override_font_sizes/font_size = 8
 text = "[E] Interact"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -117,5 +112,6 @@ frame_progress = 0.194332
 script = SubResource("GDScript_tj4ug")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(5, 41.5)
+visibility_layer = 2
+position = Vector2(0, 41.5)
 shape = SubResource("RectangleShape2D_yhow6")
