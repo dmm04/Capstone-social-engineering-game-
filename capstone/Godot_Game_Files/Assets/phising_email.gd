@@ -49,25 +49,34 @@ var emails = ["""hotdogwarrior@hotdot.com""","""hr@workofice.com""","""dragonmas
 func _ready() -> void:
 	randomize()  # seed RNG
 	_show_random_email()
-
+	
 func _show_random_email() -> void:
 	$PhisingEmail/message.text = messages.pick_random()
 	$PhisingEmail/email.text = "FROM: " + emails.pick_random()
 
 	
 func _on_accept_pressed() -> void:
-	$Button_manager/Help/Label.text = "WRONG! Never trust an email asking for credit card information.
+	$Button_manager/Continue/Label2.text = "WRONG! Never trust an email asking for credit card information.
 	Always look who is sending it and make sure you know them."
-	$Button_manager/Help/Label.visible = !$Button_manager/Help/Label.visible
+	$Button_manager/Accept.visible = !$Button_manager/Accept.visible
+	$Button_manager/Reject.visible = !$Button_manager/Reject.visible
+	$Button_manager/Help.visible = !$Button_manager/Help.visible
 	$Button_manager/Continue.visible = !$Button_manager/Continue.visible
+	print("Score is:", Global.score)
+	Global.score -= 100
 func _on_continue_pressed() -> void:
 	get_tree().change_scene_to_file("res://Godot_Game_Files/game.tscn")
 
 func _on_reject_pressed() -> void:
-	$Button_manager/Help/Label.text = "CORRECT! Never trust an email asking for credit card information.
+	$Button_manager/Continue/Label2.text = "CORRECT! Never trust an email asking for credit card information.
 	Always look who is sending it and make sure you know them."
-	$Button_manager/Help/Label.visible = !$Button_manager/Help/Label.visible
+	$Button_manager/Accept.visible = !$Button_manager/Accept.visible
+	$Button_manager/Reject.visible = !$Button_manager/Reject.visible
+	$Button_manager/Help.visible = !$Button_manager/Help.visible
 	$Button_manager/Continue.visible = !$Button_manager/Continue.visible
+	print("Score is:", Global.score)
+	Global.score += 100
+	print("Score is:", Global.score)
 
 
 func _on_help_pressed() -> void:

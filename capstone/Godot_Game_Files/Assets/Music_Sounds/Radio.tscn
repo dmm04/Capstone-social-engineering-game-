@@ -23,8 +23,8 @@ var songs = [
 	preload(\"res://Godot_Game_Files/Assets/Music_Sounds/song5.mp3\"),
 	preload(\"res://Godot_Game_Files/Assets/Music_Sounds/song7.mp3\")
 ]
-
-var current_index = 0
+var num = [1,2,3,4,5,6,7]
+var current_index = num.pick_random()
 var is_on = true
 var player_near = false
 

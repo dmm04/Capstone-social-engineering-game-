@@ -1,14 +1,21 @@
-[gd_scene load_steps=12 format=3 uid="uid://b5cb8hi831nnt"]
+[gd_scene load_steps=15 format=3 uid="uid://b5cb8hi831nnt"]
 
 [ext_resource type="PackedScene" uid="uid://bnpveoij6ge22" path="res://Godot_Game_Files/Assets/Characters/Player.tscn" id="1_l7whm"]
 [ext_resource type="Texture2D" uid="uid://dsuhcbcpm4ryw" path="res://Godot_Game_Files/Assets/Characters/office background.png" id="2_60j76"]
 [ext_resource type="PackedScene" uid="uid://nnlmyeh6m0oq" path="res://Godot_Game_Files/Assets/Characters/npc_boss.tscn" id="3_2s8f0"]
+[ext_resource type="FontFile" uid="uid://spynjnwq75ou" path="res://Godot_Game_Files/Assets/Fonts/Tokyo.ttf" id="3_prroa"]
 [ext_resource type="PackedScene" uid="uid://c2d6ehiuccdsh" path="res://Godot_Game_Files/Assets/Characters/npc_1.tscn" id="4_1og58"]
 [ext_resource type="PackedScene" uid="uid://r1agwgfqfbg4" path="res://Godot_Game_Files/Assets/Music_Sounds/Radio.tscn" id="5_60j76"]
 [ext_resource type="PackedScene" uid="uid://c78uxvq3ytj03" path="res://Godot_Game_Files/Assets/Characters/npc_2.tscn" id="6_w2jga"]
 [ext_resource type="PackedScene" uid="uid://bgjesj5di2ixk" path="res://Godot_Game_Files/Assets/Characters/npc_3.tscn" id="7_woipg"]
 [ext_resource type="PackedScene" uid="uid://cslssty13vqwr" path="res://Godot_Game_Files/Assets/Characters/node_2d.tscn" id="8_prroa"]
+[ext_resource type="Script" uid="uid://ntcob37ojm7b" path="res://Godot_Game_Files/score.gd" id="9_2npts"]
 [ext_resource type="PackedScene" uid="uid://dvcynifnfhk4c" path="res://Godot_Game_Files/Assets/Buttons/!alert.tscn" id="9_woipg"]
+
+[sub_resource type="GDScript" id="GDScript_woipg"]
+script/source = "extends Node
+var score: int = 0
+"
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_e2o6t"]
 distance = -354.0
@@ -17,19 +24,20 @@ distance = -354.0
 b = Vector2(-1, -510)
 
 [node name="Game" type="Node2D"]
+script = SubResource("GDScript_woipg")
 
 [node name="NPC\'s" type="Node" parent="."]
 
 [node name="NPC BOSS" parent="NPC\'s" instance=ExtResource("3_2s8f0")]
 position = Vector2(804, 407)
 
-[node name="NPC4" parent="NPC\'s" instance=ExtResource("8_prroa")]
+[node name="npc_4" parent="NPC\'s" instance=ExtResource("8_prroa")]
 position = Vector2(235, 400)
 
 [node name="npc_3" parent="NPC\'s" instance=ExtResource("7_woipg")]
 position = Vector2(354, 394)
 
-[node name="Player2" parent="NPC\'s" instance=ExtResource("6_w2jga")]
+[node name="npc_2" parent="NPC\'s" instance=ExtResource("6_w2jga")]
 position = Vector2(109, 411)
 
 [node name="NPC1" parent="NPC\'s" instance=ExtResource("4_1og58")]
@@ -61,6 +69,19 @@ shape = SubResource("SegmentShape2D_l7whm")
 [node name="Player" parent="." instance=ExtResource("1_l7whm")]
 z_index = 5
 position = Vector2(235, 399)
+
+[node name="score" type="Label" parent="Player"]
+z_index = 7
+offset_left = -281.0
+offset_top = -252.0
+offset_right = 285.0
+offset_bottom = -225.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_prroa")
+theme_override_font_sizes/font_size = 27
+text = "SCORE: 0"
+horizontal_alignment = 1
+script = ExtResource("9_2npts")
 
 [node name="Radio" parent="." instance=ExtResource("5_60j76")]
 position = Vector2(405, 396)

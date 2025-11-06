@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dk2cmsxd8bsft"]
+[gd_scene load_steps=13 format=3 uid="uid://dk2cmsxd8bsft"]
 
 [ext_resource type="Script" uid="uid://bh0wbj1exe3f1" path="res://Godot_Game_Files/Assets/phising_email.gd" id="1_nv4bd"]
 [ext_resource type="Texture2D" uid="uid://dewofhjfipxkm" path="res://Godot_Game_Files/Assets/Environment/pc.png" id="2_25ifg"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://e1wsxsgqrjb0" path="res://Godot_Game_Files/Puzzles/emails/HELP (1).png" id="6_amkrs"]
 [ext_resource type="Texture2D" uid="uid://bvn7muqmli1kk" path="res://Godot_Game_Files/Puzzles/emails/HELP.png" id="7_caett"]
 [ext_resource type="Texture2D" uid="uid://ccjvm3f421lyh" path="res://Godot_Game_Files/Puzzles/emails/phising emails/square.png" id="10_amkrs"]
+[ext_resource type="Texture2D" uid="uid://bpbnuo012lldo" path="res://Godot_Game_Files/Puzzles/emails/CONTINUE (1).png" id="11_kuhnx"]
+[ext_resource type="Texture2D" uid="uid://d1tl8pf0q211w" path="res://Godot_Game_Files/Puzzles/emails/CONTINUE.png" id="12_wxe8j"]
 
 [node name="Phising Email" type="Node2D"]
 script = ExtResource("1_nv4bd")
@@ -28,9 +30,10 @@ texture = ExtResource("3_afpqk")
 z_index = 1
 offset_left = -465.873
 offset_top = -227.773
-offset_right = 79.1271
-offset_bottom = -24.7729
+offset_right = 700.7734
+offset_bottom = 199.36705
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 33
 text = "test"
 
 [node name="email" type="Label" parent="PhisingEmail"]
@@ -38,8 +41,9 @@ z_index = 1
 offset_left = -465.873
 offset_top = -293.001
 offset_right = 705.127
-offset_bottom = -269.001
+offset_bottom = -246.7102
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
 text = "test"
 
 [node name="Button_manager" type="Control" parent="."]
@@ -92,30 +96,57 @@ layout_mode = 0
 offset_left = -299.0
 offset_top = 91.0
 offset_right = 518.0
-offset_bottom = 193.0
+offset_bottom = 333.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 0
 theme_override_font_sizes/font_size = 23
-text = "⚠️ Warning: This email is suspicious! 
-Never respond to emails asking for credit card info. 
-Legitimate companies will not ask you for sensitive information via email."
+text = "⚠️ Watch for common phishing signs:
+• Urgent or threatening language
+• Requests for passwords or payment info
+• Strange links or unknown senders
+• Poor spelling, odd formatting, or suspicious attachments
+Never share sensitive info through email.
+"
 horizontal_alignment = 1
 
 [node name="Square" type="Sprite2D" parent="Button_manager/Help/Label"]
 modulate = Color(0, 0, 0, 0.851)
 z_index = -1
-position = Vector2(407.305, 51.601)
-scale = Vector2(1.38972, 0.370673)
+position = Vector2(407.305, 104.13954)
+scale = Vector2(1.38972, 0.72092986)
 texture = ExtResource("10_amkrs")
 
 [node name="Continue" type="TextureButton" parent="Button_manager"]
 visible = false
 layout_mode = 0
-offset_left = 382.0
-offset_top = 504.0
-offset_right = 645.0
-offset_bottom = 561.0
-texture_normal = ExtResource("5_afpqk")
+offset_left = 347.0
+offset_top = 276.0
+offset_right = 700.0
+offset_bottom = 333.0
+texture_normal = ExtResource("11_kuhnx")
+texture_hover = ExtResource("12_wxe8j")
+
+[node name="Label2" type="Label" parent="Button_manager/Continue"]
+visibility_layer = 4
+z_index = 1
+z_as_relative = false
+layout_mode = 0
+offset_left = -224.0
+offset_top = 109.0
+offset_right = 593.0
+offset_bottom = 351.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_font_sizes/font_size = 23
+text = "text"
+horizontal_alignment = 1
+
+[node name="Square" type="Sprite2D" parent="Button_manager/Continue/Label2"]
+modulate = Color(0, 0, 0, 0.851)
+z_index = -1
+position = Vector2(407.305, 39.355507)
+scale = Vector2(1.38972, 0.2890363)
+texture = ExtResource("10_amkrs")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(495, 261)
