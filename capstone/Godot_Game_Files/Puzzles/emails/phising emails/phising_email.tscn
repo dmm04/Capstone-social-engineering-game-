@@ -30,8 +30,8 @@ texture = ExtResource("3_afpqk")
 z_index = 1
 offset_left = -465.873
 offset_top = -227.773
-offset_right = 700.7734
-offset_bottom = 199.36705
+offset_right = 700.773
+offset_bottom = 199.367
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 33
 text = "test"
@@ -41,7 +41,7 @@ z_index = 1
 offset_left = -465.873
 offset_top = -293.001
 offset_right = 705.127
-offset_bottom = -246.7102
+offset_bottom = -246.71
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "test"
@@ -112,8 +112,8 @@ horizontal_alignment = 1
 [node name="Square" type="Sprite2D" parent="Button_manager/Help/Label"]
 modulate = Color(0, 0, 0, 0.851)
 z_index = -1
-position = Vector2(407.305, 104.13954)
-scale = Vector2(1.38972, 0.72092986)
+position = Vector2(407.305, 104.14)
+scale = Vector2(1.38972, 0.72093)
 texture = ExtResource("10_amkrs")
 
 [node name="Continue" type="TextureButton" parent="Button_manager"]
@@ -144,8 +144,8 @@ horizontal_alignment = 1
 [node name="Square" type="Sprite2D" parent="Button_manager/Continue/Label2"]
 modulate = Color(0, 0, 0, 0.851)
 z_index = -1
-position = Vector2(407.305, 39.355507)
-scale = Vector2(1.38972, 0.2890363)
+position = Vector2(407.305, 39.3555)
+scale = Vector2(1.38972, 0.289036)
 texture = ExtResource("10_amkrs")
 
 [node name="Camera2D" type="Camera2D" parent="."]
