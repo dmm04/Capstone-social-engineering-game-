@@ -1,0 +1,210 @@
+[gd_scene load_steps=4 format=3 uid="uid://xq1pobtbqe5g"]
+
+[ext_resource type="Script" uid="uid://dni7qq32edh3f" path="res://Godot_Game_Files/Puzzles/dowload.gd" id="1_7v8kv"]
+[ext_resource type="Texture2D" uid="uid://pvtvt5tttyv7" path="res://Godot_Game_Files/Assets/Environment/pc-extra.png" id="1_n58bt"]
+[ext_resource type="Texture2D" uid="uid://beigqd0xgfye6" path="res://Godot_Game_Files/Assets/Buttons/flag.png" id="2_1w6ef"]
+
+[node name="dowload" type="Node2D"]
+script = ExtResource("1_7v8kv")
+
+[node name="Intro" type="PopupPanel" parent="."]
+oversampling_override = 1.0
+visible = true
+
+[node name="Label" type="Label" parent="Intro"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 96.0
+offset_bottom = 96.0
+theme_override_font_sizes/font_size = 35
+
+[node name="ContinueButton" type="Button" parent="Intro"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 96.0
+offset_bottom = 96.0
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(548, 459.00003)
+scale = Vector2(8.94408, 11.043473)
+texture = ExtResource("1_n58bt")
+
+[node name="FileButtons" type="Node2D" parent="."]
+
+[node name="File1" type="TextureButton" parent="FileButtons"]
+offset_left = 77.0
+offset_top = 129.0
+offset_right = 380.0
+offset_bottom = 234.0
+
+[node name="FileLabel" type="Label" parent="FileButtons/File1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.017
+anchor_top = 0.21000001
+anchor_right = 2.9110003
+anchor_bottom = 0.822
+offset_left = -0.15099669
+offset_top = -0.050001144
+offset_right = -0.033081055
+offset_bottom = 0.04599762
+theme_override_colors/font_color = Color(0.01773239, 0.017732395, 0.017732374, 1)
+theme_override_font_sizes/font_size = 41
+text = "Resume.docx"
+
+[node name="Flag" type="Sprite2D" parent="FileButtons/File1"]
+position = Vector2(929.25, 63)
+scale = Vector2(4.671875, 3.6875)
+texture = ExtResource("2_1w6ef")
+
+[node name="File2" type="TextureButton" parent="FileButtons"]
+offset_left = 74.0
+offset_top = 239.0
+offset_right = 326.0
+offset_bottom = 305.0
+
+[node name="FileLabel" type="Label" parent="FileButtons/File2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.048
+anchor_top = 0.015000001
+anchor_right = 3.5240002
+anchor_bottom = 1.0
+offset_left = -0.09599781
+offset_top = 0.0100028515
+offset_right = -0.048034668
+offset_bottom = -7.999996
+theme_override_colors/font_color = Color(0.06469653, 0.06469653, 0.06469653, 1)
+theme_override_font_sizes/font_size = 41
+text = "Update.zip"
+
+[node name="Flag" type="Sprite2D" parent="FileButtons/File2"]
+position = Vector2(926.99994, 24)
+scale = Vector2(4.5000033, 3.40625)
+texture = ExtResource("2_1w6ef")
+
+[node name="File3" type="TextureButton" parent="FileButtons"]
+offset_left = 64.0
+offset_top = 335.0
+offset_right = 340.0
+offset_bottom = 393.0
+
+[node name="FileLabel" type="Label" parent="FileButtons/File3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.072000004
+anchor_right = 3.2170002
+anchor_bottom = 1.067
+offset_left = 3.1279984
+offset_top = -1.0000134
+offset_right = 0.107910156
+offset_bottom = 0.008987427
+theme_override_colors/font_color = Color(0.04755766, 0.047557645, 0.047557645, 1)
+theme_override_font_sizes/font_size = 41
+text = "trojan.exe"
+
+[node name="Flag" type="Sprite2D" parent="FileButtons/File3"]
+position = Vector2(938, 15.000004)
+scale = Vector2(3.9531276, 3.7031248)
+texture = ExtResource("2_1w6ef")
+
+[node name="File4" type="TextureButton" parent="FileButtons"]
+offset_left = 83.0
+offset_top = 391.0
+offset_right = 358.0
+offset_bottom = 497.0
+
+[node name="FileLabel" type="Label" parent="FileButtons/File4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.018000001
+anchor_top = 0.27400002
+anchor_right = 3.236
+anchor_bottom = 0.934
+offset_left = 0.05000353
+offset_top = -0.043987274
+offset_right = 0.099975586
+offset_bottom = -0.003982544
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_font_sizes/font_size = 41
+text = "meeting_notes.pdf"
+
+[node name="Flag" type="Sprite2D" parent="FileButtons/File4"]
+position = Vector2(914, 57.00001)
+scale = Vector2(3.7851539, 3.6523426)
+texture = ExtResource("2_1w6ef")
+
+[node name="File5" type="TextureButton" parent="FileButtons"]
+offset_left = 70.0
+offset_top = 488.0
+offset_right = 533.0
+offset_bottom = 567.0
+
+[node name="FileLabel" type="Label" parent="FileButtons/File5"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.030000001
+anchor_top = 0.11400001
+anchor_right = 1.9310001
+anchor_bottom = 1.0
+offset_left = 0.10999966
+offset_top = -0.006000519
+offset_right = -0.05303955
+offset_bottom = -4.6540146
+theme_override_colors/font_color = Color(0.072842635, 0.072842635, 0.072842635, 1)
+theme_override_font_sizes/font_size = 41
+text = "cat_videos.src"
+
+[node name="Flag" type="Sprite2D" parent="FileButtons/File5"]
+position = Vector2(928.5, 40.75)
+scale = Vector2(3.593749, 3.265625)
+texture = ExtResource("2_1w6ef")
+
+[node name="FileExplorer" type="TextureButton" parent="."]
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 1087.0
+offset_bottom = 136.0
+
+[node name="Home" type="Label" parent="FileExplorer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.99100006
+anchor_bottom = 0.65900004
+offset_left = -3.0
+offset_top = 4.0
+offset_right = -2.7930298
+offset_bottom = 3.9849968
+theme_override_colors/font_color = Color(0.31801978, 0.3180198, 0.31801963, 1)
+theme_override_colors/font_outline_color = Color(0.04755766, 0.047557645, 0.047557645, 1)
+theme_override_font_sizes/font_size = 34
+text = "<- ->          > File Explorer                                                               -- X"
+
+[node name="Feedback" type="PopupPanel" parent="."]
+oversampling_override = 1.0
+size = Vector2i(453, 108)
+
+[node name="Label" type="Label" parent="Feedback"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 449.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 32
+
+[node name="ContinueButton" type="Button" parent="Feedback"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 449.0
+offset_bottom = 104.0
+
+[node name="ReturnButton" type="Button" parent="."]
+offset_left = 1041.0
+offset_top = 68.0
+offset_right = 1076.0
+offset_bottom = 122.0
+tooltip_text = "Close to return back to the office.
+"
+theme_override_colors/font_color = Color(0.42365012, 0.42365092, 0.42365023, 1)
+theme_override_font_sizes/font_size = 25
+text = "
+"
