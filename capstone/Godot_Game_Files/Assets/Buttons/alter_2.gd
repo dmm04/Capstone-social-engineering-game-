@@ -4,7 +4,7 @@ extends Area2D
 @onready var message_label = $AlertLabel
 
 var player_in_area2 := false
-
+var continue_chat = 0 
 
 func _ready():
 	# Start the popup animation
@@ -18,6 +18,7 @@ func _process(delta: float) -> void:
 	# Only check for interact press if player is in the area
 	if player_in_area2 and Input.is_action_just_pressed("interact"):
 		continue_text()
+		continue_chat = 1
 	
 
 func _on_body_entered(body):
@@ -31,12 +32,14 @@ func _on_body_exited(body):
 
 func continue_text():
 	$"../Label".text = "When you see a ! above your coworkers, you need to go check out thier computer and complete the cybersecurity task! Good luck! DONT DISAPOINT ME."
-	continuei() 
-func continuei():  
+	continue1() 
+func continue1():  
 	if player_in_area2 and Input.is_action_just_pressed("interact"):
-		$"../Label".visible = false
-		$".".visible = false
-		$"../Chatbubble".visible = false 
-		$"../../Alert".set_process(true)
-		$"../../Alert".visible =true
+		continue_chat += 1
+		if continue_chat == 2:
+			$"../Label".visible = false
+			$".".visible = false
+			$"../Chatbubble".visible = false 
+			$"../../Alert".set_process(true)
+			$"../../Alert".visible =true
 	

@@ -64,6 +64,7 @@ func _on_accept_pressed() -> void:
 	$Button_manager/Continue.visible = !$Button_manager/Continue.visible
 	print("Score is:", Global.score)
 	Global.score -= 100
+	
 func _on_continue_pressed() -> void:
 	get_tree().change_scene_to_file("res://Godot_Game_Files/game.tscn")
 

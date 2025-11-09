@@ -15,7 +15,7 @@
 [ext_resource type="Script" uid="uid://ntcob37ojm7b" path="res://Godot_Game_Files/score.gd" id="9_2npts"]
 [ext_resource type="PackedScene" uid="uid://dvcynifnfhk4c" path="res://Godot_Game_Files/Assets/Buttons/!alert.tscn" id="9_woipg"]
 [ext_resource type="FontFile" uid="uid://b34psro2563xl" path="res://Godot_Game_Files/Assets/Fonts/dogicapixel.otf" id="14_1jyk3"]
-[ext_resource type="Script" uid="uid://b14l2wwp0qdu3" path="res://Godot_Game_Files/Assets/Characters/Player.gd" id="14_eqekq"]
+[ext_resource type="Script" uid="uid://b14l2wwp0qdu3" path="res://Godot_Game_Files/Assets/Characters/player.gd" id="14_eqekq"]
 
 [sub_resource type="GDScript" id="GDScript_woipg"]
 script/source = "extends Node
@@ -29,6 +29,7 @@ distance = -354.0
 b = Vector2(-1, -510)
 
 [node name="Game" type="Node2D"]
+position = Vector2(17, 23)
 script = SubResource("GDScript_woipg")
 
 [node name="Event_Tree" type="Node" parent="."]
@@ -59,7 +60,6 @@ scale = Vector2(3.6383, 3.36667)
 texture = ExtResource("7_gy2er")
 
 [node name="Alert" parent="." instance=ExtResource("9_woipg")]
-visible = false
 position = Vector2(110, 372)
 monitorable = false
 

@@ -1,6 +1,7 @@
 extends Area2D
 
 @onready var sprite = $AnimatedSprite2D
+var Global = preload("res://global.gd").new()
 
 var player_in_area = false
 
@@ -14,6 +15,7 @@ func _process(delta: float):
 	# Only check for interact press if player is in the area
 	if player_in_area and Input.is_action_just_pressed("interact"):
 		open_puzzle_scene()
+		
 
 func _on_body_entered(body):
 		player_in_area = true
