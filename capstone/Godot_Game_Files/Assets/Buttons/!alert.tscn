@@ -111,7 +111,7 @@ animation = &"float"
 frame_progress = 0.194332
 script = SubResource("GDScript_tj4ug")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="emailalertcollisionshape" type="CollisionShape2D" parent="."]
 visibility_layer = 2
 position = Vector2(0, 41.5)
 shape = SubResource("RectangleShape2D_yhow6")

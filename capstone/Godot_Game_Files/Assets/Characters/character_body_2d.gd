@@ -6,7 +6,7 @@ const SPEED = 230
 const JUMP_FORCE = -350
 const GRAVITY = 20
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	# Gravity
 	if not is_on_floor():
 		velocity.y += GRAVITY

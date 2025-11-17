@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://caiomggrkdb7i"
-path="res://.godot/imported/ACCEPT.png-8a77f5b798b63c78bf78b5788a63f14e.ctex"
+uid="uid://b5h0ag10cmp16"
+path="res://.godot/imported/phising email.png-35f3bc6e5d7a08e2088d1f0019605640.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Godot_Game_Files/Puzzles/emails/ACCEPT.png"
-dest_files=["res://.godot/imported/ACCEPT.png-8a77f5b798b63c78bf78b5788a63f14e.ctex"]
+source_file="res://Godot_Game_Files/Puzzles/Phil/phising email.png"
+dest_files=["res://.godot/imported/phising email.png-35f3bc6e5d7a08e2088d1f0019605640.ctex"]
 
 [params]
 

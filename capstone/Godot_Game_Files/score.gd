@@ -1,4 +1,5 @@
 extends Label
-func _ready():
-	# Set the initial score
+
+#Keep the score updated boi
+func _process(_delta: float) -> void:
 	text = "score: $" + str(Global.score)

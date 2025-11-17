@@ -1,9 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://b5cb8hi831nnt"]
+[gd_scene load_steps=21 format=3 uid="uid://b5cb8hi831nnt"]
 
 [ext_resource type="Script" uid="uid://by34sk16ycs2r" path="res://Godot_Game_Files/event_tree.gd" id="1_eqekq"]
 [ext_resource type="PackedScene" uid="uid://bnpveoij6ge22" path="res://Godot_Game_Files/Assets/Characters/Player.tscn" id="1_l7whm"]
 [ext_resource type="PackedScene" uid="uid://chyoixyqe0874" path="res://Godot_Game_Files/Assets/Buttons/alter2.tscn" id="2_7nhs0"]
 [ext_resource type="Texture2D" uid="uid://dsuhcbcpm4ryw" path="res://Godot_Game_Files/Assets/Characters/office background.png" id="2_60j76"]
+[ext_resource type="PackedScene" uid="uid://dk2cmsxd8bsft" path="res://Godot_Game_Files/Puzzles/Phil/phising emails/phising_email.tscn" id="2_hw1hp"]
 [ext_resource type="PackedScene" uid="uid://nnlmyeh6m0oq" path="res://Godot_Game_Files/Assets/Characters/npc_boss.tscn" id="3_2s8f0"]
 [ext_resource type="FontFile" uid="uid://spynjnwq75ou" path="res://Godot_Game_Files/Assets/Fonts/Tokyo.ttf" id="3_prroa"]
 [ext_resource type="PackedScene" uid="uid://c2d6ehiuccdsh" path="res://Godot_Game_Files/Assets/Characters/npc_1.tscn" id="4_1og58"]
@@ -20,6 +21,42 @@
 [sub_resource type="GDScript" id="GDScript_woipg"]
 script/source = "extends Node
 var score: int = 0
+
+
+
+#EVENT TIME LINE DO NOT CHANGE! 
+
+func _process(_delta: float) -> void:
+	if Global.counter == 0:
+		$Event_Tree/Puzzles/EmailAlert.set_process(false)
+		$Event_Tree/Puzzles/EmailAlert.visible = false
+		$PhisingEmail.set_process(false)
+		$Player/CharacterBody2D/Playercamera2d.make_current()
+		
+	elif Global.counter == 1:
+		$Event_Tree/ChatArea.set_process(false)
+		$Event_Tree/Puzzles/EmailAlert.set_process(true)
+		$Event_Tree/Puzzles/EmailAlert.visible = true
+
+	elif Global.counter == 2:
+		#---------------------------------------------#
+		#make step 1 invisible/chat visible
+		$Event_Tree/ChatArea.set_process(true)
+		$Event_Tree/Puzzles/EmailAlert.set_process(false)
+		$Event_Tree/Puzzles/EmailAlert.visible = false
+		$Event_Tree/Label.visible = true
+		$Event_Tree/Chatbubble.visible = true
+		Global.counter += 1
+		print (\"event counter: \", Global.counter)
+	elif Global.counter == 3:
+		#----------------------------------------------#
+		#make step 2 visible chat is now invisible counter goes to 3
+		pass
+	elif Global.counter == 4:
+		pass
+		
+		
+	
 "
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_e2o6t"]
@@ -32,10 +69,19 @@ b = Vector2(-1, -510)
 position = Vector2(17, 23)
 script = SubResource("GDScript_woipg")
 
+[node name="PhisingEmail" parent="." instance=ExtResource("2_hw1hp")]
+position = Vector2(-9.434998, -604.19006)
+
 [node name="Event_Tree" type="Node" parent="."]
 script = ExtResource("1_eqekq")
 
-[node name="Area2D" parent="Event_Tree" instance=ExtResource("2_7nhs0")]
+[node name="Puzzles" type="Node" parent="Event_Tree"]
+
+[node name="EmailAlert" parent="Event_Tree/Puzzles" instance=ExtResource("9_woipg")]
+position = Vector2(109.94, 371.59)
+monitorable = false
+
+[node name="ChatArea" parent="Event_Tree" instance=ExtResource("2_7nhs0")]
 position = Vector2(813.114, 371.23)
 scale = Vector2(1.04545, 0.954183)
 monitorable = false
@@ -50,7 +96,6 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("14_1jyk3")
 theme_override_font_sizes/font_size = 8
 text = "WELCOME! Your job here is simple. Make sure no one does anything. 
-
 The more disastors you prevent, the more money I... I mean we make!"
 autowrap_mode = 2
 
@@ -58,10 +103,6 @@ autowrap_mode = 2
 position = Vector2(721.681, 337.5)
 scale = Vector2(3.6383, 3.36667)
 texture = ExtResource("7_gy2er")
-
-[node name="Alert" parent="." instance=ExtResource("9_woipg")]
-position = Vector2(92.94, 348.59)
-monitorable = false
 
 [node name="NPC\'s" type="Node" parent="."]
 
@@ -124,7 +165,7 @@ text = "SCORE: 0"
 horizontal_alignment = 1
 script = ExtResource("9_2npts")
 
-[connection signal="body_entered" from="Event_Tree/Area2D" to="Event_Tree/Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="Event_Tree/Area2D" to="Event_Tree/Area2D" method="_on_body_exited"]
-[connection signal="body_entered" from="Alert" to="Alert" method="_on_body_entered"]
-[connection signal="body_exited" from="Alert" to="Alert" method="_on_body_exited"]
+[connection signal="body_entered" from="Event_Tree/Puzzles/EmailAlert" to="Event_Tree/Puzzles/EmailAlert" method="_on_body_entered"]
+[connection signal="body_exited" from="Event_Tree/Puzzles/EmailAlert" to="Event_Tree/Puzzles/EmailAlert" method="_on_body_exited"]
+[connection signal="body_entered" from="Event_Tree/ChatArea" to="Event_Tree/ChatArea" method="_on_body_entered"]
+[connection signal="body_exited" from="Event_Tree/ChatArea" to="Event_Tree/ChatArea" method="_on_body_exited"]

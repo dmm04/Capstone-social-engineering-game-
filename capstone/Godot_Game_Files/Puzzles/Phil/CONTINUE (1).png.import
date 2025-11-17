@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1tl8pf0q211w"
-path="res://.godot/imported/CONTINUE.png-b0f9a5098a53be11e10a4dcd22628205.ctex"
+uid="uid://bpbnuo012lldo"
+path="res://.godot/imported/CONTINUE (1).png-9c1b301c04f4bce23f365044f8869097.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Godot_Game_Files/Puzzles/emails/CONTINUE.png"
-dest_files=["res://.godot/imported/CONTINUE.png-b0f9a5098a53be11e10a4dcd22628205.ctex"]
+source_file="res://Godot_Game_Files/Puzzles/Phil/CONTINUE (1).png"
+dest_files=["res://.godot/imported/CONTINUE (1).png-9c1b301c04f4bce23f365044f8869097.ctex"]
 
 [params]
 

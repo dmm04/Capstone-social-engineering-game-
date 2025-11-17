@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch4ybmm6rtd8d"
-path="res://.godot/imported/REJECT (1).png-ce4571d8e3eedbb8a9ae80b36ffcab29.ctex"
+uid="uid://dwj5tjtjqiie5"
+path="res://.godot/imported/REJECT.png-ba052687bd5c2913f2d3becc97c22c88.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Godot_Game_Files/Puzzles/emails/REJECT (1).png"
-dest_files=["res://.godot/imported/REJECT (1).png-ce4571d8e3eedbb8a9ae80b36ffcab29.ctex"]
+source_file="res://Godot_Game_Files/Puzzles/Phil/REJECT.png"
+dest_files=["res://.godot/imported/REJECT.png-ba052687bd5c2913f2d3becc97c22c88.ctex"]
 
 [params]
 

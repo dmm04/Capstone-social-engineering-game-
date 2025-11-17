@@ -127,7 +127,7 @@ radius = 7.07107
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_0psd1")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Playercamera2d" type="Camera2D" parent="CharacterBody2D"]
 visible = false
 visibility_layer = 2
 position = Vector2(8, -65)

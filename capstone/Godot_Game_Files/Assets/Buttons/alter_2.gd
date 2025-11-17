@@ -9,30 +9,37 @@ var continue_chat = 0
 func _ready():
 	# Start the popup animation
 	sprite.play("float")
-	$AlertLabel.visible = false
-	$"../../Alert".set_process(false)
-
 
 # Must include delta parameter to match parent signature
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	# Only check for interact press if player is in the area
-	if player_in_area2 and Input.is_action_just_pressed("interact"):
-		continue_text()
-		continue_chat = 1
-	
+	if Global.counter == 0:
+		if player_in_area2 and Input.is_action_just_pressed("interact"):
+			continue_text()
+			continue_chat = 1
+	elif Global.counter == 2:
+		pass
+	elif Global.counter == 3:
+		$".".visible = true
+		$"../Label".text = "Well I hope you learned something. I heard rumor of a shadowy character running around plugging in usb's into systems. Quickly go find it before they system is compromised!"
+		if player_in_area2 and Input.is_action_just_pressed("interact"):
+			Global.counter += 1
+			print ("event counter: ", Global.counter)
 
-func _on_body_entered(body):
+
+func _on_body_entered(_body):
 		player_in_area2 = true
 		message_label.visible = true
 		print("Body Entered")
 
-func _on_body_exited(body):
+func _on_body_exited(_body):
 		player_in_area2 = false
 		message_label.visible = false
 
 func continue_text():
 	$"../Label".text = "When you see a ! above your coworkers, you need to go check out thier computer and complete the cybersecurity task! Good luck! DONT DISAPOINT ME."
 	continue1() 
+	
 func continue1():  
 	if player_in_area2 and Input.is_action_just_pressed("interact"):
 		continue_chat += 1
@@ -40,6 +47,7 @@ func continue1():
 			$"../Label".visible = false
 			$".".visible = false
 			$"../Chatbubble".visible = false 
-			$"../../Alert".set_process(true)
-			$"../../Alert".visible =true
+			Global.counter += 1
+			print ("event counter: ", Global.counter)
+
 	

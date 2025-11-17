@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccjvm3f421lyh"
-path="res://.godot/imported/square.png-f0de431e9b51338915a55fdfa406ca1c.ctex"
+uid="uid://caiomggrkdb7i"
+path="res://.godot/imported/ACCEPT.png-118f72c8bf0f90f48963dfd0e91a9606.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Godot_Game_Files/Puzzles/emails/phising emails/square.png"
-dest_files=["res://.godot/imported/square.png-f0de431e9b51338915a55fdfa406ca1c.ctex"]
+source_file="res://Godot_Game_Files/Puzzles/Phil/ACCEPT.png"
+dest_files=["res://.godot/imported/ACCEPT.png-118f72c8bf0f90f48963dfd0e91a9606.ctex"]
 
 [params]
 

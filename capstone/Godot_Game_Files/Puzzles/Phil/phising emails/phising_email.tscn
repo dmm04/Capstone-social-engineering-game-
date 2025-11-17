@@ -2,19 +2,19 @@
 
 [ext_resource type="Script" uid="uid://bh0wbj1exe3f1" path="res://Godot_Game_Files/Assets/phising_email.gd" id="1_nv4bd"]
 [ext_resource type="Texture2D" uid="uid://dewofhjfipxkm" path="res://Godot_Game_Files/Assets/Environment/pc.png" id="2_25ifg"]
-[ext_resource type="Texture2D" uid="uid://b5h0ag10cmp16" path="res://Godot_Game_Files/Puzzles/emails/phising email.png" id="3_afpqk"]
-[ext_resource type="Texture2D" uid="uid://caiomggrkdb7i" path="res://Godot_Game_Files/Puzzles/emails/ACCEPT.png" id="3_al83v"]
-[ext_resource type="Texture2D" uid="uid://dk8hikfnumyxy" path="res://Godot_Game_Files/Puzzles/emails/ACCEPT (5).png" id="3_kt3jf"]
-[ext_resource type="Texture2D" uid="uid://dwj5tjtjqiie5" path="res://Godot_Game_Files/Puzzles/emails/REJECT.png" id="4_0js8u"]
+[ext_resource type="Texture2D" uid="uid://b5h0ag10cmp16" path="res://Godot_Game_Files/Puzzles/Phil/phising email.png" id="3_afpqk"]
+[ext_resource type="Texture2D" uid="uid://caiomggrkdb7i" path="res://Godot_Game_Files/Puzzles/Phil/ACCEPT.png" id="3_al83v"]
+[ext_resource type="Texture2D" uid="uid://dk8hikfnumyxy" path="res://Godot_Game_Files/Puzzles/Phil/ACCEPT (5).png" id="3_kt3jf"]
+[ext_resource type="Texture2D" uid="uid://dwj5tjtjqiie5" path="res://Godot_Game_Files/Puzzles/Phil/REJECT.png" id="4_0js8u"]
 [ext_resource type="FontFile" uid="uid://6erqq5mcai1s" path="res://Godot_Game_Files/Assets/Fonts/EtBt6001-JO47.ttf" id="4_wxe8j"]
-[ext_resource type="Texture2D" uid="uid://csc0ymb2lq5pt" path="res://Godot_Game_Files/Puzzles/emails/REJECT (2).png" id="5_afpqk"]
-[ext_resource type="Texture2D" uid="uid://e1wsxsgqrjb0" path="res://Godot_Game_Files/Puzzles/emails/HELP (1).png" id="6_amkrs"]
-[ext_resource type="Texture2D" uid="uid://bvn7muqmli1kk" path="res://Godot_Game_Files/Puzzles/emails/HELP.png" id="7_caett"]
-[ext_resource type="Texture2D" uid="uid://ccjvm3f421lyh" path="res://Godot_Game_Files/Puzzles/emails/phising emails/square.png" id="10_amkrs"]
-[ext_resource type="Texture2D" uid="uid://bpbnuo012lldo" path="res://Godot_Game_Files/Puzzles/emails/CONTINUE (1).png" id="11_kuhnx"]
-[ext_resource type="Texture2D" uid="uid://d1tl8pf0q211w" path="res://Godot_Game_Files/Puzzles/emails/CONTINUE.png" id="12_wxe8j"]
+[ext_resource type="Texture2D" uid="uid://csc0ymb2lq5pt" path="res://Godot_Game_Files/Puzzles/Phil/REJECT (2).png" id="5_afpqk"]
+[ext_resource type="Texture2D" uid="uid://e1wsxsgqrjb0" path="res://Godot_Game_Files/Puzzles/Phil/HELP (1).png" id="6_amkrs"]
+[ext_resource type="Texture2D" uid="uid://bvn7muqmli1kk" path="res://Godot_Game_Files/Puzzles/Phil/HELP.png" id="7_caett"]
+[ext_resource type="Texture2D" uid="uid://ccjvm3f421lyh" path="res://Godot_Game_Files/Puzzles/Phil/phising emails/square.png" id="10_amkrs"]
+[ext_resource type="Texture2D" uid="uid://bpbnuo012lldo" path="res://Godot_Game_Files/Puzzles/Phil/CONTINUE (1).png" id="11_kuhnx"]
+[ext_resource type="Texture2D" uid="uid://d1tl8pf0q211w" path="res://Godot_Game_Files/Puzzles/Phil/CONTINUE.png" id="12_wxe8j"]
 
-[node name="Phising Email" type="Node2D"]
+[node name="PhisingEmail" type="Node2D"]
 script = ExtResource("1_nv4bd")
 
 [node name="Pc" type="Sprite2D" parent="."]
@@ -31,6 +31,7 @@ texture = ExtResource("3_afpqk")
 z_index = 1
 anchors_preset = -1
 anchor_top = 0.008010767
+anchor_bottom = 0.008010767
 offset_left = -465.873
 offset_top = -227.773
 offset_right = 700.773
@@ -45,6 +46,7 @@ metadata/_edit_use_anchors_ = true
 z_index = 1
 anchors_preset = -1
 anchor_top = 0.01068061
+anchor_bottom = 0.01068061
 offset_left = -465.873
 offset_top = -293.001
 offset_right = 705.127
@@ -161,7 +163,7 @@ position = Vector2(407.305, 39.3555)
 scale = Vector2(1.38972, 0.289036)
 texture = ExtResource("10_amkrs")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="phisingemailcamera2d" type="Camera2D" parent="."]
 position = Vector2(495, 261)
 zoom = Vector2(0.94, 0.94)
 

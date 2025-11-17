@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvn7muqmli1kk"
-path="res://.godot/imported/HELP.png-7f1b26b33cced2eedaa2e96af240ed60.ctex"
+path="res://.godot/imported/HELP.png-bdaa851694620f041ec12aec9fe2da89.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Godot_Game_Files/Puzzles/emails/HELP.png"
-dest_files=["res://.godot/imported/HELP.png-7f1b26b33cced2eedaa2e96af240ed60.ctex"]
+source_file="res://Godot_Game_Files/Puzzles/Phil/HELP.png"
+dest_files=["res://.godot/imported/HELP.png-bdaa851694620f041ec12aec9fe2da89.ctex"]
 
 [params]
 

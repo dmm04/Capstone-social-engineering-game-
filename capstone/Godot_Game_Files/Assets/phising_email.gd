@@ -66,7 +66,9 @@ func _on_accept_pressed() -> void:
 	Global.score -= 100
 	
 func _on_continue_pressed() -> void:
-	get_tree().change_scene_to_file("res://Godot_Game_Files/game.tscn")
+	Global.counter += 1
+	$"../Player/CharacterBody2D/Playercamera2d".make_current()
+	$".".set_process(false)
 
 func _on_reject_pressed() -> void:
 	$Button_manager/Continue/Label2.text = "CORRECT! Never trust an email asking for credit card information.
@@ -77,6 +79,8 @@ func _on_reject_pressed() -> void:
 	$Button_manager/Continue.visible = !$Button_manager/Continue.visible
 	print("Score is:", Global.score)
 	Global.score += 100
+	Global.counter += 1
+	print ("event counter: ", Global.counter)
 	print("Score is:", Global.score)
 
 
