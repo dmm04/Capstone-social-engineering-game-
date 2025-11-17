@@ -7,24 +7,24 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uxn2v"]
 texture = ExtResource("2_ce8vo")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1tc16"]
-bg_color = Color(0.16862746, 0.14901961, 0.15294118, 0.49411765)
-border_color = Color(0.8989943, 0.7636582, 0.7537989, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gt3ty"]
+bg_color = Color(0.129172, 0.138185, 0.147197, 0.780392)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_113m4"]
-bg_color = Color(0.13210109, 0.14291736, 0.1450805, 0.6039216)
+bg_color = Color(0.132101, 0.142917, 0.145081, 0.603922)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
-shadow_color = Color(0, 0, 0, 0.8117647)
+shadow_color = Color(0, 0, 0, 0.811765)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gt3ty"]
-bg_color = Color(0.12917209, 0.13818502, 0.14719719, 0.78039217)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1tc16"]
+bg_color = Color(0.168627, 0.14902, 0.152941, 0.494118)
+border_color = Color(0.898994, 0.763658, 0.753799, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1tc16"]
 
@@ -73,38 +73,38 @@ theme_override_constants/separation = 14
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.7500109, 0.7161464, 0.6133999, 1)
-theme_override_colors/font_pressed_color = Color(0.5384924, 0.35505563, 0.25455356, 1)
-theme_override_colors/font_hover_color = Color(0.2938055, 0.2950022, 0.15418956, 1)
+theme_override_colors/font_hover_color = Color(0.293806, 0.295002, 0.15419, 1)
+theme_override_colors/font_color = Color(0.750011, 0.716146, 0.6134, 1)
+theme_override_colors/font_pressed_color = Color(0.538492, 0.355056, 0.254554, 1)
 theme_override_font_sizes/font_size = 41
-theme_override_styles/normal = SubResource("StyleBoxFlat_1tc16")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_113m4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gt3ty")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_113m4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1tc16")
 text = "START GAME"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.7500109, 0.7161464, 0.6133999, 1)
-theme_override_colors/font_pressed_color = Color(0.5384924, 0.35505563, 0.25455356, 1)
-theme_override_colors/font_hover_color = Color(0.2938055, 0.2950022, 0.15418956, 1)
+theme_override_colors/font_hover_color = Color(0.293806, 0.295002, 0.15419, 1)
+theme_override_colors/font_color = Color(0.750011, 0.716146, 0.6134, 1)
+theme_override_colors/font_pressed_color = Color(0.538492, 0.355056, 0.254554, 1)
 theme_override_font_sizes/font_size = 41
-theme_override_styles/normal = SubResource("StyleBoxFlat_1tc16")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_113m4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gt3ty")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_113m4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1tc16")
 text = "OPTIONS"
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.7500109, 0.7161464, 0.6133999, 1)
-theme_override_colors/font_pressed_color = Color(0.5384924, 0.35505563, 0.25455356, 1)
-theme_override_colors/font_hover_color = Color(0.2938055, 0.2950022, 0.15418956, 1)
+theme_override_colors/font_hover_color = Color(0.293806, 0.295002, 0.15419, 1)
+theme_override_colors/font_color = Color(0.750011, 0.716146, 0.6134, 1)
+theme_override_colors/font_pressed_color = Color(0.538492, 0.355056, 0.254554, 1)
 theme_override_font_sizes/font_size = 41
-theme_override_styles/normal = SubResource("StyleBoxFlat_1tc16")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_113m4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gt3ty")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_113m4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1tc16")
 text = "QUIT"
 
 [node name="MainMenu" type="AudioStreamPlayer2D" parent="."]

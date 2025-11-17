@@ -1,0 +1,173 @@
+[gd_scene load_steps=14 format=3 uid="uid://dk2cmsxd8bsft"]
+
+[ext_resource type="Script" uid="uid://bh0wbj1exe3f1" path="res://Godot_Game_Files/Assets/phising_email.gd" id="1_nv4bd"]
+[ext_resource type="Texture2D" uid="uid://dewofhjfipxkm" path="res://Godot_Game_Files/Assets/Environment/pc.png" id="2_25ifg"]
+[ext_resource type="Texture2D" uid="uid://b5h0ag10cmp16" path="res://Godot_Game_Files/Puzzles/Phil/phising email.png" id="3_afpqk"]
+[ext_resource type="Texture2D" uid="uid://caiomggrkdb7i" path="res://Godot_Game_Files/Puzzles/Phil/ACCEPT.png" id="3_al83v"]
+[ext_resource type="Texture2D" uid="uid://dk8hikfnumyxy" path="res://Godot_Game_Files/Puzzles/Phil/ACCEPT (5).png" id="3_kt3jf"]
+[ext_resource type="Texture2D" uid="uid://dwj5tjtjqiie5" path="res://Godot_Game_Files/Puzzles/Phil/REJECT.png" id="4_0js8u"]
+[ext_resource type="FontFile" uid="uid://6erqq5mcai1s" path="res://Godot_Game_Files/Assets/Fonts/EtBt6001-JO47.ttf" id="4_wxe8j"]
+[ext_resource type="Texture2D" uid="uid://csc0ymb2lq5pt" path="res://Godot_Game_Files/Puzzles/Phil/REJECT (2).png" id="5_afpqk"]
+[ext_resource type="Texture2D" uid="uid://e1wsxsgqrjb0" path="res://Godot_Game_Files/Puzzles/Phil/HELP (1).png" id="6_amkrs"]
+[ext_resource type="Texture2D" uid="uid://bvn7muqmli1kk" path="res://Godot_Game_Files/Puzzles/Phil/HELP.png" id="7_caett"]
+[ext_resource type="Texture2D" uid="uid://ccjvm3f421lyh" path="res://Godot_Game_Files/Puzzles/Phil/phising emails/square.png" id="10_amkrs"]
+[ext_resource type="Texture2D" uid="uid://bpbnuo012lldo" path="res://Godot_Game_Files/Puzzles/Phil/CONTINUE (1).png" id="11_kuhnx"]
+[ext_resource type="Texture2D" uid="uid://d1tl8pf0q211w" path="res://Godot_Game_Files/Puzzles/Phil/CONTINUE.png" id="12_wxe8j"]
+
+[node name="PhisingEmail" type="Node2D"]
+script = ExtResource("1_nv4bd")
+
+[node name="Pc" type="Sprite2D" parent="."]
+position = Vector2(494.152, 256.703)
+scale = Vector2(8.06379, 7.59341)
+texture = ExtResource("2_25ifg")
+
+[node name="PhisingEmail" type="Sprite2D" parent="."]
+position = Vector2(514.633, 162.25)
+scale = Vector2(0.467151, 0.475254)
+texture = ExtResource("3_afpqk")
+
+[node name="message" type="Label" parent="PhisingEmail"]
+z_index = 1
+anchors_preset = -1
+anchor_top = 0.008010767
+anchor_bottom = 0.008010767
+offset_left = -465.873
+offset_top = -227.773
+offset_right = 700.773
+offset_bottom = 199.367
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_wxe8j")
+theme_override_font_sizes/font_size = 25
+text = "test"
+metadata/_edit_use_anchors_ = true
+
+[node name="email" type="Label" parent="PhisingEmail"]
+z_index = 1
+anchors_preset = -1
+anchor_top = 0.01068061
+anchor_bottom = 0.01068061
+offset_left = -465.873
+offset_top = -293.001
+offset_right = 705.127
+offset_bottom = -246.71
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_wxe8j")
+theme_override_font_sizes/font_size = 27
+text = "test"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button_manager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Accept" type="TextureButton" parent="Button_manager"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 294.0
+offset_right = 312.0
+offset_bottom = 351.0
+texture_normal = ExtResource("3_al83v")
+texture_hover = ExtResource("3_kt3jf")
+metadata/_edit_use_anchors_ = true
+
+[node name="Reject" type="TextureButton" parent="Button_manager"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.816
+anchor_bottom = 0.327
+offset_left = 715.0
+offset_top = 294.0
+offset_right = 945.36
+offset_bottom = 337.92
+texture_normal = ExtResource("4_0js8u")
+texture_hover = ExtResource("5_afpqk")
+metadata/_edit_use_anchors_ = true
+
+[node name="Help" type="TextureButton" parent="Button_manager"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 4.793
+anchor_top = 1.388
+anchor_right = 4.793
+anchor_bottom = 1.388
+offset_left = 230.28
+offset_top = 238.48
+offset_right = 411.28
+offset_bottom = 295.48
+texture_normal = ExtResource("6_amkrs")
+texture_hover = ExtResource("7_caett")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Button_manager/Help"]
+visible = false
+visibility_layer = 4
+z_index = 1
+z_as_relative = false
+layout_mode = 0
+offset_left = -299.0
+offset_top = 91.0
+offset_right = 518.0
+offset_bottom = 333.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_font_sizes/font_size = 23
+text = "⚠️ Watch for common phishing signs:
+• Urgent or threatening language
+• Requests for passwords or payment info
+• Strange links or unknown senders
+• Poor spelling, odd formatting, or suspicious attachments
+Never share sensitive info through email.
+"
+horizontal_alignment = 1
+
+[node name="Square" type="Sprite2D" parent="Button_manager/Help/Label"]
+modulate = Color(0, 0, 0, 0.851)
+z_index = -1
+position = Vector2(407.305, 104.14)
+scale = Vector2(1.38972, 0.72093)
+texture = ExtResource("10_amkrs")
+
+[node name="Continue" type="TextureButton" parent="Button_manager"]
+visible = false
+layout_mode = 0
+offset_left = 347.0
+offset_top = 276.0
+offset_right = 700.0
+offset_bottom = 333.0
+texture_normal = ExtResource("11_kuhnx")
+texture_hover = ExtResource("12_wxe8j")
+
+[node name="Label2" type="Label" parent="Button_manager/Continue"]
+visibility_layer = 4
+z_index = 1
+z_as_relative = false
+layout_mode = 0
+offset_left = -224.0
+offset_top = 109.0
+offset_right = 593.0
+offset_bottom = 351.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_font_sizes/font_size = 23
+text = "text"
+horizontal_alignment = 1
+
+[node name="Square" type="Sprite2D" parent="Button_manager/Continue/Label2"]
+modulate = Color(0, 0, 0, 0.851)
+z_index = -1
+position = Vector2(407.305, 39.3555)
+scale = Vector2(1.38972, 0.289036)
+texture = ExtResource("10_amkrs")
+
+[node name="phisingemailcamera2d" type="Camera2D" parent="."]
+position = Vector2(495, 261)
+zoom = Vector2(0.94, 0.94)
+
+[connection signal="pressed" from="Button_manager/Accept" to="." method="_on_accept_pressed"]
+[connection signal="pressed" from="Button_manager/Reject" to="." method="_on_reject_pressed"]
+[connection signal="pressed" from="Button_manager/Help" to="." method="_on_help_pressed"]
+[connection signal="pressed" from="Button_manager/Continue" to="." method="_on_continue_pressed"]
