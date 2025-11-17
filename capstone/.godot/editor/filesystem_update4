@@ -1,9 +1,7 @@
+res://Godot_Game_Files/main_menu.tscn
 res://Godot_Game_Files/game.tscn
-res://Godot_Game_Files/Assets/Buttons/alter_2.gd
+res://Godot_Game_Files/Assets/Buttons/!alert.tscn
 res://Godot_Game_Files/Puzzles/Phil/phising emails/phising_email.tscn
-res://Godot_Game_Files/Assets/Buttons/!alert.gd
 res://Godot_Game_Files/Assets/Characters/Player.tscn
-res://Godot_Game_Files/Assets/phising_email.gd
-res://Godot_Game_Files/score.gd
-res://Godot_Game_Files/event_tree.gd
-res://Godot_Game_Files/Assets/Characters/character_body_2d.gd
+res://Godot_Game_Files/Assets/Music_Sounds/Radio.tscn
+res://Godot_Game_Files/Assets/Buttons/alter_2.gd

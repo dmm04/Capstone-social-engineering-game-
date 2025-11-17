@@ -22,9 +22,9 @@
 script/source = "extends Node
 var score: int = 0
 
+#EVENT TIME LINE DO NOT CHANGE! #EVENT TIME LINE DO NOT CHANGE! #EVENT TIME LINE DO NOT CHANGE! #EVENT TIME LINE DO NOT CHANGE! 
+#EVENT TIME LINE DO NOT CHANGE! #EVENT TIME LINE DO NOT CHANGE! #EVENT TIME LINE DO NOT CHANGE! #EVENT TIME LINE DO NOT CHANGE! 
 
-
-#EVENT TIME LINE DO NOT CHANGE! 
 
 func _process(_delta: float) -> void:
 	if Global.counter == 0:
@@ -70,7 +70,7 @@ position = Vector2(17, 23)
 script = SubResource("GDScript_woipg")
 
 [node name="PhisingEmail" parent="." instance=ExtResource("2_hw1hp")]
-position = Vector2(-9.434998, -604.19006)
+position = Vector2(-9.435, -604.19)
 
 [node name="Event_Tree" type="Node" parent="."]
 script = ExtResource("1_eqekq")

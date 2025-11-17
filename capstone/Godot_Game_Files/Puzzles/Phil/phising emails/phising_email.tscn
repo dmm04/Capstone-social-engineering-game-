@@ -30,23 +30,26 @@ texture = ExtResource("3_afpqk")
 [node name="message" type="Label" parent="PhisingEmail"]
 z_index = 1
 anchors_preset = -1
-anchor_top = 0.008010767
-anchor_bottom = 0.008010767
-offset_left = -465.873
+anchor_left = -0.0031505
+anchor_top = 0.00841751
+anchor_right = -0.0031505
+anchor_bottom = 0.00841751
+offset_left = -461.592
 offset_top = -227.773
-offset_right = 700.773
+offset_right = 705.054
 offset_bottom = 199.367
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_wxe8j")
 theme_override_font_sizes/font_size = 25
 text = "test"
+text_overrun_behavior = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="email" type="Label" parent="PhisingEmail"]
 z_index = 1
 anchors_preset = -1
-anchor_top = 0.01068061
-anchor_bottom = 0.01068061
+anchor_top = 0.0106806
+anchor_bottom = 0.0106806
 offset_left = -465.873
 offset_top = -293.001
 offset_right = 705.127
