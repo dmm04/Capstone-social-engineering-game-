@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b5cb8hi831nnt"]
+[gd_scene load_steps=20 format=3 uid="uid://b5cb8hi831nnt"]
 
 [ext_resource type="Script" uid="uid://by34sk16ycs2r" path="res://Godot_Game_Files/event_tree.gd" id="1_eqekq"]
 [ext_resource type="PackedScene" uid="uid://bnpveoij6ge22" path="res://Godot_Game_Files/Assets/Characters/Player.tscn" id="1_l7whm"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://nnlmyeh6m0oq" path="res://Godot_Game_Files/Assets/Characters/npc_boss.tscn" id="3_2s8f0"]
 [ext_resource type="FontFile" uid="uid://spynjnwq75ou" path="res://Godot_Game_Files/Assets/Fonts/Tokyo.ttf" id="3_prroa"]
 [ext_resource type="PackedScene" uid="uid://c2d6ehiuccdsh" path="res://Godot_Game_Files/Assets/Characters/npc_1.tscn" id="4_1og58"]
+[ext_resource type="Texture2D" uid="uid://cwxh1llb10q37" path="res://Godot_Game_Files/Assets/Characters/office background2.png" id="4_eqekq"]
 [ext_resource type="PackedScene" uid="uid://r1agwgfqfbg4" path="res://Godot_Game_Files/Assets/Music_Sounds/Radio.tscn" id="5_60j76"]
 [ext_resource type="PackedScene" uid="uid://c78uxvq3ytj03" path="res://Godot_Game_Files/Assets/Characters/npc_2.tscn" id="6_w2jga"]
 [ext_resource type="PackedScene" uid="uid://15rwt1q3ccjm" path="res://Godot_Game_Files/chats/chat_1.tscn" id="7_hw1hp"]
@@ -58,7 +59,7 @@ distance = -354.0
 b = Vector2(-1, -510)
 
 [node name="Game" type="Node2D"]
-position = Vector2(17, 23)
+position = Vector2(16, 22)
 script = SubResource("GDScript_woipg")
 
 [node name="PhisingEmail" parent="." instance=ExtResource("2_hw1hp")]
@@ -101,6 +102,14 @@ z_index = -1
 position = Vector2(386, 289)
 scale = Vector2(0.635231, 0.635231)
 texture = ExtResource("2_60j76")
+offset = Vector2(0.46, 0)
+
+[node name="OfficeBackground2" type="Sprite2D" parent="Background"]
+z_index = 9
+position = Vector2(615.0007, 411.00003)
+scale = Vector2(0.6316139, 0.6208789)
+texture = ExtResource("4_eqekq")
+offset = Vector2(0.005, 0)
 
 [node name="Floor_Walls" type="StaticBody2D" parent="Background"]
 position = Vector2(333, 421)

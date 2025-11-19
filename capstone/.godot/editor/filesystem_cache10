@@ -1,9 +1,9 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1763507445
+::res://::1763518695
 global.gd::GDScript::7084319685921171026::1763148359::0::1::::<>Node<><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::2861348676250027155::1763143160::1763423194::1::::<><><>0<>0<>f02d8857271d44842dc7b0e5643eea8f<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1763429751::0::1::::<><><>0<>0<><>::
-node_2d.gd::GDScript::5868442282664055358::1763507237::0::1::::<>Node2D<><>0<>0<><>::
+node_2d.gd::GDScript::5868442282664055358::1763511161::0::1::::<>Node2D<><>0<>0<><>::
 chat_1.tscn::PackedScene::1734689874983663939::1763507277::0::1::::<><><>0<>0<><>::uid://cpuynfm4fhv7c::::res://node_2d.gd
 ::res://addons/::1763429751
 ::res://addons/dialogic/::1763429774
@@ -427,8 +427,8 @@ full_advance_input_layer.tscn::PackedScene::5751287062166832928::1763429771::0::
 input_layer_icon.svg::CompressedTexture2D::3920242578168397878::1763429771::1763429775::1::::<><><>0<>0<>7a3bbd0cb21dc92669b4356ad393197b<>res://.godot/imported/input_layer_icon.svg-3f439e08e8c66cbf3522ce60714f7588.ctex::
 part_config.cfg::TextFile::-1::1763429771::0::1::::<><><>0<>0<><>::
 preview.png::CompressedTexture2D::4608186578602512888::1763429771::1763429775::1::::<><><>0<>0<>7c4fcad6e2e78db0cd2fffdb2f5cdafe<>res://.godot/imported/preview.png-c20c74f5253522c0ea9ec9a21fcd804d.ctex::
-::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/::1763429775
-default_stylebox.tres::StyleBoxFlat::5646424049282425802::1763429771::0::1::::<><><>0<>0<><>::
+::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/::1763508823
+default_stylebox.tres::StyleBoxFlat::5646424049282425802::1763508823::0::1::::<><><>0<>0<><>::
 part_config.cfg::TextFile::-1::1763429771::0::1::::<><><>0<>0<><>::
 preview.png::CompressedTexture2D::1326475808619160445::1763429771::1763429775::1::::<><><>0<>0<>349901d88930d49ae91547fe05c07318<>res://.godot/imported/preview.png-dcc8befd9aebdd8b4c988971a734c72f.ctex::
 speaker-textbox-icon.svg::CompressedTexture2D::6572615020867580224::1763429771::1763429775::1::::<><><>0<>0<>ea39c0b849c7e83603feb1423c94bc29<>res://.godot/imported/speaker-textbox-icon.svg-e67964032c31cfdc4bf5a376d48a985e.ctex::
@@ -631,20 +631,20 @@ event.gd::GDScript::8763588563558386910::1763429773::0::1::::DialogicEvent<>Reso
 timeline.gd::GDScript::5667425671830628919::1763429774::0::1::::DialogicTimeline<>Resource<><>0<>1<><>::
 TimelineResourceLoader.gd::GDScript::1953327801557244659::1763429773::0::1::::DialogicTimelineFormatLoader<>ResourceFormatLoader<><>0<>1<><>::
 TimelineResourceSaver.gd::GDScript::6005903703142383367::1763429773::0::1::::DialogicTimelineFormatSaver<>ResourceFormatSaver<><>0<>1<><>::
-::res://Godot_Game_Files/::1763507386
+::res://Godot_Game_Files/::1763518695
 chat_bubble.gd::GDScript::3585572294712243970::1763147466::0::1::::<>Sprite2D<><>0<>0<><>::
 event_tree.gd::GDScript::4130549012039154399::1763386437::0::1::::<>Node<><>0<>0<><>::
-game.tscn::PackedScene::4496334778093530289::1763507386::0::1::::<><><>0<>0<><>::uid://by34sk16ycs2r::::res://Godot_Game_Files/event_tree.gd<>uid://bnpveoij6ge22::::res://Godot_Game_Files/Assets/Characters/Player.tscn<>uid://chyoixyqe0874::::res://Godot_Game_Files/Assets/Buttons/alter2.tscn<>uid://dsuhcbcpm4ryw::::res://Godot_Game_Files/Assets/Characters/office background.png<>uid://dk2cmsxd8bsft::::res://Godot_Game_Files/Puzzles/Phil/phising emails/phising_email.tscn<>uid://nnlmyeh6m0oq::::res://Godot_Game_Files/Assets/Characters/npc_boss.tscn<>uid://spynjnwq75ou::::res://Godot_Game_Files/Assets/Fonts/Tokyo.ttf<>uid://c2d6ehiuccdsh::::res://Godot_Game_Files/Assets/Characters/npc_1.tscn<>uid://r1agwgfqfbg4::::res://Godot_Game_Files/Assets/Music_Sounds/Radio.tscn<>uid://c78uxvq3ytj03::::res://Godot_Game_Files/Assets/Characters/npc_2.tscn<>uid://dmt205xpr5cs::::res://Godot_Game_Files/Assets/Fonts/chatbubble.png<>uid://15rwt1q3ccjm::::res://Godot_Game_Files/chats/chat_1.tscn<>uid://bgjesj5di2ixk::::res://Godot_Game_Files/Assets/Characters/npc_3.tscn<>uid://cslssty13vqwr::::res://Godot_Game_Files/Assets/Characters/node_2d.tscn<>uid://ntcob37ojm7b::::res://Godot_Game_Files/score.gd<>uid://dvcynifnfhk4c::::res://Godot_Game_Files/Assets/Buttons/!alert.tscn<>uid://b34psro2563xl::::res://Godot_Game_Files/Assets/Fonts/dogicapixel.otf<>uid://b14l2wwp0qdu3::::res://Godot_Game_Files/Assets/Characters/Player.gd
+game.tscn::PackedScene::4496334778093530289::1763518695::0::1::::<><><>0<>0<><>::uid://by34sk16ycs2r::::res://Godot_Game_Files/event_tree.gd<>uid://bnpveoij6ge22::::res://Godot_Game_Files/Assets/Characters/Player.tscn<>uid://dsuhcbcpm4ryw::::res://Godot_Game_Files/Assets/Characters/office background.png<>uid://dk2cmsxd8bsft::::res://Godot_Game_Files/Puzzles/Phil/phising emails/phising_email.tscn<>uid://nnlmyeh6m0oq::::res://Godot_Game_Files/Assets/Characters/npc_boss.tscn<>uid://spynjnwq75ou::::res://Godot_Game_Files/Assets/Fonts/Tokyo.ttf<>uid://c2d6ehiuccdsh::::res://Godot_Game_Files/Assets/Characters/npc_1.tscn<>uid://r1agwgfqfbg4::::res://Godot_Game_Files/Assets/Music_Sounds/Radio.tscn<>uid://c78uxvq3ytj03::::res://Godot_Game_Files/Assets/Characters/npc_2.tscn<>uid://15rwt1q3ccjm::::res://Godot_Game_Files/chats/chat_1.tscn<>uid://bgjesj5di2ixk::::res://Godot_Game_Files/Assets/Characters/npc_3.tscn<>uid://cslssty13vqwr::::res://Godot_Game_Files/Assets/Characters/node_2d.tscn<>uid://ntcob37ojm7b::::res://Godot_Game_Files/score.gd<>uid://dvcynifnfhk4c::::res://Godot_Game_Files/Assets/Buttons/!alert.tscn<>uid://b14l2wwp0qdu3::::res://Godot_Game_Files/Assets/Characters/Player.gd
 icon.svg::CompressedTexture2D/CompressedTexture2D::2334768477749310885::1763143160::1763423194::1::::<><><>0<>0<>5cac525587c1cb000462b0833be2b1a9<>res://.godot/imported/icon.svg-b68f511828899fb9833a3da6a5abf99a.ctex::
 label.gd::GDScript::418680082921849346::1763147466::0::1::::<>Label<><>0<>0<><>::
 main_menu.gd::GDScript::5439587765012934100::1763143160::0::1::::<>Control<><>0<>0<><>::
 main_menu.tscn::PackedScene::3180186416653221949::1763147466::0::1::::<><><>0<>0<><>::uid://cjq8hloctmi4k::::res://Godot_Game_Files/main_menu.gd<>uid://bbfkejl6q1peb::::res://Godot_Game_Files/Assets/Environment/office buidling outside.png<>uid://c8e2ixmm7xoo8::::res://Godot_Game_Files/Assets/Music_Sounds/MainMenu.mp3
-timeline.dtl::Resource/DialogicTimeline::7980755787174866827::1763507316::0::1::::<><>uid://j7ym07anlusi<>0<>0<><>::uid://ciqdfnu6b3se
+timeline.dtl::Resource/DialogicTimeline::7980755787174866827::1763518695::0::1::::<><>uid://j7ym07anlusi<>0<>0<><>::uid://clws6l56cb4sl
 score.gd::GDScript::951824676972642969::1763385773::0::1::::<>Label<><>0<>0<><>::
-::res://Godot_Game_Files/Assets/::1763386043
-phising_email.gd::GDScript::2930690105733322564::1763386043::0::1::::<>Node2D<><>0<>0<><>::
-::res://Godot_Game_Files/Assets/Buttons/::1763505086
-!alert.gd::GDScript::5735775271104392705::1763385564::0::1::::<>Area2D<><>0<>0<><>::
+::res://Godot_Game_Files/Assets/::1763514012
+phising_email.gd::GDScript::2930690105733322564::1763514012::0::1::::<>Node2D<><>0<>0<><>::
+::res://Godot_Game_Files/Assets/Buttons/::1763513789
+!alert.gd::GDScript::5735775271104392705::1763513789::0::1::::<>Area2D<><>0<>0<><>::
 !alert.tscn::PackedScene::8638837374641714668::1763149343::0::1::::<><><>0<>0<><>::uid://5uxvwx0uubex::::res://Godot_Game_Files/Assets/Buttons/AlertIcon.png<>uid://cnypm7dlt5b66::::res://Godot_Game_Files/Assets/Buttons/!alert.gd<>uid://b34psro2563xl::::res://Godot_Game_Files/Assets/Fonts/dogicapixel.otf
 accept button.png::CompressedTexture2D/CompressedTexture2D::7397783149449426296::1763143160::1763423194::1::::<><><>0<>0<>d152f427da06f0b4642a5382b1b8adf2<>res://.godot/imported/accept button.png-01d24599029e51ca01aa2e669002cdb8.ctex::
 AlertIcon.png::CompressedTexture2D/CompressedTexture2D::2148388048935402979::1763143160::1763423194::1::::<><><>0<>0<>a71ac8ac4cc9156d91b648d758b7ef39<>res://.godot/imported/AlertIcon.png-a8a4fad859260b6abb148593cff1d234.ctex::
@@ -652,7 +652,7 @@ alter2.tscn::PackedScene::5314573909045526377::1763147477::0::1::::<><><>0<>0<><
 altermovement.gd::GDScript::5055898027446569915::1763143160::0::1::::<>CharacterBody2D<><>0<>0<><>::
 alter_2.gd::GDScript::1542262920673436585::1763505086::0::1::::<>Area2D<><>0<>0<><>::
 reject button.png::CompressedTexture2D/CompressedTexture2D::6093783708605276213::1763143160::1763423194::1::::<><><>0<>0<>b1520c9337a69a75ff545662b453e0ad<>res://.godot/imported/reject button.png-573632ecfdb867de2303baddffff1ddc.ctex::
-::res://Godot_Game_Files/Assets/Characters/::1763508010
+::res://Godot_Game_Files/Assets/Characters/::1763518779
 accept button.png::CompressedTexture2D/CompressedTexture2D::6572363027638708222::1763143160::1763423194::1::::<><><>0<>0<>3dc2eb957e025157d6def5aa9fffc498<>res://.godot/imported/accept button.png-0769b21e46e29a143f668585243b129c.ctex::
 animated_sprite_2d.gd::GDScript::9055779254693541207::1763147466::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
 boss headshot.png::CompressedTexture2D::8468594078309153239::1763508010::1763508010::1::::<><><>0<>0<>241f89d22700027fd11c4e8d0f0b7489<>res://.godot/imported/boss headshot.png-38b28c38938d241943fa61a46e4f8494.ctex::
@@ -673,6 +673,7 @@ npc_2.tscn::PackedScene::7088265371814598570::1763147466::0::1::::<><><>0<>0<><>
 npc_3.tscn::PackedScene::2826408676771539312::1763147466::0::1::::<><><>0<>0<><>::uid://cuw4m5opjrwaa::::res://Godot_Game_Files/Assets/Characters/character_sprite_trey.png<>uid://bpognu288fpnf::::res://Godot_Game_Files/Assets/Characters/npc_idle.gd
 npc_boss.tscn::PackedScene::939982461644084480::1763147466::0::1::::<><><>0<>0<><>::uid://bpognu288fpnf::::res://Godot_Game_Files/Assets/Characters/npc_idle.gd<>uid://djd7vx6arbfkv::::res://Godot_Game_Files/Assets/Characters/boss.png
 npc_idle.gd::GDScript::3468543237818190611::1763147466::0::1::::<>Node2D<><>0<>0<><>::
+office background2.png::CompressedTexture2D::6364948660188064352::1763518779::1763518779::1::::<><><>0<>0<>13cd31e673ec7107692e52014bab8252<>res://.godot/imported/office background2.png-0f3de059284883680b2c4f01c7370f54.ctex::
 office background.png::CompressedTexture2D/CompressedTexture2D::8464377438493943314::1763143160::1763423194::1::::<><><>0<>0<>2b547588b1e1697e605daa289eda07d0<>res://.godot/imported/office background.png-10effa282291c51f5ea29db5c0ffaedd.ctex::
 Player.gd::GDScript::4271914866720512960::1763147466::0::1::::<>Node2D<><>0<>0<><>::
 Player.tscn::PackedScene::3331124265458057985::1763384443::0::1::::<><><>0<>0<><>::uid://cwoaypo7pqsl8::::res://Godot_Game_Files/Assets/Characters/character_body_2d.gd<>uid://pgxojkea1fot::::res://Godot_Game_Files/Assets/Characters/character 1.png
@@ -683,19 +684,19 @@ Computer Screen.png::CompressedTexture2D/CompressedTexture2D::233991994752692517
 office background.png::CompressedTexture2D/CompressedTexture2D::1220194085289192240::1763143160::1763423194::1::::<><><>0<>0<>f64b4dc4f82a9b5380a6eeca7087c2fb<>res://.godot/imported/office background.png-7a7f4169fd2e8b97bc5ecaa23cb56da9.ctex::
 office buidling outside.png::CompressedTexture2D/CompressedTexture2D::2467546220338635317::1763143160::1763423195::1::::<><><>0<>0<>c267913da8481ec75141f4a7f128b9dc<>res://.godot/imported/office buidling outside.png-9198003622675eca84fbf4af39a3a292.ctex::
 pc.png::CompressedTexture2D/CompressedTexture2D::7486293084894177812::1763143160::1763423194::1::::<><><>0<>0<>2c391f94eaf376b6426bf1b3eda06f3d<>res://.godot/imported/pc.png-e2726f9b0deb10f68709d0add2c51bfb.ctex::
-::res://Godot_Game_Files/Assets/Fonts/::1763506737
+::res://Godot_Game_Files/Assets/Fonts/::1763508349
 chatbubble.png::CompressedTexture2D/CompressedTexture2D::236542263754458278::1763147466::1763423194::1::::<><><>0<>0<>ea8bf940e2a03e413979ded3a6aa8344<>res://.godot/imported/chatbubble.png-81f324d4b140d2fb2c28d29c9e09d112.ctex::
 dogicapixel.otf::FontFile/FontFile::4412519075399838785::1763147466::1763423194::1::::<><><>0<>0<>5f5fe44b5d998497cb1730bcc40060bf<>res://.godot/imported/dogicapixel.otf-72ba52e0d7022c70a8e59ad6c1bc5103.fontdata::
 EtBt6001-JO47.ttf::FontFile/FontFile::2185173312640393926::1763147466::1763423194::1::::<><><>0<>0<>f928d8e74f78658d42be58df43370752<>res://.godot/imported/EtBt6001-JO47.ttf-0a60e556e8a45beeef6b8485ee8a4a91.fontdata::
-New_File.tres::Resource/DialogicStyle::2887477050721088772::1763506737::0::1::::<><><>0<>0<><>::uid://cqpb3ie51rwl5::::res://addons/dialogic/Modules/DefaultLayoutParts/Base_Default/default_layout_base.tscn<>uid://bwg6yncmh2cml::::res://addons/dialogic/Resources/dialogic_style_layer.gd<>uid://c1k5m0w3r40xf::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn<>uid://cy1y14inwkplb::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn<>uid://cn674foxwedqu::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn<>uid://bquja8jyk8kbr::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn<>uid://dsbwnp5hegnu3::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn<>uid://dhk6j6eb6e3q::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn<>uid://cvgf4c6gg0tsy::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn<>uid://lx24i8fl6uo::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn<>uid://dv08k6ljua6fm::::res://addons/dialogic/Resources/dialogic_style.gd
+New_File.tres::Resource/DialogicStyle::2887477050721088772::1763508349::0::1::::<><><>0<>0<><>::uid://cqpb3ie51rwl5::::res://addons/dialogic/Modules/DefaultLayoutParts/Base_Default/default_layout_base.tscn<>uid://bwg6yncmh2cml::::res://addons/dialogic/Resources/dialogic_style_layer.gd<>uid://c1k5m0w3r40xf::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn<>uid://cy1y14inwkplb::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn<>uid://cn674foxwedqu::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn<>uid://bquja8jyk8kbr::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn<>uid://dsbwnp5hegnu3::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn<>uid://dhk6j6eb6e3q::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn<>uid://cvgf4c6gg0tsy::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn<>uid://lx24i8fl6uo::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn<>uid://dv08k6ljua6fm::::res://addons/dialogic/Resources/dialogic_style.gd
 Tokyo.ttf::FontFile/FontFile::1295845768757500648::1763147466::1763423194::1::::<><><>0<>0<>f40068d3c9cecd69c979bd5b3d2801e8<>res://.godot/imported/Tokyo.ttf-057cdb7dfc6b0b657122c9a4c5ef5de4.fontdata::
-::res://Godot_Game_Files/Assets/Music_Sounds/::1763423194
+::res://Godot_Game_Files/Assets/Music_Sounds/::1763514526
 alert-sound.mp3::AudioStreamMP3/AudioStreamMP3::8111576320002208764::1763143160::1763147406::1::::<><><>0<>0<>eeae995b9147e40b387f1de92354fa2f<>res://.godot/imported/alert-sound.mp3-ffbc13485df434d94c17317320ba9e1d.mp3str::
 character_body_2d.gd::GDScript::6665880798168485101::1763143160::0::1::::<>CharacterBody2D<><>0<>0<><>::
 label.gd::GDScript::2966452270823461497::1763143160::0::1::::<>Label<><>0<>0<><>::
 MainMenu.mp3::AudioStreamMP3/AudioStreamMP3::7098985590777058413::1763143160::1763147406::1::::<><><>0<>0<>94ca014941eb6606e4ea9f74b2157aa0<>res://.godot/imported/MainMenu.mp3-fcda2eb3af6b2e997cf92cf7a620144b.mp3str::
 Radio.png::CompressedTexture2D/CompressedTexture2D::8066116331833744029::1763143160::1763423194::1::::<><><>0<>0<>6afe8064414c47d82b77a559be1339e9<>res://.godot/imported/Radio.png-2275bd0071f1055ba4f1504a437d8aaa.ctex::
-Radio.tscn::PackedScene::1246896043246820149::1763147466::0::1::::<><><>0<>0<><>::uid://dm6j00xhfrwgb::::res://Godot_Game_Files/Assets/Music_Sounds/Radio.png<>uid://c18ac21jm875j::::res://Godot_Game_Files/Assets/Music_Sounds/character_body_2d.gd<>uid://b5haqdryi2462::::res://Godot_Game_Files/Assets/Music_Sounds/Radiounit.png
+Radio.tscn::PackedScene::1246896043246820149::1763514526::0::1::::<><><>0<>0<><>::uid://dm6j00xhfrwgb::::res://Godot_Game_Files/Assets/Music_Sounds/Radio.png<>uid://c18ac21jm875j::::res://Godot_Game_Files/Assets/Music_Sounds/character_body_2d.gd<>uid://b5haqdryi2462::::res://Godot_Game_Files/Assets/Music_Sounds/Radiounit.png
 Radiounit.png::CompressedTexture2D/CompressedTexture2D::4506565394748931525::1763143160::1763423194::1::::<><><>0<>0<>43c4e4e65c7e7984ab25a291fcc6461f<>res://.godot/imported/Radiounit.png-0da631acd1f6ab5e18c17ba154ff0dc6.ctex::
 song1.mp3::AudioStreamMP3/AudioStreamMP3::5772497819958163211::1763143160::1763147406::1::::<><><>0<>0<>deab2ff9b9e657e341bbe0a0cdb8621b<>res://.godot/imported/song1.mp3-6e73684ab37286efe55cda8212b0ac16.mp3str::
 song2.mp3::AudioStreamMP3/AudioStreamMP3::1428687960835138483::1763143160::1763147406::1::::<><><>0<>0<>946cd5f0fbbf530495044bb07eb8a832<>res://.godot/imported/song2.mp3-0d1fc4d902b3d56fef9783bbd1b5d877.mp3str::
@@ -705,9 +706,10 @@ song5.mp3::AudioStreamMP3/AudioStreamMP3::8336598063188865232::1763143160::17631
 song6.mp3::AudioStreamMP3/AudioStreamMP3::115203555689453307::1763143160::1763147406::1::::<><><>0<>0<>f3a9c23ee6223a2a8067d0c269ec6afa<>res://.godot/imported/song6.mp3-576bbcd6ba99994c59308100325e0b04.mp3str::
 song7.mp3::AudioStreamMP3/AudioStreamMP3::1777337481967793787::1763143160::1763147406::1::::<><><>0<>0<>882477ccf401d76ca48b17edce46eba1<>res://.godot/imported/song7.mp3-8687677f12b426f8a10768b20063acfd.mp3str::
 song8.mp3::AudioStreamMP3/AudioStreamMP3::313076210291745300::1763143160::1763147406::1::::<><><>0<>0<>adb1b53d8f615eac6ef025029af6dd6a<>res://.godot/imported/song8.mp3-eeca4d9658768d22337d4c37153a860f.mp3str::
-::res://Godot_Game_Files/chats/::1763507445
+::res://Godot_Game_Files/chats/::1763510886
 chat_1.tscn::PackedScene::1887913782426605846::1763507316::0::1::::<><><>0<>0<><>::uid://cpuynfm4fhv7c::::res://node_2d.gd
-boss.dch::Resource/DialogicCharacter::5591483848986949867::1763507445::0::1::::<><>uid://bbea0efx0ybu7<>0<>0<><>::
+boss.dch::Resource/DialogicCharacter::5591483848986949867::1763510886::0::1::::<><>uid://bbea0efx0ybu7<>0<>0<><>::res://Godot_Game_Files/Assets/Characters/boss headshot.png
+ChatProfile.tres::Resource/DialogicStyle::3846369230267136174::1763508886::0::1::::<><><>0<>0<><>::uid://cqpb3ie51rwl5::::res://addons/dialogic/Modules/DefaultLayoutParts/Base_Default/default_layout_base.tscn<>uid://bwg6yncmh2cml::::res://addons/dialogic/Resources/dialogic_style_layer.gd<>uid://c1k5m0w3r40xf::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn<>uid://cn674foxwedqu::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn<>uid://by6waso0mjpjp::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/textbox_with_speaker_portrait.tscn<>uid://dsbwnp5hegnu3::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn<>uid://dhk6j6eb6e3q::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn<>uid://cvgf4c6gg0tsy::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn<>uid://lx24i8fl6uo::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn<>uid://dv08k6ljua6fm::::res://addons/dialogic/Resources/dialogic_style.gd
 ::res://Godot_Game_Files/Puzzles/::1763423194
 computer puzzle example.png::CompressedTexture2D/CompressedTexture2D::1043593099524158288::1763143160::1763423194::1::::<><><>0<>0<>bbb6429e8e88a4f4932c685393ce8888<>res://.godot/imported/computer puzzle example.png-1a6fd22ea254db275d824bfdc306db36.ctex::
 pc_display.tscn::PackedScene::5910256982078114652::1763143160::0::1::::<><><>0<>0<><>::uid://o4r3cyk54meq::::res://Godot_Game_Files/Puzzles/computer puzzle example.png
