@@ -1,0 +1,19 @@
+[style name="ChatProfile"]
+if {chatstep} == 0.0:
+	boss: Hello there!
+	boss: My name is Georgio, I am your new boss! Your job here is simple..
+	boss: You will see a ! above anyone who needs help. Make sure you guide them correctly. The more bad things you prevent the more money I... I mean we.. make.
+	boss: I have noticed that some of our employees have been getting some strange emails. Go through them and make sure no one accidentally destroys the company!
+	boss: Remeber our company motto\: SHAREHOLDER VALUE > I
+	[signal arg="complete_chat1"]
+elif {chatstep} == 1.0:
+	boss: Welp thanks for that. But it looks like Henry is having some trouble too..
+	boss: Seems pretty onvious to me, but give him some guidance on his email.
+	[signal arg="complete_chat2"]
+elif {chatstep} == 2.0:
+	boss: Well.. I hope you learned something.
+	boss: I heard through the grapvine that Jeff - the very overpaid janitor (in my opinion) - has been in communication with out competitors!
+	boss: Lucy said she saw him plugging in a USB into a computer! Sounds like a keylogger! OR WORSE, STOLEN FILES! Go check it out!
+	boss: And make it quick, time is of the esence! I can feel our shareholder value droping by the second!
+	[signal arg="complete_chat3"]
+[end_timeline]

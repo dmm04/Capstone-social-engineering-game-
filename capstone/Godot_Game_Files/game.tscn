@@ -1,8 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://b5cb8hi831nnt"]
+[gd_scene load_steps=19 format=3 uid="uid://b5cb8hi831nnt"]
 
 [ext_resource type="Script" uid="uid://by34sk16ycs2r" path="res://Godot_Game_Files/event_tree.gd" id="1_eqekq"]
 [ext_resource type="PackedScene" uid="uid://bnpveoij6ge22" path="res://Godot_Game_Files/Assets/Characters/Player.tscn" id="1_l7whm"]
-[ext_resource type="PackedScene" uid="uid://chyoixyqe0874" path="res://Godot_Game_Files/Assets/Buttons/alter2.tscn" id="2_7nhs0"]
 [ext_resource type="Texture2D" uid="uid://dsuhcbcpm4ryw" path="res://Godot_Game_Files/Assets/Characters/office background.png" id="2_60j76"]
 [ext_resource type="PackedScene" uid="uid://dk2cmsxd8bsft" path="res://Godot_Game_Files/Puzzles/Phil/phising emails/phising_email.tscn" id="2_hw1hp"]
 [ext_resource type="PackedScene" uid="uid://nnlmyeh6m0oq" path="res://Godot_Game_Files/Assets/Characters/npc_boss.tscn" id="3_2s8f0"]
@@ -10,52 +9,45 @@
 [ext_resource type="PackedScene" uid="uid://c2d6ehiuccdsh" path="res://Godot_Game_Files/Assets/Characters/npc_1.tscn" id="4_1og58"]
 [ext_resource type="PackedScene" uid="uid://r1agwgfqfbg4" path="res://Godot_Game_Files/Assets/Music_Sounds/Radio.tscn" id="5_60j76"]
 [ext_resource type="PackedScene" uid="uid://c78uxvq3ytj03" path="res://Godot_Game_Files/Assets/Characters/npc_2.tscn" id="6_w2jga"]
-[ext_resource type="Texture2D" uid="uid://dmt205xpr5cs" path="res://Godot_Game_Files/Assets/Fonts/chatbubble.png" id="7_gy2er"]
+[ext_resource type="PackedScene" uid="uid://15rwt1q3ccjm" path="res://Godot_Game_Files/chats/chat_1.tscn" id="7_hw1hp"]
 [ext_resource type="PackedScene" uid="uid://bgjesj5di2ixk" path="res://Godot_Game_Files/Assets/Characters/npc_3.tscn" id="7_woipg"]
 [ext_resource type="PackedScene" uid="uid://cslssty13vqwr" path="res://Godot_Game_Files/Assets/Characters/node_2d.tscn" id="8_prroa"]
 [ext_resource type="Script" uid="uid://ntcob37ojm7b" path="res://Godot_Game_Files/score.gd" id="9_2npts"]
 [ext_resource type="PackedScene" uid="uid://dvcynifnfhk4c" path="res://Godot_Game_Files/Assets/Buttons/!alert.tscn" id="9_woipg"]
-[ext_resource type="FontFile" uid="uid://b34psro2563xl" path="res://Godot_Game_Files/Assets/Fonts/dogicapixel.otf" id="14_1jyk3"]
 [ext_resource type="Script" uid="uid://b14l2wwp0qdu3" path="res://Godot_Game_Files/Assets/Characters/Player.gd" id="14_eqekq"]
 
 [sub_resource type="GDScript" id="GDScript_woipg"]
 script/source = "extends Node
 var score: int = 0
 
-
-
-#EVENT TIME LINE DO NOT CHANGE! 
-
+#EVENT TIME LINE DO NOT CHANGE! #EVENT TIME LINE DO NOT CHANGE! #EVENT TIME LINE DO NOT CHANGE! #EVENT TIME LINE DO NOT CHANGE! 
+#EVENT TIME LINE DO NOT CHANGE! #EVENT TIME LINE DO NOT CHANGE! #EVENT TIME LINE DO NOT CHANGE! #EVENT TIME LINE DO NOT CHANGE! 
+func _ready():
+	$Player/CharacterBody2D/Playercamera2d.make_current()
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+	$Event_Tree/Puzzles/EmailAlert.visible = false
+	$Event_Tree/Puzzles/EmailAlert.set_process(false)
+	
+func _on_dialogic_signal(argument: String):
+	if argument == \"complete_chat1\": 
+		$Event_Tree/Puzzles/EmailAlert.set_process(true)
+		$Event_Tree/Puzzles/EmailAlert.visible = true
+	elif argument == \"complete_chat2\":
+		$Event_Tree/Puzzles/EmailAlert.set_process(true)
+		$Event_Tree/Puzzles/EmailAlert.visible = true
+		$Event_Tree/Puzzles/EmailAlert.position = Vector2(357, 371)
+		
+		
 func _process(_delta: float) -> void:
-	if Global.counter == 0:
+	if Global.counter == 1:
 		$Event_Tree/Puzzles/EmailAlert.set_process(false)
 		$Event_Tree/Puzzles/EmailAlert.visible = false
 		$PhisingEmail.set_process(false)
-		$Player/CharacterBody2D/Playercamera2d.make_current()
-		
-	elif Global.counter == 1:
-		$Event_Tree/ChatArea.set_process(false)
-		$Event_Tree/Puzzles/EmailAlert.set_process(true)
-		$Event_Tree/Puzzles/EmailAlert.visible = true
+		run_timeline()
 
-	elif Global.counter == 2:
-		#---------------------------------------------#
-		#make step 1 invisible/chat visible
-		$Event_Tree/ChatArea.set_process(true)
-		$Event_Tree/Puzzles/EmailAlert.set_process(false)
-		$Event_Tree/Puzzles/EmailAlert.visible = false
-		$Event_Tree/Label.visible = true
-		$Event_Tree/Chatbubble.visible = true
-		Global.counter += 1
-		print (\"event counter: \", Global.counter)
-	elif Global.counter == 3:
-		#----------------------------------------------#
-		#make step 2 visible chat is now invisible counter goes to 3
-		pass
-	elif Global.counter == 4:
-		pass
-		
-		
+func run_timeline():
+	Dialogic.start(\"timeline\")
+	Global.counter += 1
 	
 "
 
@@ -70,7 +62,7 @@ position = Vector2(17, 23)
 script = SubResource("GDScript_woipg")
 
 [node name="PhisingEmail" parent="." instance=ExtResource("2_hw1hp")]
-position = Vector2(-9.434998, -604.19006)
+position = Vector2(-9.435, -604.19)
 
 [node name="Event_Tree" type="Node" parent="."]
 script = ExtResource("1_eqekq")
@@ -78,31 +70,12 @@ script = ExtResource("1_eqekq")
 [node name="Puzzles" type="Node" parent="Event_Tree"]
 
 [node name="EmailAlert" parent="Event_Tree/Puzzles" instance=ExtResource("9_woipg")]
-position = Vector2(109.94, 371.59)
+position = Vector2(109, 371)
 monitorable = false
 
-[node name="ChatArea" parent="Event_Tree" instance=ExtResource("2_7nhs0")]
-position = Vector2(813.114, 371.23)
-scale = Vector2(1.04545, 0.954183)
-monitorable = false
+[node name="Chats" type="Node" parent="Event_Tree"]
 
-[node name="Label" type="Label" parent="Event_Tree"]
-z_index = 2
-offset_left = 650.0
-offset_top = 296.0
-offset_right = 802.0
-offset_bottom = 429.23
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("14_1jyk3")
-theme_override_font_sizes/font_size = 8
-text = "WELCOME! Your job here is simple. Make sure no one does anything. 
-The more disastors you prevent, the more money I... I mean we make!"
-autowrap_mode = 2
-
-[node name="Chatbubble" type="Sprite2D" parent="Event_Tree"]
-position = Vector2(721.681, 337.5)
-scale = Vector2(3.6383, 3.36667)
-texture = ExtResource("7_gy2er")
+[node name="Chat1" parent="Event_Tree/Chats" instance=ExtResource("7_hw1hp")]
 
 [node name="NPC\'s" type="Node" parent="."]
 
@@ -167,5 +140,3 @@ script = ExtResource("9_2npts")
 
 [connection signal="body_entered" from="Event_Tree/Puzzles/EmailAlert" to="Event_Tree/Puzzles/EmailAlert" method="_on_body_entered"]
 [connection signal="body_exited" from="Event_Tree/Puzzles/EmailAlert" to="Event_Tree/Puzzles/EmailAlert" method="_on_body_exited"]
-[connection signal="body_entered" from="Event_Tree/ChatArea" to="Event_Tree/ChatArea" method="_on_body_entered"]
-[connection signal="body_exited" from="Event_Tree/ChatArea" to="Event_Tree/ChatArea" method="_on_body_exited"]

@@ -9,7 +9,7 @@ var continue_chat = 0
 func _ready():
 	# Start the popup animation
 	sprite.play("float")
-
+	'''
 # Must include delta parameter to match parent signature
 func _process(_delta: float) -> void:
 	# Only check for interact press if player is in the area
@@ -17,20 +17,31 @@ func _process(_delta: float) -> void:
 		if player_in_area2 and Input.is_action_just_pressed("interact"):
 			continue_text()
 			continue_chat = 1
-	elif Global.counter == 2:
-		pass
 	elif Global.counter == 3:
-		$".".visible = true
-		$"../Label".text = "Well I hope you learned something. I heard rumor of a shadowy character running around plugging in usb's into systems. Quickly go find it before they system is compromised!"
+		self.visible = true
+		$"../Label".text = "Well I hope you learned something."
 		if player_in_area2 and Input.is_action_just_pressed("interact"):
-			Global.counter += 1
-			print ("event counter: ", Global.counter)
+			print("Counter advanced to:", Global.counter)
+			chat_3()
+			
 
+func chat_3():
+	if continue_chat == 4:
+		$"../Label".text ="I heard rumor of a shadowy character running around plugging in usb's into systems. Quickly go find it before the system is compromised!"
+		chat_close()
+
+func chat_close():
+	if player_in_area2 and Input.is_action_just_pressed("interact"):
+		$"../Label".visible = false
+		$".".visible = false
+		$"../Chatbubble".visible = false 
+		Global.counter += 1
+		print("event counter: ", Global.counter)
 
 func _on_body_entered(_body):
 		player_in_area2 = true
 		message_label.visible = true
-		print("Body Entered")
+		print("Body Entered chat area")
 
 func _on_body_exited(_body):
 		player_in_area2 = false
@@ -50,4 +61,4 @@ func continue1():
 			Global.counter += 1
 			print ("event counter: ", Global.counter)
 
-	
+	'''
