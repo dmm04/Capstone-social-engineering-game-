@@ -1,4 +1,6 @@
 [style name="ChatProfile"]
+WELCOME TO THE BUSINESS OFFICE! LICK YOUR MOUSE TO START!
+Sorry, I meant\: CLICK YOUR MOUSE TO START!
 if {chatstep} == 0.0:
 	boss: Hello there!
 	boss: My name is Georgio, I am your new boss! Your job here is simple..
@@ -11,8 +13,14 @@ elif {chatstep} == 1.0:
 	boss: Seems pretty onvious to me, but give him some guidance on his email.
 	[signal arg="complete_chat2"]
 elif {chatstep} == 2.0:
-	boss: Well.. I hope you learned something.
-	boss: I heard through the grapvine that Jeff - the very overpaid janitor (in my opinion) - has been in communication with out competitors!
+	Love_Interest: Hey, names Lucy.. I just wanted to introduce myself.. Maybe you can join me on the roof for a cigarette some time..
+	- Sorry I'm married
+		Love_Interest: She doesn't have to know...
+	- I only vape..
+		Love_Interest: Lame dude.
+	- Sure, I love to smell like burning ash all day!
+		Love_Interest: Sounds good, I'll meet you there if we get a shareholder value of at least $500 *licks lips*
+	boss: Hey.. I saw you talking to my wife.. Boy do I love her! Anyways, I heard through the grapvine that Jeff - the very overpaid janitor (in my opinion) - has been in communication with out competitors!
 	boss: Lucy said she saw him plugging in a USB into a computer! Sounds like a keylogger! OR WORSE, STOLEN FILES! Go check it out!
 	boss: And make it quick, time is of the esence! I can feel our shareholder value droping by the second!
 	[signal arg="complete_chat3"]

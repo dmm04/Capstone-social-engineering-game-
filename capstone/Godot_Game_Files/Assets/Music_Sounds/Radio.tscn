@@ -80,7 +80,7 @@ position = Vector2(1, 0)
 volume_db = -2.862
 autoplay = true
 max_distance = 875.0
-attenuation = 1.1021904
+attenuation = 1.10219
 
 [node name="InteractionZone" type="Area2D" parent="."]
 

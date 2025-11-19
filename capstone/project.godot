@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Capstone"
 run/main_scene="uid://blkrg8y6e0san"
-config/features=PackedStringArray("4.5", "GL Compatibility")
+config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [audio]
@@ -27,6 +27,7 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Love_Interest": "res://Godot_Game_Files/chats/Love_Interest.dch",
 "boss": "res://Godot_Game_Files/chats/boss.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
@@ -36,7 +37,7 @@ directories/dtl_directory={
 layout/style_directory={
 "ChatProfile": "res://Godot_Game_Files/chats/ChatProfile.tres"
 }
-layout/style_list=["res://Godot_Game_Files/chats/ChatProfile.tres"]
+layout/style_list=["res://Godot_Game_Files/chats/ChatProfile.tres", ""]
 layout/default_style=""
 glossary/default_case_sensitive=true
 variables={

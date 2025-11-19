@@ -45,10 +45,22 @@ func _process(_delta: float) -> void:
 		$Event_Tree/Puzzles/EmailAlert.visible = false
 		$PhisingEmail.set_process(false)
 		run_timeline()
-
+	elif Global.counter == 3:
+		$Event_Tree/Puzzles/EmailAlert.set_process(false)
+		$Event_Tree/Puzzles/EmailAlert.visible = false
+		$PhisingEmail.set_process(false)
+		run_timeline()
+		
+	elif Global.counter == 4:
+		$Event_Tree/Puzzles/EmailAlert.set_process(false)
+		$Event_Tree/Puzzles/EmailAlert.visible = false
+		$PhisingEmail.set_process(false)
+		run_timeline()
+		
 func run_timeline():
 	Dialogic.start(\"timeline\")
 	Global.counter += 1
+	print(\"event counter: \", Global.counter)
 	
 "
 
@@ -106,8 +118,8 @@ offset = Vector2(0.46, 0)
 
 [node name="OfficeBackground2" type="Sprite2D" parent="Background"]
 z_index = 9
-position = Vector2(615.0007, 411.00003)
-scale = Vector2(0.6316139, 0.6208789)
+position = Vector2(615.001, 411)
+scale = Vector2(0.631614, 0.620879)
 texture = ExtResource("4_eqekq")
 offset = Vector2(0.005, 0)
 
