@@ -1,7 +1,12 @@
-res://Godot_Game_Files/main_menu.tscn
+res://Godot_Game_Files/timeline.dtl
 res://Godot_Game_Files/game.tscn
-res://Godot_Game_Files/Assets/Buttons/!alert.tscn
-res://Godot_Game_Files/Puzzles/Phil/phising emails/phising_email.tscn
-res://Godot_Game_Files/Assets/Characters/Player.tscn
-res://Godot_Game_Files/Assets/Music_Sounds/Radio.tscn
 res://Godot_Game_Files/Assets/Buttons/alter_2.gd
+res://Godot_Game_Files/Assets/Fonts/New_File.tres
+res://node_2d.gd
+res://Godot_Game_Files/chats/chat_1.tscn
+res://Godot_Game_Files/chats/boss.dch
+res://Godot_Game_Files/chats/ChatProfile.tres
+res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/default_stylebox.tres
+res://Godot_Game_Files/Assets/phising_email.gd
+res://Godot_Game_Files/Assets/Buttons/!alert.gd
+res://Godot_Game_Files/Assets/Music_Sounds/Radio.tscn

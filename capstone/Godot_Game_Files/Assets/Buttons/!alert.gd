@@ -23,4 +23,5 @@ func _on_body_exited(_body):
 
 func open_puzzle_scene():
 	$"../../../PhisingEmail".set_process(true)
+	$"../../../PhisingEmail".reset_alert()
 	$"../../../PhisingEmail/phisingemailcamera2d".make_current()

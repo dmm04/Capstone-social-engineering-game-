@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://r1agwgfqfbg4"]
+[gd_scene load_steps=9 format=3 uid="uid://r1agwgfqfbg4"]
 
 [ext_resource type="Texture2D" uid="uid://dm6j00xhfrwgb" path="res://Godot_Game_Files/Assets/Music_Sounds/Radio.png" id="2_6itx7"]
 [ext_resource type="Script" uid="uid://c18ac21jm875j" path="res://Godot_Game_Files/Assets/Music_Sounds/character_body_2d.gd" id="2_n3c28"]
@@ -43,9 +43,6 @@ func _on_song_finished():
 	play_song(current_index)
 "
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_j3bdh"]
-size = Vector2(33, 71)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_6itx7"]
 atlas = ExtResource("2_6itx7")
 region = Rect2(38, 0, 19, 18)
@@ -82,14 +79,10 @@ script = SubResource("GDScript_tsqcv")
 position = Vector2(1, 0)
 volume_db = -2.862
 autoplay = true
-max_distance = 666.0
-attenuation = 2.92817
+max_distance = 875.0
+attenuation = 1.1021904
 
 [node name="InteractionZone" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionZone"]
-position = Vector2(-0.5, 25.5)
-shape = SubResource("RectangleShape2D_j3bdh")
 
 [node name="Label" type="Label" parent="InteractionZone"]
 visible = false
