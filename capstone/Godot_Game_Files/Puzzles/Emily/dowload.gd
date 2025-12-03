@@ -23,9 +23,6 @@ var correct_flags = 0
 var incorrect_flags = 0
 
 func _ready():
-	intro_label.text = "Welcome to the game 'Find the Malware'. \nYour task is to identify and flag all malicious files. \nYou only get one chance per file, choose wisely! \nClick to begin"
-	continue_button.connect("pressed", Callable(self, "_on_continue_pressed"))
-	popup.hide()
 	for i in range(file_buttons.size()):
 		var button = file_buttons[i]
 		button.get_node("FileLabel").text = filenames[i]
@@ -67,14 +64,9 @@ func _on_file_pressed(button):
 
 	popup.popup_centered()
 
-func _on_continue_pressed():
-	intro_popup.hide()
-
-func _on_start_button_pressed():
-	popup.hide()
 
 func _on_return_pressed():
-	get_tree().change_scene_to_file("res://Godot_Game_Files/game.tscn")
+	$"../Player/CharacterBody2D/Playercamera2d".make_current()
 
 func show_score_popup():
 	var attempts = correct_flags + incorrect_flags
@@ -87,3 +79,10 @@ func show_score_popup():
 #	for button in file_buttons:
 #		button.set_meta("flagged", false)
 #		button.get_node("Flag").visible = false
+
+
+func _on_continue_2_pressed() -> void:
+	$intro2.hide()
+	$intro3.hide()
+	$Continue2.hide()
+	$Label.hide()

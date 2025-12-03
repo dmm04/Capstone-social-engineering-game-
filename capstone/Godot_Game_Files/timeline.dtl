@@ -1,7 +1,7 @@
 [style name="ChatProfile"]
-WELCOME TO THE BUSINESS OFFICE! LICK YOUR MOUSE TO START!
-Sorry, I meant\: CLICK YOUR MOUSE TO START!
 if {chatstep} == 0.0:
+	WELCOME TO THE BUSINESS OFFICE! LICK YOUR MOUSE TO START!
+	Sorry, I meant\: CLICK YOUR MOUSE TO START!
 	boss: Hello there!
 	boss: My name is Georgio, I am your new boss! Your job here is simple..
 	boss: You will see a ! above anyone who needs help. Make sure you guide them correctly. The more bad things you prevent the more money I... I mean we.. make.
