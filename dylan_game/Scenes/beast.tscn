@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://bsjlidcibkqxw"]
+
+[ext_resource type="Script" uid="uid://cvtcljmmbmxw3" path="res://scripts/beast.gd" id="1_nfgux"]
+[ext_resource type="Texture2D" uid="uid://dgii1h5dyhiqe" path="res://assets/beast2.png" id="2_nfgux"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_10t74"]
+size = Vector2(729, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfgux"]
+atlas = ExtResource("2_nfgux")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qx1v6"]
+atlas = ExtResource("2_nfgux")
+region = Rect2(0, 192, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eu2dt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfgux")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qx1v6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="RisingHazard" type="Area2D"]
+z_index = 2
+position = Vector2(-8, -6)
+script = ExtResource("1_nfgux")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 86)
+shape = SubResource("RectangleShape2D_10t74")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1.000061, 269)
+scale = Vector2(3.8195171, 3.2268703)
+sprite_frames = SubResource("SpriteFrames_eu2dt")
+autoplay = "default"
+frame_progress = 0.34563798
