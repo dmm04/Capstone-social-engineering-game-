@@ -1,0 +1,194 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2bu84kx4jb8p"]
+
+[ext_resource type="Script" uid="uid://bv5xh0sra1sx6" path="res://malicious_files.gd" id="1_l24dr"]
+[ext_resource type="Texture2D" uid="uid://yul4fve8buln" path="res://assets/pc.png" id="1_o5rn7"]
+[ext_resource type="Texture2D" uid="uid://51hons0wunyn" path="res://assets/file explorer image.png" id="2_k8qkp"]
+[ext_resource type="Texture2D" uid="uid://bti4t7oa2vfd1" path="res://assets/flag.png" id="4_oq5e3"]
+
+[node name="malicious_files" type="Node2D"]
+script = ExtResource("1_l24dr")
+
+[node name="PC" type="Sprite2D" parent="."]
+position = Vector2(555.31256, 348.40625)
+scale = Vector2(8.837994, 8.188873)
+texture = ExtResource("1_o5rn7")
+
+[node name="FileExplorer" type="Sprite2D" parent="PC"]
+position = Vector2(2.3973062, -12.994)
+scale = Vector2(0.08013705, 0.066637404)
+texture = ExtResource("2_k8qkp")
+
+[node name="Intro" type="PopupPanel" parent="."]
+oversampling_override = 1.0
+
+[node name="Label" type="Label" parent="Intro"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Continue" type="Button" parent="Intro"]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="FileButtons" type="VBoxContainer" parent="."]
+offset_left = 249.0
+offset_top = 125.0
+offset_right = 1073.0
+offset_bottom = 330.0
+
+[node name="File1" type="Button" parent="FileButtons"]
+custom_minimum_size = Vector2(250, 30)
+layout_mode = 2
+
+[node name="FileLabel" type="Label" parent="FileButtons/File1"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 211.0
+offset_bottom = 27.0
+
+[node name="FlagIcon" type="TextureRect" parent="FileButtons/File1"]
+layout_mode = 0
+offset_left = 790.0
+offset_top = -3.0
+offset_right = 829.0
+offset_bottom = 35.0
+texture = ExtResource("4_oq5e3")
+
+[node name="File2" type="Button" parent="FileButtons"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="FileLabel" type="Label" parent="FileButtons/File2"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 161.0
+offset_bottom = 27.0
+
+[node name="FlagIcon" type="TextureRect" parent="FileButtons/File2"]
+layout_mode = 0
+offset_left = 788.0
+offset_top = -3.0
+offset_right = 828.0
+offset_bottom = 34.0
+texture = ExtResource("4_oq5e3")
+
+[node name="File3" type="Button" parent="FileButtons"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="FileLabel" type="Label" parent="FileButtons/File3"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 153.0
+offset_bottom = 29.0
+
+[node name="FlagIcon" type="TextureRect" parent="FileButtons/File3"]
+layout_mode = 0
+offset_left = 788.0
+offset_top = -3.0
+offset_right = 826.0
+offset_bottom = 32.0
+texture = ExtResource("4_oq5e3")
+
+[node name="File4" type="Button" parent="FileButtons"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="FileLabel" type="Label" parent="FileButtons/File4"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 151.0
+offset_bottom = 29.0
+
+[node name="FlagIcon" type="TextureRect" parent="FileButtons/File4"]
+layout_mode = 0
+offset_left = 786.0
+offset_top = -2.0
+offset_right = 826.0
+offset_bottom = 32.0
+texture = ExtResource("4_oq5e3")
+
+[node name="File5" type="Button" parent="FileButtons"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="FileLabel" type="Label" parent="FileButtons/File5"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 164.0
+offset_bottom = 27.0
+
+[node name="FlagIcon" type="TextureRect" parent="FileButtons/File5"]
+layout_mode = 0
+offset_left = 786.0
+offset_top = -5.0
+offset_right = 826.0
+offset_bottom = 33.0
+texture = ExtResource("4_oq5e3")
+
+[node name="File6" type="Button" parent="FileButtons"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="FileLabel" type="Label" parent="FileButtons/File6"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 188.0
+offset_bottom = 27.0
+
+[node name="FlagIcon" type="TextureRect" parent="FileButtons/File6"]
+layout_mode = 0
+offset_left = 784.0
+offset_top = -3.0
+offset_right = 824.0
+offset_bottom = 37.0
+texture = ExtResource("4_oq5e3")
+
+[node name="Feedback" type="PopupPanel" parent="."]
+
+[node name="Label" type="Label" parent="Feedback"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Continue" type="Button" parent="Feedback"]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="ContinueLabel" type="Label" parent="Feedback/Continue"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.42365062, 0.42365065, 0.42365062, 1)
+theme_override_font_sizes/font_size = 25
+text = "
+Continue"
+horizontal_alignment = 3
+vertical_alignment = 3
+
+[node name="FinalScore" type="PopupPanel" parent="."]
+oversampling_override = 1.0
+
+[node name="ScoreLabel" type="Label" parent="FinalScore"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Quit" type="Button" parent="FinalScore"]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -28.5
+offset_top = -36.0
+offset_right = 28.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.48570347, 0.48570353, 0.48570347, 1)
+theme_override_font_sizes/font_size = 20
+text = "QUIT"
