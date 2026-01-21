@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bti4t7oa2vfd1"
-path="res://.godot/imported/flag.png-29c6a06ab0a1d25cfcfa38ea2a7baffa.ctex"
+path="res://.godot/imported/flag.png-f385d75538464c09dfdeb1191563a7be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/flag.png"
-dest_files=["res://.godot/imported/flag.png-29c6a06ab0a1d25cfcfa38ea2a7baffa.ctex"]
+source_file="res://Godot_Game_Files/Puzzles/Emilys Updated_Scene/flag.png"
+dest_files=["res://.godot/imported/flag.png-f385d75538464c09dfdeb1191563a7be.ctex"]
 
 [params]
 
