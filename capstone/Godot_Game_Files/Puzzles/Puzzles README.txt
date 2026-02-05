@@ -29,4 +29,16 @@ puzzles/
  ├── phishing_emails/
  │    ├── phishing_emails.tscn
  │    ├── phishing_emails.gd
+
  │    └── assets/
+
+
+Code for returning to office scene from puzzle:
+
+@onready var return_button = $ReturnButton
+func _ready():
+ return_button.connect("pressed", Callable(self, "_on_return_pressed"))
+	return_button.tooltip_text = "Close this window and return to office."
+
+func _on_return_pressed():
+ get_tree().change_scene_to_file("res://Godot_Game_Files/game.tscn")
