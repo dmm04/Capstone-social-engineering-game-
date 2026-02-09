@@ -251,3 +251,8 @@ Frostwindz reserves the right to update or amend this Agreement at any time. Upd
 ====================================================================
 
 By purchasing or using the https://frostwindz.itch.io/ assets, the Customer acknowledges that they have read, understood, and agreed to be bound by the terms of this Agreement.
+
+Pixel Effect Pack ------------------------------------------------------------------------------------------------------------------------------
+This is a public domain asset, you can use it for both personal and comercial purposes. No credit required but feel free to show us where you used it on @DavitMasia and @CodeManuPro at twitter. :)
+
+
