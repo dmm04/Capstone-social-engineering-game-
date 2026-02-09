@@ -165,7 +165,7 @@ script = ExtResource("9_2npts")
 position = Vector2(-1, 814)
 
 [node name="endleve" parent="." instance=ExtResource("18_hw1hp")]
-position = Vector2(-2743, 2583)
+position = Vector2(-1995, 2194)
 script = null
 
 [connection signal="body_entered" from="Event_Tree/Puzzles/EmailAlert" to="Event_Tree/Puzzles/EmailAlert" method="_on_body_entered"]

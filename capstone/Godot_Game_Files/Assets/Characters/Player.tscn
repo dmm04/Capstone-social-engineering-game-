@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://bnpveoij6ge22"]
 
-[ext_resource type="Script" uid="uid://cwoaypo7pqsl8" path="res://Godot_Game_Files/Assets/Characters/character_body_2d.gd" id="1_0psd1"]
+[ext_resource type="Script" uid="uid://blsgyyyhemxm1" path="res://Godot_Game_Files/Assets/Characters/character_body_2d_endscene.gd" id="1_u52to"]
 [ext_resource type="Texture2D" uid="uid://pgxojkea1fot" path="res://Godot_Game_Files/Assets/Characters/character 1.png" id="2_0psd1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y7red"]
@@ -125,7 +125,7 @@ radius = 7.07107
 [node name="Player" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("1_0psd1")
+script = ExtResource("1_u52to")
 
 [node name="Playercamera2d" type="Camera2D" parent="CharacterBody2D"]
 visible = false

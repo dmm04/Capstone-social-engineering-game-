@@ -1,0 +1,67 @@
+Love_Interest: Hello.. Thanks for coming up here.. I didn't think you would to be honest..
+- I wouldn't miss it for the world. Cigarettes are why I started vaping.
+- I don't believe in free will.. It's like I don't exist outside of this..
+	Love_Interest: What do you mean?
+	- It's like this place.. I dont know.. It's like once this is all over I won't exist anymore.. Like everything I know is limited by this job.. Even this job only felt like I've been here like 10 minutes max..
+		Love_Interest: Don't talk like that.. Just hold me..
+		- (hold her)
+			set {end_step} = 1.0
+			if {end_step} == 1.1:
+				return
+				boss: Well would you look at this.. Seems a poor time for me to come up here and smoke a doobie..
+				Love_Interest: It's not what it looks like..
+				boss: Ya know you're right.. None of this is what it looks like.. We are all at the whims of the great cosmic creature..
+				boss: Moving us about..
+				boss: I, yes even I, with all my power, am powerless to alter fate.. it is unceasing and unchanging..
+				boss: We no more control our fate than the shareholders control this company..
+				boss: It's time you know something about me..
+				[wait_input]
+				set {end_step} = 2.0
+		- (change conversation)
+			set {end_step} = 1.0
+		- (attempt to push her off the roof)
+			set {end_step} = 1.0
+- Why not?
+	Love_Interest: Well considering my husband is your boss.. and bascially the devil..
+	- Not even the fires of hell burn as hot as I do for you..
+		Love_Interest: I feel the same way! And by the way, the shareholder value can go to hell—this merger is strictly personal.
+		- Um.. I'm not really comfortable talking bad about the shareholders..
+			boss: Well.. Well.. Well.. I can't believe you would do this..
+			boss: AGAIN!
+			Love_Interest: Honey! It's not what it looks like!
+			boss: It looks like you're trying to turn our hard working cyber analist against the shareholders.
+			boss: .. First Michael..
+			boss: .. Then Jim..
+			boss: .. Then Dwight..
+			boss: .. Then Toby..
+			boss: And now this guy who's name I definetly remember!
+			- Umm, what the heck is going on?
+			- It's true, she tried to woo me, and I almost fell for it. Had it not been for the loyalty, respect, and love I have for the shareholders, I would be arm deep in some roof top love making right now.. Thank God you were here..
+				boss: God.. Ha!
+				boss: What a coincidence..
+				set {end_step} = 1.0
+		- I agree.. The shareholders can go straight to H-E-Double Hockey Stick!
+			boss: Well.. Well.. Well.. What do we have here?
+			Love_Interest: Honey! It's not what it looks like!
+			boss: It looks like our faithful cybersecurity guard thinks he's better than the shareholders.
+			Love_Interest: No baby! I was just trying to have an afair!
+			boss: Yeah yeah, save it for the upcoming quartly review, darling. The shareholders are not going to be happy about this kind of mutanous talk.
+			- Listen pal, the shareholders can eat my shorts!
+				boss: My friend.. That is the last words you shall ever speak!
+				set {end_step} = 1.0
+			- Well gee.. I didn't know they were even real..
+				boss: It's all real!
+				boss: .. Shareholders..
+				boss: .. Synthetic Equity..
+				boss: .. Tulip Mania..
+				boss: .. and even.. THE DEVIL.
+				set {end_step} = 1.0
+			- Aww shucks, I really am sorry.. I didn't mean to cause a ruckus. I only ever wanted to ensure the industry standard cyber-safe practices.
+				boss: My son, you have been swayed by the wiles of Bathsheba. She has taken your innocence of mind, and for that…
+				boss: .. for that you must die.. I am truely sorry.. You really did bring some value to the shareholders.. I am your PUNISHMENT.
+				set {end_step} = 1.0
+	- I actually forgot I was supposed to meet you up here..
+		Love_Interest: <Empty Text Event>
+<Empty Text Event>
+<Empty Text Event>
+<Empty Text Event>
