@@ -13,7 +13,7 @@ var file_pool = [
 
 var malware_files = [
 	"trojan.exe", "cat_video.src", "Photo_001.jpg.exe",
-	"security_patch.exe", "unlocker_tool.exe", "funny_clip.scr"
+	"security_patch.exe", "unlocker_tool.exe", "funny_clip.scr", "bank_statement.exe"
 ]
 
 var total_malicious_this_round = 0
@@ -25,6 +25,7 @@ var incorrect_flags = 0
 # 2. Node references
 # -----------------------------------------
 @onready var file_buttons = $FileButtons.get_children()
+
 @onready var popup = $Feedback
 @onready var popup_label = $Feedback/Label
 @onready var continue_button = $Feedback/Continue
@@ -32,6 +33,9 @@ var incorrect_flags = 0
 @onready var intro_popup = $Intro
 @onready var intro_label = $Intro/Label
 @onready var intro_continue = $Intro/Continue
+
+@onready var help_button = $Help
+@onready var help_label = $Help/Label
 
 @onready var final_popup = $FinalScore
 @onready var final_label = $FinalScore/ScoreLabel
@@ -42,22 +46,52 @@ var incorrect_flags = 0
 # -----------------------------------------
 func _ready():
 	randomize()
+
+	intro_label.text = "Welcome to the Malware File Detector!\n\nClick on any file you believe is malicious.\nIf you're right, a flag will appear.\nIf you're wrong, you'll get feedback.\n\nChoose wisely."
+
+	await get_tree().process_frame
 	intro_popup.popup_centered()
-	intro_label.text = "Welcome to the Malware File Detector!\n\nClick on any file you believe is malicious. If you're right, a flag will appear. If you're wrong, you'll get feedback.\n\nChoose wisely."
+
 	intro_continue.connect("pressed", Callable(self, "_on_intro_continue_pressed"))
 	continue_button.connect("pressed", Callable(self, "_on_feedback_continue_pressed"))
-	quit_button.connect("pressed", Callable(self, "_on_quit_pressed_"))
+	quit_button.connect("pressed", Callable(self, "_on_quit_pressed"))
+
+	# -----------------------------
+	# Help text (click to toggle)
+	# -----------------------------
+	help_label.text = """How to Identify Malicious Files
+	• Unexpected file extensions (e.g., .exe, .scr, .src)
+	• Double extensions (e.g., photo.jpg.exe)
+	• Files pretending to be documents or images
+	• Misspelled filenames or strange characters
+	• Files you weren’t expecting to receive
+	• Files claiming to be “updates” or “patches”
+	• Anything that feels out of place in the folder
 	
+	Note:
+		A ZIP file is not inherently malicious — it's just a compressed archive. 
+		Only the files *inside* a ZIP could be harmful, not the ZIP itself.
+	
+	When in doubt, treat the file as suspicious.
+	"""
+	help_label.visible = false
+
+	help_button.connect("pressed", Callable(self, "_on_Help_pressed"))
+
 	for button in file_buttons:
 		button.connect("pressed", Callable(self, "_on_file_pressed").bind(button))
 
 	generate_random_file_list()
+
+func _on_Help_pressed():
+	help_label.visible = !help_label.visible
 
 func _on_intro_continue_pressed():
 	intro_popup.hide()
 
 func _on_feedback_continue_pressed():
 	popup.hide()
+
 # -----------------------------------------
 # 4. Random file list generator
 # -----------------------------------------
@@ -65,12 +99,12 @@ func generate_random_file_list():
 	displayed_files = file_pool.duplicate()
 	displayed_files.shuffle()
 	displayed_files = displayed_files.slice(0, file_buttons.size())
-	
+
 	total_malicious_this_round = 0
 	for f in displayed_files:
 		if malware_files.has(f):
 			total_malicious_this_round += 1
-			
+
 	populate_file_buttons()
 
 func populate_file_buttons():
@@ -95,6 +129,8 @@ func _on_file_pressed(button):
 
 	button.set_meta("flagged", true)
 
+
+
 	if is_malware:
 		correct_flags += 1
 		button.get_node("FlagIcon").visible = true
@@ -102,21 +138,61 @@ func _on_file_pressed(button):
 	else:
 		incorrect_flags += 1
 		popup_label.text = "Incorrect. '%s' is safe." % filename
-	
-	popup.popup_centered()
-	
-	if correct_flags == total_malicious_this_round:
-		popup.hide()
-		show_final_score()
 
+	popup.popup_centered()
+
+	if correct_flags == total_malicious_this_round:
+		continue_button.disconnect("pressed", Callable(self, "_on_feedback_continue_pressed"))
+		continue_button.connect("pressed", Callable(self, "_on_final_feedback_continue_pressed"))
+
+func _on_final_feedback_continue_pressed():
+	popup.hide()
+	show_final_score()
+
+# -----------------------------------------
+# 6. Final score popup
+# -----------------------------------------
 func show_final_score():
 	final_label.text = (
 		"All malicious files found!\n\n"
-		+ "Correct Flags: + %d\n" % [correct_flags]
-		+ "Incorrect Flags: - %d\n" % [incorrect_flags]
-		+ "Final Score: %d\n" % [correct_flags - incorrect_flags]
-		)
+		+ "Correct Flags: +%d\n" % correct_flags
+		+ "Incorrect Flags: -%d\n" % incorrect_flags
+		+ "Final Score: %d\n" % (correct_flags - incorrect_flags)
+	)
+
+	apply_global_score()
 	final_popup.popup_centered()
 
+# -----------------------------------------
+# 7. Global scoring conversion
+# -----------------------------------------
+func apply_global_score():
+	var wrong = incorrect_flags
+	var global_points = 0
+
+	match wrong:
+		0:
+			global_points = 100
+		1:
+			global_points = 75
+		2:
+			global_points = 50
+		3:
+			global_points = 25
+		4:
+			global_points = 0
+		5:
+			global_points = -10
+		6:
+			global_points = -25
+		_:
+			global_points = 0 #fallback
+
+	Global.score += global_points
+	print("Global score updated by:", global_points)
+
+# -----------------------------------------
+# 7. Quit button
+# -----------------------------------------
 func _on_quit_pressed():
-	get_tree().change_scene_to_file("res://scenes/game.tscn")
+	get_tree().change_scene_to_file("res://Godot_Game_Files/game.tscn")
