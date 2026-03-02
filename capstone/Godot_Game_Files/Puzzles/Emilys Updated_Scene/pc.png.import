@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://yul4fve8buln"
-path="res://.godot/imported/pc.png-64d8cff9cefc2f90f28e26963c9eb6cf.ctex"
+path="res://.godot/imported/pc.png-01688b678494d8e1ac1e56b17d0cd085.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pc.png"
-dest_files=["res://.godot/imported/pc.png-64d8cff9cefc2f90f28e26963c9eb6cf.ctex"]
+source_file="res://Godot_Game_Files/Puzzles/Emily/malicious scene/pc.png"
+dest_files=["res://.godot/imported/pc.png-01688b678494d8e1ac1e56b17d0cd085.ctex"]
 
 [params]
 
