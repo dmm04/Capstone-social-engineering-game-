@@ -1,15 +1,2 @@
 res://Godot_Game_Files/game.tscn
 res://Godot_Game_Files/chats/ChatProfile.tres
-res://Godot_Game_Files/endcutscene/endcutscene.tscn
-res://Godot_Game_Files/endcutscene/endcutscene.gd
-res://Godot_Game_Files/Assets/Characters/character_body_2d.gd
-res://Godot_Game_Files/Assets/Characters/Player.tscn
-res://Godot_Game_Files/Assets/Characters/character_body_2d_endscene.gd
-res://Godot_Game_Files/endcutscene/shareholder.gd
-res://Godot_Game_Files/endcutscene/mainchar.gd
-res://Godot_Game_Files/endcutscene/lucy-player-boss-prehates.tscn
-res://Godot_Game_Files/endcutscene/timeline.dtl
-res://Godot_Game_Files/chats/Love_Interest.dch
-res://Godot_Game_Files/chats/boss.dch
-res://Godot_Game_Files/Assets/Fonts/New_File.tres
-res://Godot_Game_Files/endcutscene/end_camera.gd
