@@ -1,0 +1,224 @@
+extends Node2D
+
+
+# -----------------------------------------
+# 1. File pools
+# -----------------------------------------
+var file_pool = [
+	"Resume.docx", "trojan.exe", "cat_video.src", "GroceryList.txt",
+	"Photo_001.jpg.exe", "Update_Patch.zip", "family_photo.jpg",
+	"security_patch.exe", "diagram_flowchart.png", "unlocker_tool.exe",
+	"project_files.rar", "funny_clip.scr", "voice_memo.m4a",
+	"Meeting_Notes.pdf", "bank_statement.exe", "lecture_recording.mov"
+]
+
+var malware_files = [
+	"trojan.exe", "cat_video.src", "Photo_001.jpg.exe",
+	"security_patch.exe", "unlocker_tool.exe", "funny_clip.scr", "bank_statement.exe"
+]
+
+var total_malicious_this_round = 0
+var displayed_files = []
+var correct_flags = 0
+var incorrect_flags = 0
+
+# -----------------------------------------
+# 2. Node references
+# -----------------------------------------
+@onready var file_buttons = $FileButtons.get_children()
+
+@onready var popup = $Feedback
+@onready var popup_label = $Feedback/Label
+@onready var continue_button = $Feedback/Continue
+
+@onready var intro_popup = $Intro
+@onready var intro_label = $Intro/Label
+@onready var intro_continue = $Intro/Continue
+
+@onready var help_button = $Help
+@onready var help_label = $Help/Label
+
+@onready var final_popup = $FinalScore
+@onready var final_label = $FinalScore/ScoreLabel
+@onready var quit_button = $FinalScore/Quit
+
+# -----------------------------------------
+# 3. Scene setup
+# -----------------------------------------
+func initialize():
+	randomize()
+
+	intro_label.text = "Welcome to the Malware File Detector!\n\nClick on any file you believe is malicious.\nIf you're right, a flag will appear.\nIf you're wrong, you'll get feedback.\n\nChoose wisely."
+
+	await get_tree().process_frame
+	intro_popup.popup_centered()
+
+	intro_continue.connect("pressed", Callable(self, "_on_intro_continue_pressed"))
+	continue_button.connect("pressed", Callable(self, "_on_feedback_continue_pressed"))
+	quit_button.connect("pressed", Callable(self, "_on_quit_pressed"))
+
+	# -----------------------------
+	# Help text (click to toggle)
+	# -----------------------------
+	help_label.text = """How to Identify Malicious Files
+	• Unexpected file extensions (e.g., .exe, .scr, .src)
+	• Double extensions (e.g., photo.jpg.exe)
+	• Files pretending to be documents or images
+	• Misspelled filenames or strange characters
+	• Files you weren’t expecting to receive
+	• Files claiming to be “updates” or “patches”
+	• Anything that feels out of place in the folder
+	
+	Note:
+		A ZIP file is not inherently malicious — it's just a compressed archive. 
+		Only the files *inside* a ZIP could be harmful, not the ZIP itself.
+	
+	When in doubt, treat the file as suspicious.
+	"""
+	help_label.visible = false
+
+	help_button.connect("pressed", Callable(self, "_on_Help_pressed"))
+
+	for button in file_buttons:
+		button.connect("pressed", Callable(self, "_on_file_pressed").bind(button))
+
+	generate_random_file_list()
+
+# -----------------------------------------
+# 4. Random file list generator
+# -----------------------------------------
+func generate_random_file_list():
+	displayed_files = file_pool.duplicate()
+	displayed_files.shuffle()
+	displayed_files = displayed_files.slice(0, file_buttons.size())
+
+	total_malicious_this_round = 0
+	for f in displayed_files:
+		if malware_files.has(f):
+			total_malicious_this_round += 1
+
+	populate_file_buttons()
+
+func populate_file_buttons():
+	for i in range(file_buttons.size()):
+		var button = file_buttons[i]
+		var filename = displayed_files[i]
+
+		button.get_node("FileLabel").text = filename
+		button.set_meta("filename", filename)
+		button.set_meta("flagged", false)
+		button.get_node("FlagIcon").visible = false
+
+# -----------------------------------------
+# 5. File click handler
+# -----------------------------------------
+func _on_file_pressed(button):
+	if button.get_meta("flagged"):
+		return
+
+	var filename = button.get_meta("filename")
+	var is_malware = malware_files.has(filename)
+
+	button.set_meta("flagged", true)
+	if is_malware:
+		correct_flags += 1
+		button.get_node("FlagIcon").visible = true
+		popup_label.text = "Correct! '%s' is malware." % filename
+	else:
+		incorrect_flags += 1
+		popup_label.text = "Incorrect. '%s' is safe." % filename
+
+	popup.popup_centered()
+
+	if correct_flags == total_malicious_this_round:
+		continue_button.disconnect("pressed", Callable(self, "_on_feedback_continue_pressed"))
+		continue_button.connect("pressed", Callable(self, "_on_final_feedback_continue_pressed"))
+
+func _on_final_feedback_continue_pressed():
+	popup.hide()
+	show_final_score()
+
+# -----------------------------------------
+# 6. Final score popup
+# -----------------------------------------
+func show_final_score():
+	final_label.text = (
+		"All malicious files found!\n\n"
+		+ "Correct Flags: +%d\n" % correct_flags
+		+ "Incorrect Flags: -%d\n" % incorrect_flags
+		+ "Final Score: %d\n" % (correct_flags - incorrect_flags)
+	)
+	apply_global_score()
+	final_popup.popup_centered()
+
+# -----------------------------------------
+# 7. Global scoring conversion
+# -----------------------------------------
+func apply_global_score():
+	var wrong = incorrect_flags
+	var global_points = 0
+
+	match wrong:
+		0:
+			global_points = 100
+		1:
+			global_points = 75
+		2:
+			global_points = 50
+		3:
+			global_points = 25
+		4:
+			global_points = 0
+		5:
+			global_points = -10
+		6:
+			global_points = -25
+		_:
+			global_points = 0 #fallback
+
+	Global.score += global_points
+	print("Global score updated by:", global_points)
+
+# -----------------------------------------
+# 7. Quit button - phils junk, needed for the game to reset
+# -----------------------------------------
+func _on_quit_pressed():
+	Global.counter += 1
+	print ("Global counter: ", Global.counter)
+	print("Score is:", Global.score)
+	Dialogic.VAR.chatstep += 1
+	print("chat step: ",Dialogic.VAR.chatstep)
+	$FinalScore.visible = !$FinalScore.visible
+	$"../Player/CharacterBody2D/Playercamera2d".make_current()
+
+
+
+
+func force_reset_and_start():
+	# Reset core state
+	correct_flags = 0
+	incorrect_flags = 0
+	displayed_files.clear()
+
+	# Hide any open popups
+	popup.hide()
+	final_popup.hide()
+	intro_popup.hide()
+
+	# Reset Continue button back to normal behavior
+	if continue_button.is_connected("pressed", Callable(self, "_on_final_feedback_continue_pressed")):
+		continue_button.disconnect("pressed", Callable(self, "_on_final_feedback_continue_pressed"))
+
+	if not continue_button.is_connected("pressed", Callable(self, "_on_feedback_continue_pressed")):
+		continue_button.connect("pressed", Callable(self, "_on_feedback_continue_pressed"))
+
+	# Reset buttons
+	for button in file_buttons:
+		button.set_meta("flagged", false)
+		button.get_node("FlagIcon").visible = false
+
+	# Generate new round
+	generate_random_file_list()
+
+	# Show intro again (this replaces initialize())
+	intro_popup.popup_centered()

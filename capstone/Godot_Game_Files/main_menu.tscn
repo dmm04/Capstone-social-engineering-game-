@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://blkrg8y6e0san"]
+[gd_scene format=3 uid="uid://blkrg8y6e0san"]
 
 [ext_resource type="Script" uid="uid://cjq8hloctmi4k" path="res://Godot_Game_Files/main_menu.gd" id="1_gt3ty"]
 [ext_resource type="Texture2D" uid="uid://bbfkejl6q1peb" path="res://Godot_Game_Files/Assets/Environment/office buidling outside.png" id="2_ce8vo"]
@@ -6,17 +6,6 @@
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uxn2v"]
 texture = ExtResource("2_ce8vo")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gt3ty"]
-bg_color = Color(0.129172, 0.138185, 0.147197, 0.780392)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_113m4"]
-bg_color = Color(0.132101, 0.142917, 0.145081, 0.603922)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_color = Color(0, 0, 0, 0.811765)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1tc16"]
 bg_color = Color(0.168627, 0.14902, 0.152941, 0.494118)
@@ -26,9 +15,20 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_113m4"]
+bg_color = Color(0.132101, 0.142917, 0.145081, 0.603922)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0, 0, 0, 0.811765)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gt3ty"]
+bg_color = Color(0.129172, 0.138185, 0.147197, 0.780392)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_1tc16"]
 
-[node name="main_menu" type="Control"]
+[node name="main_menu" type="Control" unique_id=1664782918]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -42,7 +42,7 @@ grow_vertical = 2
 size_flags_vertical = 3
 script = ExtResource("1_gt3ty")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=868648317]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -55,7 +55,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_uxn2v")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1800002424]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -70,50 +70,50 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 14
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=908036757]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_hover_color = Color(0.293806, 0.295002, 0.15419, 1)
 theme_override_colors/font_color = Color(0.750011, 0.716146, 0.6134, 1)
 theme_override_colors/font_pressed_color = Color(0.538492, 0.355056, 0.254554, 1)
+theme_override_colors/font_hover_color = Color(0.293806, 0.295002, 0.15419, 1)
 theme_override_font_sizes/font_size = 41
-theme_override_styles/hover = SubResource("StyleBoxFlat_gt3ty")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_113m4")
 theme_override_styles/normal = SubResource("StyleBoxFlat_1tc16")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_113m4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gt3ty")
 text = "START GAME"
 
-[node name="Button2" type="Button" parent="VBoxContainer"]
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1054249881]
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_hover_color = Color(0.293806, 0.295002, 0.15419, 1)
 theme_override_colors/font_color = Color(0.750011, 0.716146, 0.6134, 1)
 theme_override_colors/font_pressed_color = Color(0.538492, 0.355056, 0.254554, 1)
+theme_override_colors/font_hover_color = Color(0.293806, 0.295002, 0.15419, 1)
 theme_override_font_sizes/font_size = 41
-theme_override_styles/hover = SubResource("StyleBoxFlat_gt3ty")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_113m4")
 theme_override_styles/normal = SubResource("StyleBoxFlat_1tc16")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_113m4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gt3ty")
 text = "OPTIONS"
 
-[node name="Button3" type="Button" parent="VBoxContainer"]
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1624309997]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_hover_color = Color(0.293806, 0.295002, 0.15419, 1)
 theme_override_colors/font_color = Color(0.750011, 0.716146, 0.6134, 1)
 theme_override_colors/font_pressed_color = Color(0.538492, 0.355056, 0.254554, 1)
+theme_override_colors/font_hover_color = Color(0.293806, 0.295002, 0.15419, 1)
 theme_override_font_sizes/font_size = 41
-theme_override_styles/hover = SubResource("StyleBoxFlat_gt3ty")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_113m4")
 theme_override_styles/normal = SubResource("StyleBoxFlat_1tc16")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_113m4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gt3ty")
 text = "QUIT"
 
-[node name="MainMenu" type="AudioStreamPlayer2D" parent="."]
+[node name="MainMenu" type="AudioStreamPlayer2D" parent="." unique_id=981993658]
 position = Vector2(65, 614)
 stream = ExtResource("3_ce8vo")
 volume_db = -1.909
 autoplay = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=272590885]
 sprite_frames = SubResource("SpriteFrames_1tc16")
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]

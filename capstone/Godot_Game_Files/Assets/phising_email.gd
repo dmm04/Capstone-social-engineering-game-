@@ -83,7 +83,7 @@ func _on_accept_pressed() -> void:
 	
 func _on_continue_pressed() -> void:
 	Global.counter += 1
-	print ("event counter: ", Global.counter)
+	print ("Global counter: ", Global.counter)
 	print("Score is:", Global.score)
 	Dialogic.VAR.chatstep += 1
 	print("chat step: ",Dialogic.VAR.chatstep)
@@ -99,6 +99,8 @@ func _on_reject_pressed() -> void:
 	$Button_manager/Continue.visible = !$Button_manager/Continue.visible
 	print("Score is:", Global.score)
 	Global.score += 100
-
+	$"../Event_Tree/Puzzles/EmailAlert".visible = false
+	$"../Event_Tree/Puzzles/EmailAlert".set_process(false)
+	
 func _on_help_pressed() -> void:
 	$Button_manager/Help/Label.visible = !$Button_manager/Help/Label.visible
