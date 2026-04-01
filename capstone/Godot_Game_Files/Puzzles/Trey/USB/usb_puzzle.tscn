@@ -1,0 +1,213 @@
+[gd_scene format=3 uid="uid://decr23hfmiurp"]
+
+[ext_resource type="Script" uid="uid://c26pmv4exr7o4" path="res://Godot_Game_Files/Puzzles/Trey/USB/usb_puzzle.gd" id="1_usb"]
+[ext_resource type="FontFile" uid="uid://b34psro2563xl" path="res://Godot_Game_Files/Assets/Fonts/dogicapixel.otf" id="2_usb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_usb"]
+radius = 70.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_toast"]
+bg_color = Color(0.13, 0.13, 0.16, 0.96)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.45, 0.45, 0.52, 1.0)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_normal"]
+bg_color = Color(0.18, 0.36, 0.72, 1.0)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_hover"]
+bg_color = Color(0.24, 0.46, 0.88, 1.0)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_pressed"]
+bg_color = Color(0.12, 0.26, 0.55, 1.0)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="UsbPuzzle" type="Area2D"]
+script = ExtResource("1_usb")
+
+[node name="UsbLabel" type="Label" parent="."]
+visible = false
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = -20.0
+theme_override_fonts/font = ExtResource("2_usb")
+theme_override_font_sizes/font_size = 10
+text = "[ USB ]"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_usb")
+
+[node name="ProximityLabel" type="Label" parent="."]
+visible = false
+offset_left = -120.0
+offset_top = -70.0
+offset_right = 120.0
+offset_bottom = -45.0
+theme_override_fonts/font = ExtResource("2_usb")
+theme_override_font_sizes/font_size = 8
+text = "Malicious USB detected!
+Press E to extract"
+horizontal_alignment = 1
+
+[node name="UsbUI" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Panel" type="Panel" parent="UsbUI"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -110.0
+offset_right = 200.0
+offset_bottom = 110.0
+
+[node name="TimerLabel" type="Label" parent="UsbUI/Panel"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 390.0
+offset_bottom = 35.0
+text = "Time remaining: 30"
+horizontal_alignment = 1
+
+[node name="TimerBar" type="ProgressBar" parent="UsbUI/Panel"]
+offset_left = 10.0
+offset_top = 40.0
+offset_right = 390.0
+offset_bottom = 65.0
+max_value = 30.0
+value = 30.0
+show_percentage = false
+
+[node name="HoldLabel" type="Label" parent="UsbUI/Panel"]
+offset_left = 10.0
+offset_top = 80.0
+offset_right = 390.0
+offset_bottom = 105.0
+text = "Hold E to extract USB"
+horizontal_alignment = 1
+
+[node name="HoldBar" type="ProgressBar" parent="UsbUI/Panel"]
+offset_left = 10.0
+offset_top = 110.0
+offset_right = 390.0
+offset_bottom = 135.0
+max_value = 3.0
+value = 0.0
+show_percentage = false
+
+[node name="ResultLabel" type="Label" parent="UsbUI/Panel"]
+visible = false
+offset_left = 10.0
+offset_top = 150.0
+offset_right = 390.0
+offset_bottom = 195.0
+text = ""
+horizontal_alignment = 1
+
+; ── Windows-style toast notification ─────────────────────────────────────────
+; Appears bottom-right on screen before the timer starts.
+; Dismissed via the OK button, which then reveals the USB and starts the QTE.
+
+[node name="WinNotification" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ToastPanel" type="Panel" parent="WinNotification"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -160.0
+offset_right = -20.0
+offset_bottom = -20.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_toast")
+
+[node name="IconLabel" type="Label" parent="WinNotification/ToastPanel"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 30.0
+offset_bottom = 30.0
+theme_override_fonts/font = ExtResource("2_usb")
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1.0, 0.8, 0.1, 1.0)
+text = "(!)"
+horizontal_alignment = 1
+
+[node name="TitleLabel" type="Label" parent="WinNotification/ToastPanel"]
+offset_left = 36.0
+offset_top = 8.0
+offset_right = 292.0
+offset_bottom = 30.0
+theme_override_fonts/font = ExtResource("2_usb")
+theme_override_font_sizes/font_size = 10
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+text = "Security Alert"
+
+[node name="Divider" type="Panel" parent="WinNotification/ToastPanel"]
+offset_left = 8.0
+offset_top = 34.0
+offset_right = 292.0
+offset_bottom = 36.0
+modulate = Color(0.45, 0.45, 0.52, 1.0)
+
+[node name="BodyLabel" type="Label" parent="WinNotification/ToastPanel"]
+offset_left = 10.0
+offset_top = 38.0
+offset_right = 292.0
+offset_bottom = 84.0
+theme_override_fonts/font = ExtResource("2_usb")
+theme_override_font_sizes/font_size = 8
+theme_override_colors/font_color = Color(0.85, 0.85, 0.88, 1.0)
+text = "A USB device has been detected in the Boss's computer!"
+autowrap_mode = 3
+
+[node name="NotifTimerLabel" type="Label" parent="WinNotification/ToastPanel"]
+offset_left = 10.0
+offset_top = 88.0
+offset_right = 292.0
+offset_bottom = 106.0
+theme_override_fonts/font = ExtResource("2_usb")
+theme_override_font_sizes/font_size = 8
+theme_override_colors/font_color = Color(1.0, 0.65, 0.1, 1.0)
+text = "Time remaining: 30"
+
+[node name="DismissButton" type="Button" parent="WinNotification/ToastPanel"]
+offset_left = 196.0
+offset_top = 110.0
+offset_right = 292.0
+offset_bottom = 132.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_fonts/font = ExtResource("2_usb")
+theme_override_font_sizes/font_size = 8
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+text = "OK"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="pressed" from="WinNotification/ToastPanel/DismissButton" to="." method="_on_dismiss_pressed"]

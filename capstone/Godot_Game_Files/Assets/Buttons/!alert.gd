@@ -14,14 +14,12 @@ func _process(_delta: float):
 			open_puzzle_scene()
 		elif Global.counter == 4:
 			open_emilys_puzzle()
-		elif Global.counter == 5:
-			stop()
-		elif Global.counter == 7:
+		elif Global.counter == 6:
 			open_emilys_puzzle()
 		elif Global.counter == 8:
-			stop()
+			pass
 		elif Global.counter == 9:
-			open_password_puzzle()
+			pass
 			
 			
 			
@@ -44,10 +42,12 @@ func open_emilys_puzzle():
 	$"../../../malicious_files".initialize()
 	$"../../../malicious_files/EmilysCamera2D".make_current()
 	
-	func open_password_puzzle():
+func open_password_puzzle():
 	$"../../../password_reset".set_process(true)
 	$"../../../password_reset".initialize()
-	$"../../../malicious_files/EmilysCamera2D".make_current()
+	$"../../../password_reset/Camera2D".make_current()
+
+
 
 func stop():
 	self.set_process(false)      

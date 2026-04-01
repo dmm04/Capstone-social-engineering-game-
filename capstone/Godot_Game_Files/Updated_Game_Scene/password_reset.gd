@@ -49,7 +49,10 @@ var correct_order = [
 #-----------------------------------------
 #6. Connect all buttons
 #-----------------------------------------
-func _ready(): 
+func _ready() -> void:
+	initialize()
+
+func initialize():
 	credential_panel.visible = true 
 	feedback_panel.visible = false 
 	ranking_panel.visible = false 
@@ -172,10 +175,11 @@ func apply_global_score_for_passwords(player_order: Array) -> int:
 #-----------------------------------------
 #12. Confirm ranking → Final popup
 #-----------------------------------------
-func _on_Confirm_pressed(): 
-	var player_order = [] 
-	var sorted_buttons = ranked.keys() 
+func _on_Confirm_pressed():
+	var player_order = []
+	var sorted_buttons = ranked.keys()
 	sorted_buttons.sort_custom(func(a, b): return ranked[a] < ranked[b])
+
 	for btn in sorted_buttons:
 		player_order.append(btn.text.substr(btn.text.find(". ") + 2))
 
@@ -187,22 +191,25 @@ func _on_Confirm_pressed():
 	text += "\nYour ranking:\n"
 	for p in player_order:
 		text += "• " + p + "\n"
-	
-	# If the player didn't rank all 5 passwords, treat it as fully incorrect
+
+	# Declare ONCE
+	var final_score = 0
+
+	# If the player didn't rank all 5 passwords
 	if player_order.size() < correct_order.size():
-		var final_score = -25
+		final_score = -25
 		Global.score += final_score
 		text += "\nFinal Score: " + str(final_score) + "\n"
 		final_body.text = text
 		ranking_panel.visible = false
 		final_popup.popup()
 		return
-	# NEW — calculate and show final score
-	var final_score = apply_global_score_for_passwords(player_order)
+
+	# Normal scoring
+	final_score = apply_global_score_for_passwords(player_order)
 	text += "\nFinal Score: " + str(final_score) + "\n"
 
 	final_body.text = text
-
 	ranking_panel.visible = false
 	final_popup.popup()
 
@@ -210,4 +217,9 @@ func _on_Confirm_pressed():
 #12. Final Continue → return to game
 #-----------------------------------------
 func _on_FinalPopup_Continue_pressed(): 
-	get_tree().change_scene_to_file("res://Godot_Game_Files/game.tscn")
+	Global.counter += 1
+	print ("Global counter: ", Global.counter)
+	print("Score is:", Global.score)
+	Dialogic.VAR.chatstep += 1
+	print("chat step: ",Dialogic.VAR.chatstep)
+	$"../Player/CharacterBody2D/Playercamera2d".make_current()

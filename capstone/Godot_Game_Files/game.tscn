@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b5cb8hi831nnt"]
 
+[ext_resource type="Script" uid="uid://c26pmv4exr7o4" path="res://Godot_Game_Files/Puzzles/Trey/USB/usb_puzzle.gd" id="1_dxc75"]
 [ext_resource type="Script" uid="uid://by34sk16ycs2r" path="res://Godot_Game_Files/event_tree.gd" id="1_eqekq"]
 [ext_resource type="PackedScene" uid="uid://bnpveoij6ge22" path="res://Godot_Game_Files/Assets/Characters/Player.tscn" id="1_l7whm"]
 [ext_resource type="PackedScene" uid="uid://cdcolqdy3j16q" path="res://Godot_Game_Files/Updated_Game_Scene/password_reset.tscn" id="2_7nhs0"]
@@ -18,65 +19,6 @@
 [ext_resource type="Script" uid="uid://b14l2wwp0qdu3" path="res://Godot_Game_Files/Assets/Characters/Player.gd" id="14_eqekq"]
 [ext_resource type="PackedScene" uid="uid://c2bu84kx4jb8p" path="res://Godot_Game_Files/Puzzles/Emilys Updated_Scene/malicious_files.tscn" id="16_eqekq"]
 
-[sub_resource type="GDScript" id="GDScript_woipg"]
-script/source = "extends Node
-var score: int = 0
-
-#EVENT TIME LINE DO NOT CHANGE! #EVENT TIME LINE DO NOT CHANGE! #EVENT TIME LINE DO NOT CHANGE! #EVENT TIME LINE DO NOT CHANGE! 
-#EVENT TIME LINE DO NOT CHANGE! #EVENT TIME LINE DO NOT CHANGE! #EVENT TIME LINE DO NOT CHANGE! #EVENT TIME LINE DO NOT CHANGE! 
-func _ready():
-	$Player/CharacterBody2D/Playercamera2d.make_current()
-	Dialogic.signal_event.connect(_on_dialogic_signal)
-	$Event_Tree/Puzzles/EmailAlert.visible = false
-	$Event_Tree/Puzzles/EmailAlert.set_process(false)
-	$PhisingEmail.set_process(false)
-	$malicious_files.set_process(false)
-func _on_dialogic_signal(argument: String):
-	if argument == \"complete_chat1\": 
-		$Event_Tree/Puzzles/EmailAlert.set_process(true)
-		$Event_Tree/Puzzles/EmailAlert.visible = true
-	elif argument == \"complete_chat2\":
-		$Event_Tree/Puzzles/EmailAlert.set_process(true)
-		$Event_Tree/Puzzles/EmailAlert.visible = true
-		$Event_Tree/Puzzles/EmailAlert.position = Vector2(357, 371)
-	elif argument == \"complete_chat3\":
-		$Event_Tree/Puzzles/EmailAlert.set_process(true)
-		$Event_Tree/Puzzles/EmailAlert.visible = true
-		$Event_Tree/Puzzles/EmailAlert.position = Vector2(236, 369)
-	elif argument == \"complete_chat4\":
-		$Event_Tree/Puzzles/EmailAlert.set_process(true)
-		$Event_Tree/Puzzles/EmailAlert.visible = true
-		$Event_Tree/Puzzles/EmailAlert.position = Vector2(-12, 370)
-		Global.counter += 1
-	elif argument == \"complete_chat5\":
-		$Event_Tree/Puzzles/EmailAlert.set_process(true)
-		$Event_Tree/Puzzles/EmailAlert.visible = true
-		$Event_Tree/Puzzles/EmailAlert.position = Vector2(-12, 370)
-		Global.counter += 1
-		
-func _process(_delta: float) -> void:
-	if Global.counter == 1:
-		$Event_Tree/Puzzles/EmailAlert.set_process(false)
-		$Event_Tree/Puzzles/EmailAlert.visible = false
-		$PhisingEmail.set_process(false)
-		run_timeline()
-	if Global.counter == 3: 
-		$Event_Tree/Puzzles/EmailAlert.set_process(false)
-		$Event_Tree/Puzzles/EmailAlert.visible = false
-		$PhisingEmail.set_process(false)
-		run_timeline()
-	if Global.counter == 5: 
-		$Event_Tree/Puzzles/EmailAlert.set_process(false)
-		$Event_Tree/Puzzles/EmailAlert.visible = false
-		$PhisingEmail.set_process(false)
-		run_timeline()
-		
-func run_timeline():
-	Dialogic.start(\"timeline\")
-	Global.counter += 1
-	print(\"global counter\", Global.counter)
-"
-
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_e2o6t"]
 distance = -354.0
 
@@ -85,7 +27,7 @@ b = Vector2(-1, -510)
 
 [node name="Game" type="Node2D" unique_id=1766418587]
 position = Vector2(17, 23)
-script = SubResource("GDScript_woipg")
+script = ExtResource("1_dxc75")
 
 [node name="PhisingEmail" parent="." unique_id=1318945007 instance=ExtResource("2_hw1hp")]
 position = Vector2(-9.435, -604.19)
