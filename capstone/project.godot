@@ -37,6 +37,7 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"Godot_Game_Files/endcutscene/timeline": "res://Godot_Game_Files/endcutscene/timeline.dtl",
 "endcutscene/timeline": "res://Godot_Game_Files/Puzzles/Phil/endcutscene/timeline.dtl",
 "timeline": "res://Godot_Game_Files/timeline.dtl"
 }
@@ -47,7 +48,8 @@ layout/style_list=["res://Godot_Game_Files/chats/ChatProfile.tres"]
 layout/default_style=""
 glossary/default_case_sensitive=true
 variables={
-"chatstep": 0
+"chatstep": 0,
+"end_step": 0
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01

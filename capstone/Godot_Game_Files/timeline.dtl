@@ -1,4 +1,4 @@
-[style name="ChatProfile"]
+[style]
 if {chatstep} == 0.0:
 	Left Click The Mouse To Continue Through Dialogues.
 	boss: Hello there!
@@ -81,8 +81,8 @@ elif {chatstep} == 4.0:
 		lucy: Just please don't tell.. You know who..
 		- I would never!
 			lucy: I knew I could count on you!
+	elbow: pssst.... pssstttt... pppsssssssttttt... pppsssssttt..
 	- Hello?
-		elbow: pssst.... pssstttt... pppsssssssttttt... pppsssssttt..
 		elbow: Ahoy, names Elbow... On account of eye.. or..
 		elbow: .. Lack thereof..
 		- Umm.. Okay, what do you want?
@@ -101,4 +101,5 @@ elif {chatstep} == 4.0:
 			elbow: Good luck finding it.. Chump..
 			And as quickly as he came, the wizard elbow was gone.. Never to be seen or heard from again hopefully..
 	[signal arg="complete_chat5"]
+elif {chatstep} == 5.0:
 [end_timeline]

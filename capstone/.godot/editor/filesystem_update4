@@ -324,3 +324,5 @@ res://Tests/Unit/subsystem_history_test.gd
 res://Tests/Unit/subsystem_text_test.gd
 res://Tests/Unit/test_auto_advance.gd
 res://Tests/Unit/test_example.gd
+res://Godot_Game_Files/endcutscene/lucy-player-boss-prehates.tscn
+res://Godot_Game_Files/endcutscene/timeline.dtl
