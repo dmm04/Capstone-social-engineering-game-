@@ -20,7 +20,9 @@ func _process(_delta: float):
 			open_emilys_puzzle()
 		elif Global.counter == 8:
 			stop()
-		
+		elif Global.counter == 9:
+			open_password_puzzle()
+			
 			
 			
 func _on_body_entered(_body):
@@ -40,6 +42,11 @@ func open_puzzle_scene():
 func open_emilys_puzzle():
 	$"../../../malicious_files".set_process(true)
 	$"../../../malicious_files".initialize()
+	$"../../../malicious_files/EmilysCamera2D".make_current()
+	
+	func open_password_puzzle():
+	$"../../../password_reset".set_process(true)
+	$"../../../password_reset".initialize()
 	$"../../../malicious_files/EmilysCamera2D".make_current()
 
 func stop():

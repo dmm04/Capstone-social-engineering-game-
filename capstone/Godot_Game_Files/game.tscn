@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://by34sk16ycs2r" path="res://Godot_Game_Files/event_tree.gd" id="1_eqekq"]
 [ext_resource type="PackedScene" uid="uid://bnpveoij6ge22" path="res://Godot_Game_Files/Assets/Characters/Player.tscn" id="1_l7whm"]
+[ext_resource type="PackedScene" uid="uid://cdcolqdy3j16q" path="res://Godot_Game_Files/Updated_Game_Scene/password_reset.tscn" id="2_7nhs0"]
 [ext_resource type="Texture2D" uid="uid://dsuhcbcpm4ryw" path="res://Godot_Game_Files/Assets/Characters/office background.png" id="2_60j76"]
 [ext_resource type="PackedScene" uid="uid://dk2cmsxd8bsft" path="res://Godot_Game_Files/Puzzles/Phil/phising emails/phising_email.tscn" id="2_hw1hp"]
 [ext_resource type="PackedScene" uid="uid://nnlmyeh6m0oq" path="res://Godot_Game_Files/Assets/Characters/npc_boss.tscn" id="3_2s8f0"]
@@ -88,6 +89,9 @@ script = SubResource("GDScript_woipg")
 
 [node name="PhisingEmail" parent="." unique_id=1318945007 instance=ExtResource("2_hw1hp")]
 position = Vector2(-9.435, -604.19)
+
+[node name="password_reset" parent="." unique_id=1376279737 instance=ExtResource("2_7nhs0")]
+position = Vector2(-1667, -114)
 
 [node name="malicious_files" parent="." unique_id=628590051 instance=ExtResource("16_eqekq")]
 position = Vector2(106, 766)
