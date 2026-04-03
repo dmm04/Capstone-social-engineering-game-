@@ -16,7 +16,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="Capstone"
 run/main_scene="uid://blkrg8y6e0san"
-config/features=PackedStringArray("4.6", "GL Compatibility")
+config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [audio]
@@ -32,12 +32,14 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 directories/dch_directory={
 "boss": "res://Godot_Game_Files/chats/boss.dch",
+"devil": "res://Godot_Game_Files/Assets/Characters/devil.dch",
 "elbow": "res://Godot_Game_Files/chats/elbow.dch",
 "lucy": "res://Godot_Game_Files/chats/lucy.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
 "Godot_Game_Files/endcutscene/timeline": "res://Godot_Game_Files/endcutscene/timeline.dtl",
+"emilyendscene": "res://Godot_Game_Files/endcutscene/emilyendscene.dtl",
 "endcutscene/timeline": "res://Godot_Game_Files/Puzzles/Phil/endcutscene/timeline.dtl",
 "timeline": "res://Godot_Game_Files/timeline.dtl"
 }

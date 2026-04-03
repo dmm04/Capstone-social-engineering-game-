@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c2bu84kx4jb8p"]
+[gd_scene load_steps=24 format=3 uid="uid://c2bu84kx4jb8p"]
 
 [ext_resource type="Script" uid="uid://bv5xh0sra1sx6" path="res://Godot_Game_Files/Puzzles/Emilys Updated_Scene/malicious_files.gd" id="1_bjoyc"]
 [ext_resource type="Texture2D" uid="uid://yul4fve8buln" path="res://Godot_Game_Files/Puzzles/Emilys Updated_Scene/pc.png" id="2_0nh85"]
@@ -10,98 +10,97 @@
 [ext_resource type="Texture2D" uid="uid://d1tl8pf0q211w" path="res://Godot_Game_Files/Puzzles/Phil/CONTINUE.png" id="6_lgy45"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_culi7"]
-bg_color = Color(0.008202021, 0.008202026, 0.008202015, 0.9843137)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_esu45"]
-bg_color = Color(0.8901961, 0.8901961, 0.8901961, 1)
+bg_color = Color(0.00820202, 0.00820203, 0.00820202, 0.984314)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3mup5"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tu836"]
-bg_color = Color(0.8901961, 0.8901961, 0.8901961, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_esu45"]
+bg_color = Color(0.890196, 0.890196, 0.890196, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s5pit"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vwqyw"]
-bg_color = Color(0.8901961, 0.8901961, 0.8901961, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tu836"]
+bg_color = Color(0.890196, 0.890196, 0.890196, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xb7k4"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pgn23"]
-bg_color = Color(0.8901961, 0.8901961, 0.8901961, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vwqyw"]
+bg_color = Color(0.890196, 0.890196, 0.890196, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4wdyv"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m712k"]
-bg_color = Color(0.8901961, 0.8901961, 0.8901961, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pgn23"]
+bg_color = Color(0.890196, 0.890196, 0.890196, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_72qb0"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7x2nf"]
-bg_color = Color(0.8901961, 0.8901961, 0.8901961, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m712k"]
+bg_color = Color(0.890196, 0.890196, 0.890196, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ogcxq"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7x2nf"]
+bg_color = Color(0.890196, 0.890196, 0.890196, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sd4uq"]
-bg_color = Color(0.033853274, 0.03385329, 0.033853233, 1)
+bg_color = Color(0.0338533, 0.0338533, 0.0338532, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_sd4uq"]
 line_spacing = 1.0
 
-[node name="malicious_files" type="Node2D" unique_id=1020888423]
+[node name="malicious_files" type="Node2D"]
 script = ExtResource("1_bjoyc")
 
-[node name="EmilysCamera2D" type="Camera2D" parent="." unique_id=1154545853]
-position = Vector2(555.31256, 348.40625)
-scale = Vector2(8.837994, 8.188873)
+[node name="EmilysCamera2D" type="Camera2D" parent="."]
+position = Vector2(555.313, 348.406)
+scale = Vector2(8.83799, 8.18887)
 offset = Vector2(0, 3.575)
 zoom = Vector2(0.885, 0.885)
 
-[node name="PC" type="Sprite2D" parent="." unique_id=966192342]
-position = Vector2(555.31256, 348.40625)
-scale = Vector2(8.837994, 8.188873)
+[node name="PC" type="Sprite2D" parent="."]
+position = Vector2(555.313, 348.406)
+scale = Vector2(8.83799, 8.18887)
 texture = ExtResource("2_0nh85")
 
-[node name="FileExplorer" type="Sprite2D" parent="PC" unique_id=601963797]
-position = Vector2(2.3973062, -12.994)
-scale = Vector2(0.08013705, 0.066637404)
+[node name="FileExplorer" type="Sprite2D" parent="PC"]
+position = Vector2(2.39731, -12.994)
+scale = Vector2(0.0801371, 0.0666374)
 texture = ExtResource("3_0wljr")
 
-[node name="Intro" type="PopupPanel" parent="." unique_id=709203042]
-oversampling_override = 1.0
+[node name="Intro" type="PopupPanel" parent="."]
 theme_override_styles/panel = SubResource("StyleBoxFlat_culi7")
 
-[node name="Label" type="Label" parent="Intro" unique_id=1342051365]
+[node name="Label" type="Label" parent="Intro"]
 offset_right = 100.0
 offset_bottom = 100.0
 theme_override_font_sizes/font_size = 25
 
-[node name="Continue" type="Button" parent="Intro" unique_id=1429302436]
+[node name="Continue" type="Button" parent="Intro"]
 offset_right = 100.0
 offset_bottom = 100.0
 
-[node name="FileButtons" type="VBoxContainer" parent="." unique_id=1401893620]
+[node name="FileButtons" type="VBoxContainer" parent="."]
 offset_left = 249.0
 offset_top = 125.0
 offset_right = 1073.0
 offset_bottom = 330.0
 
-[node name="File1" type="Button" parent="FileButtons" unique_id=1960408182]
+[node name="File1" type="Button" parent="FileButtons"]
 custom_minimum_size = Vector2(250, 30)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.080783166, 0.08078342, 0.080783226, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_esu45")
+theme_override_colors/font_color = Color(0.0807832, 0.0807834, 0.0807832, 1)
 theme_override_styles/hover = SubResource("StyleBoxFlat_3mup5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_esu45")
 
-[node name="FileLabel" type="Label" parent="FileButtons/File1" unique_id=1683697111]
+[node name="FileLabel" type="Label" parent="FileButtons/File1"]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 4.0
 offset_right = 211.0
 offset_bottom = 27.0
-theme_override_colors/font_color = Color(0.072842635, 0.072842635, 0.072842635, 1)
+theme_override_colors/font_color = Color(0.0728426, 0.0728426, 0.0728426, 1)
 
-[node name="FlagIcon" type="TextureRect" parent="FileButtons/File1" unique_id=1891151893]
+[node name="FlagIcon" type="TextureRect" parent="FileButtons/File1"]
 layout_mode = 0
 offset_left = 156.0
 offset_top = -19.0
@@ -109,22 +108,22 @@ offset_right = 243.0
 offset_bottom = 57.0
 texture = ExtResource("4_xc00q")
 
-[node name="File2" type="Button" parent="FileButtons" unique_id=413528849]
+[node name="File2" type="Button" parent="FileButtons"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.07284246, 0.072842725, 0.07284253, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_tu836")
+theme_override_colors/font_color = Color(0.0728425, 0.0728427, 0.0728425, 1)
 theme_override_styles/hover = SubResource("StyleBoxFlat_s5pit")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tu836")
 
-[node name="FileLabel" type="Label" parent="FileButtons/File2" unique_id=830212476]
+[node name="FileLabel" type="Label" parent="FileButtons/File2"]
 layout_mode = 0
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 161.0
 offset_bottom = 27.0
-theme_override_colors/font_color = Color(0.056291588, 0.056291603, 0.056291595, 1)
+theme_override_colors/font_color = Color(0.0562916, 0.0562916, 0.0562916, 1)
 
-[node name="FlagIcon" type="TextureRect" parent="FileButtons/File2" unique_id=1499525857]
+[node name="FlagIcon" type="TextureRect" parent="FileButtons/File2"]
 layout_mode = 0
 offset_left = 159.0
 offset_top = -20.0
@@ -132,22 +131,22 @@ offset_right = 238.0
 offset_bottom = 56.0
 texture = ExtResource("4_xc00q")
 
-[node name="File3" type="Button" parent="FileButtons" unique_id=489995731]
+[node name="File3" type="Button" parent="FileButtons"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.060530208, 0.06053043, 0.060530253, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_vwqyw")
+theme_override_colors/font_color = Color(0.0605302, 0.0605304, 0.0605303, 1)
 theme_override_styles/hover = SubResource("StyleBoxFlat_xb7k4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vwqyw")
 
-[node name="FileLabel" type="Label" parent="FileButtons/File3" unique_id=561303714]
+[node name="FileLabel" type="Label" parent="FileButtons/File3"]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 4.0
 offset_right = 153.0
 offset_bottom = 29.0
-theme_override_colors/font_color = Color(0.051970966, 0.05197096, 0.05197095, 1)
+theme_override_colors/font_color = Color(0.051971, 0.051971, 0.051971, 1)
 
-[node name="FlagIcon" type="TextureRect" parent="FileButtons/File3" unique_id=605336749]
+[node name="FlagIcon" type="TextureRect" parent="FileButtons/File3"]
 layout_mode = 0
 offset_left = 159.0
 offset_top = -20.0
@@ -155,22 +154,22 @@ offset_right = 238.0
 offset_bottom = 58.0
 texture = ExtResource("4_xc00q")
 
-[node name="File4" type="Button" parent="FileButtons" unique_id=100728370]
+[node name="File4" type="Button" parent="FileButtons"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.07284246, 0.072842725, 0.07284253, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_pgn23")
+theme_override_colors/font_color = Color(0.0728425, 0.0728427, 0.0728425, 1)
 theme_override_styles/hover = SubResource("StyleBoxFlat_4wdyv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pgn23")
 
-[node name="FileLabel" type="Label" parent="FileButtons/File4" unique_id=1169487961]
+[node name="FileLabel" type="Label" parent="FileButtons/File4"]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 4.0
 offset_right = 151.0
 offset_bottom = 29.0
-theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_colors/font_color = Color(0.00820202, 0.00820202, 0.00820202, 1)
 
-[node name="FlagIcon" type="TextureRect" parent="FileButtons/File4" unique_id=39776209]
+[node name="FlagIcon" type="TextureRect" parent="FileButtons/File4"]
 layout_mode = 0
 offset_left = 157.0
 offset_top = -19.0
@@ -178,22 +177,22 @@ offset_right = 238.0
 offset_bottom = 54.0
 texture = ExtResource("4_xc00q")
 
-[node name="File5" type="Button" parent="FileButtons" unique_id=2054688335]
+[node name="File5" type="Button" parent="FileButtons"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.043039, 0.04303924, 0.043039076, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_m712k")
+theme_override_colors/font_color = Color(0.043039, 0.0430392, 0.0430391, 1)
 theme_override_styles/hover = SubResource("StyleBoxFlat_72qb0")
+theme_override_styles/normal = SubResource("StyleBoxFlat_m712k")
 
-[node name="FileLabel" type="Label" parent="FileButtons/File5" unique_id=584636814]
+[node name="FileLabel" type="Label" parent="FileButtons/File5"]
 layout_mode = 0
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 164.0
 offset_bottom = 27.0
-theme_override_colors/font_color = Color(0.072842635, 0.072842635, 0.072842635, 1)
+theme_override_colors/font_color = Color(0.0728426, 0.0728426, 0.0728426, 1)
 
-[node name="FlagIcon" type="TextureRect" parent="FileButtons/File5" unique_id=1150050546]
+[node name="FlagIcon" type="TextureRect" parent="FileButtons/File5"]
 layout_mode = 0
 offset_left = 153.0
 offset_top = -20.0
@@ -201,22 +200,22 @@ offset_right = 241.0
 offset_bottom = 57.0
 texture = ExtResource("4_xc00q")
 
-[node name="File6" type="Button" parent="FileButtons" unique_id=1141055381]
+[node name="File6" type="Button" parent="FileButtons"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.11858118, 0.118581496, 0.11858127, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_7x2nf")
+theme_override_colors/font_color = Color(0.118581, 0.118581, 0.118581, 1)
 theme_override_styles/hover = SubResource("StyleBoxFlat_ogcxq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7x2nf")
 
-[node name="FileLabel" type="Label" parent="FileButtons/File6" unique_id=1091914989]
+[node name="FileLabel" type="Label" parent="FileButtons/File6"]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 4.0
 offset_right = 188.0
 offset_bottom = 27.0
-theme_override_colors/font_color = Color(0.043039158, 0.04303915, 0.04303915, 1)
+theme_override_colors/font_color = Color(0.0430392, 0.0430392, 0.0430392, 1)
 
-[node name="FlagIcon" type="TextureRect" parent="FileButtons/File6" unique_id=34083514]
+[node name="FlagIcon" type="TextureRect" parent="FileButtons/File6"]
 layout_mode = 0
 offset_left = 155.0
 offset_top = -20.0
@@ -224,44 +223,43 @@ offset_right = 237.0
 offset_bottom = 57.0
 texture = ExtResource("4_xc00q")
 
-[node name="Feedback" type="PopupPanel" parent="." unique_id=401591873]
+[node name="Feedback" type="PopupPanel" parent="."]
 
-[node name="Label" type="Label" parent="Feedback" unique_id=7839420]
+[node name="Label" type="Label" parent="Feedback"]
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 96.0
 offset_bottom = 96.0
 theme_override_font_sizes/font_size = 25
 
-[node name="Continue" type="Button" parent="Feedback" unique_id=1340146275]
+[node name="Continue" type="Button" parent="Feedback"]
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 96.0
 offset_bottom = 96.0
 
-[node name="ContinueLabel" type="Label" parent="Feedback/Continue" unique_id=801551116]
+[node name="ContinueLabel" type="Label" parent="Feedback/Continue"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
-theme_override_colors/font_color = Color(0.42365062, 0.42365065, 0.42365062, 1)
+theme_override_colors/font_color = Color(0.423651, 0.423651, 0.423651, 1)
 theme_override_font_sizes/font_size = 28
 text = "
 Continue"
 horizontal_alignment = 3
 vertical_alignment = 3
 
-[node name="FinalScore" type="PopupPanel" parent="." unique_id=1254532760]
-oversampling_override = 1.0
+[node name="FinalScore" type="PopupPanel" parent="."]
 size = Vector2i(287, 326)
 
-[node name="ScoreLabel" type="Label" parent="FinalScore" unique_id=943649546]
+[node name="ScoreLabel" type="Label" parent="FinalScore"]
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 283.0
 offset_bottom = 322.0
 theme_override_font_sizes/font_size = 30
 
-[node name="Quit" type="Button" parent="FinalScore" unique_id=930952677]
+[node name="Quit" type="Button" parent="FinalScore"]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -270,12 +268,12 @@ anchor_bottom = 1.0
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 283.0
-offset_bottom = 322.0
+offset_bottom = 602.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_hover_color = Color(0.744187, 0, 0.261236, 1)
 theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0.8235294, 0, 0.011764706, 1)
-theme_override_colors/font_hover_color = Color(0.7441874, 0, 0.26123574, 1)
+theme_override_colors/font_focus_color = Color(0.823529, 0, 0.0117647, 1)
 theme_override_font_sizes/font_size = 86
 text = "
 
@@ -283,7 +281,7 @@ text = "
 
 QUIT"
 
-[node name="Continue" type="TextureButton" parent="." unique_id=1217920486]
+[node name="Continue" type="TextureButton" parent="."]
 visible = false
 z_index = 4
 offset_left = 425.0
@@ -293,7 +291,7 @@ offset_bottom = 423.0
 texture_normal = ExtResource("5_sjfi4")
 texture_hover = ExtResource("6_lgy45")
 
-[node name="Help" type="TextureButton" parent="." unique_id=1816089898]
+[node name="Help" type="TextureButton" parent="."]
 offset_left = 517.0
 offset_top = 364.0
 offset_right = 701.0
@@ -301,7 +299,7 @@ offset_bottom = 421.0
 texture_normal = ExtResource("5_sd4uq")
 texture_hover = ExtResource("6_esu45")
 
-[node name="Label" type="Label" parent="Help" unique_id=1151379898]
+[node name="Label" type="Label" parent="Help"]
 layout_mode = 0
 offset_left = 40.0
 offset_top = -345.0

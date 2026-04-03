@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dk2cmsxd8bsft"]
+[gd_scene load_steps=14 format=3 uid="uid://dk2cmsxd8bsft"]
 
 [ext_resource type="Script" uid="uid://bh0wbj1exe3f1" path="res://Godot_Game_Files/Assets/phising_email.gd" id="1_nv4bd"]
 [ext_resource type="Texture2D" uid="uid://dewofhjfipxkm" path="res://Godot_Game_Files/Assets/Environment/pc.png" id="2_25ifg"]
@@ -14,20 +14,20 @@
 [ext_resource type="Texture2D" uid="uid://bpbnuo012lldo" path="res://Godot_Game_Files/Puzzles/Phil/CONTINUE (1).png" id="11_kuhnx"]
 [ext_resource type="Texture2D" uid="uid://d1tl8pf0q211w" path="res://Godot_Game_Files/Puzzles/Phil/CONTINUE.png" id="12_wxe8j"]
 
-[node name="PhisingEmail" type="Node2D" unique_id=114464491]
+[node name="PhisingEmail" type="Node2D"]
 script = ExtResource("1_nv4bd")
 
-[node name="Pc" type="Sprite2D" parent="." unique_id=745287101]
+[node name="Pc" type="Sprite2D" parent="."]
 position = Vector2(494.152, 256.703)
 scale = Vector2(8.06379, 7.59341)
 texture = ExtResource("2_25ifg")
 
-[node name="PhisingEmail" type="Sprite2D" parent="." unique_id=1041902735]
+[node name="PhisingEmail" type="Sprite2D" parent="."]
 position = Vector2(514.633, 162.25)
 scale = Vector2(0.467151, 0.475254)
 texture = ExtResource("3_afpqk")
 
-[node name="message" type="Label" parent="PhisingEmail" unique_id=1194719273]
+[node name="message" type="Label" parent="PhisingEmail"]
 z_index = 1
 anchors_preset = -1
 anchor_left = -0.0031505
@@ -45,7 +45,7 @@ text = "test"
 text_overrun_behavior = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="email" type="Label" parent="PhisingEmail" unique_id=1268741976]
+[node name="email" type="Label" parent="PhisingEmail"]
 z_index = 1
 anchors_preset = -1
 anchor_top = 0.0106806
@@ -60,14 +60,14 @@ theme_override_font_sizes/font_size = 27
 text = "test"
 metadata/_edit_use_anchors_ = true
 
-[node name="Button_manager" type="Control" parent="." unique_id=2044277475]
+[node name="Button_manager" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Accept" type="TextureButton" parent="Button_manager" unique_id=481347822]
+[node name="Accept" type="TextureButton" parent="Button_manager"]
 layout_mode = 0
 offset_left = 49.0
 offset_top = 294.0
@@ -77,7 +77,7 @@ texture_normal = ExtResource("3_al83v")
 texture_hover = ExtResource("3_kt3jf")
 metadata/_edit_use_anchors_ = true
 
-[node name="Reject" type="TextureButton" parent="Button_manager" unique_id=665882630]
+[node name="Reject" type="TextureButton" parent="Button_manager"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.816
@@ -90,7 +90,7 @@ texture_normal = ExtResource("4_0js8u")
 texture_hover = ExtResource("5_afpqk")
 metadata/_edit_use_anchors_ = true
 
-[node name="Help" type="TextureButton" parent="Button_manager" unique_id=170325616]
+[node name="Help" type="TextureButton" parent="Button_manager"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 4.793
@@ -105,7 +105,7 @@ texture_normal = ExtResource("6_amkrs")
 texture_hover = ExtResource("7_caett")
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="Button_manager/Help" unique_id=1322923500]
+[node name="Label" type="Label" parent="Button_manager/Help"]
 visible = false
 visibility_layer = 4
 z_index = 1
@@ -127,14 +127,14 @@ Never share sensitive info through email.
 "
 horizontal_alignment = 1
 
-[node name="Square" type="Sprite2D" parent="Button_manager/Help/Label" unique_id=2090064586]
+[node name="Square" type="Sprite2D" parent="Button_manager/Help/Label"]
 modulate = Color(0, 0, 0, 0.851)
 z_index = -1
 position = Vector2(407.305, 104.14)
 scale = Vector2(1.38972, 0.72093)
 texture = ExtResource("10_amkrs")
 
-[node name="Continue" type="TextureButton" parent="Button_manager" unique_id=661380516]
+[node name="Continue" type="TextureButton" parent="Button_manager"]
 visible = false
 layout_mode = 0
 offset_left = 347.0
@@ -144,7 +144,7 @@ offset_bottom = 333.0
 texture_normal = ExtResource("11_kuhnx")
 texture_hover = ExtResource("12_wxe8j")
 
-[node name="Label2" type="Label" parent="Button_manager/Continue" unique_id=749514231]
+[node name="Label2" type="Label" parent="Button_manager/Continue"]
 visibility_layer = 4
 z_index = 1
 z_as_relative = false
@@ -159,14 +159,14 @@ theme_override_font_sizes/font_size = 23
 text = "text"
 horizontal_alignment = 1
 
-[node name="Square" type="Sprite2D" parent="Button_manager/Continue/Label2" unique_id=287802758]
+[node name="Square" type="Sprite2D" parent="Button_manager/Continue/Label2"]
 modulate = Color(0, 0, 0, 0.851)
 z_index = -1
 position = Vector2(407.305, 39.3555)
 scale = Vector2(1.38972, 0.289036)
 texture = ExtResource("10_amkrs")
 
-[node name="phisingemailcamera2d" type="Camera2D" parent="." unique_id=1810857910]
+[node name="phisingemailcamera2d" type="Camera2D" parent="."]
 position = Vector2(495, 261)
 zoom = Vector2(0.94, 0.94)
 

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://0j7limif57iy"]
+[gd_scene load_steps=201 format=3 uid="uid://0j7limif57iy"]
 
 [ext_resource type="Script" uid="uid://raxnyqb87g2e" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/endcutscene.gd" id="1_cw3nr"]
 [ext_resource type="Texture2D" uid="uid://byoqg74lle6la" path="res://Godot_Game_Files/Assets/Environment/roof.png" id="2_i4w64"]
@@ -1314,127 +1314,126 @@ animations = [{
 "speed": 7.0
 }]
 
-[node name="Node2D" type="Node2D" unique_id=501240100]
+[node name="Node2D" type="Node2D"]
 script = ExtResource("1_cw3nr")
 
-[node name="Roof" type="Sprite2D" parent="." unique_id=1448921352]
+[node name="Roof" type="Sprite2D" parent="."]
 position = Vector2(144, 113)
 texture = ExtResource("2_i4w64")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=2044027878]
+[node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-36, 121)
 offset = Vector2(0, -7.835)
 zoom = Vector2(0.765, 0.89)
 script = ExtResource("3_vm0ta")
 
-[node name="Floor_Walls" type="StaticBody2D" parent="." unique_id=260504564]
+[node name="Floor_Walls" type="StaticBody2D" parent="."]
 position = Vector2(-316, 303)
 
-[node name="Floor" type="CollisionShape2D" parent="Floor_Walls" unique_id=1187863152]
+[node name="Floor" type="CollisionShape2D" parent="Floor_Walls"]
 position = Vector2(-26, -332)
 shape = SubResource("WorldBoundaryShape2D_7i3n4")
 
-[node name="Left Wall" type="CollisionShape2D" parent="Floor_Walls" unique_id=1809027817]
-position = Vector2(-669.0001, 75)
+[node name="Left Wall" type="CollisionShape2D" parent="Floor_Walls"]
+position = Vector2(-669, 75)
 shape = SubResource("SegmentShape2D_k8t5x")
 
-[node name="Right Wall" type="CollisionShape2D" parent="Floor_Walls" unique_id=1879010792]
-position = Vector2(1107.25, 108.250046)
+[node name="Right Wall" type="CollisionShape2D" parent="Floor_Walls"]
+position = Vector2(1107.25, 108.25)
 shape = SubResource("SegmentShape2D_k8t5x")
 
-[node name="shareholder" type="Node2D" parent="." unique_id=1873650994]
+[node name="shareholder" type="Node2D" parent="."]
 position = Vector2(-4, 2)
 script = ExtResource("3_xoog6")
 
-[node name="member4" type="AnimatedSprite2D" parent="shareholder" unique_id=407347885]
-position = Vector2(-1196.0542, 273.4999)
-scale = Vector2(1.685808, 1.685808)
+[node name="member4" type="AnimatedSprite2D" parent="shareholder"]
+position = Vector2(-1196.05, 273.5)
+scale = Vector2(1.68581, 1.68581)
 sprite_frames = SubResource("SpriteFrames_ah6sk")
 animation = &"walk"
 frame = 1
-frame_progress = 0.87991786
+frame_progress = 0.879918
 
-[node name="member3" type="AnimatedSprite2D" parent="shareholder" unique_id=885985621]
-position = Vector2(-1154.845, 273.49994)
-scale = Vector2(1.7220458, 1.7220458)
+[node name="member3" type="AnimatedSprite2D" parent="shareholder"]
+position = Vector2(-1154.84, 273.5)
+scale = Vector2(1.72205, 1.72205)
 sprite_frames = SubResource("SpriteFrames_ah6sk")
 animation = &"walk"
 frame = 1
-frame_progress = 0.87991786
+frame_progress = 0.879918
 
-[node name="member2" type="AnimatedSprite2D" parent="shareholder" unique_id=1417143730]
-position = Vector2(-1112.7499, 273.49997)
-scale = Vector2(1.7590625, 1.7590625)
+[node name="member2" type="AnimatedSprite2D" parent="shareholder"]
+position = Vector2(-1112.75, 273.5)
+scale = Vector2(1.75906, 1.75906)
 sprite_frames = SubResource("SpriteFrames_ah6sk")
 animation = &"walk"
 frame = 1
-frame_progress = 0.87991786
+frame_progress = 0.879918
 
-[node name="member" type="AnimatedSprite2D" parent="shareholder" unique_id=514928422]
-position = Vector2(-1069.7499, 273.5)
-scale = Vector2(1.796875, 1.796875)
+[node name="member" type="AnimatedSprite2D" parent="shareholder"]
+position = Vector2(-1069.75, 273.5)
+scale = Vector2(1.79688, 1.79688)
 sprite_frames = SubResource("SpriteFrames_ah6sk")
 animation = &"walk"
 frame = 1
-frame_progress = 0.87991786
+frame_progress = 0.879918
 
-[node name="boss" type="Node2D" parent="." unique_id=2067525465]
+[node name="boss" type="Node2D" parent="."]
 position = Vector2(733, 23)
 
-[node name="boss_end" type="AnimatedSprite2D" parent="boss" unique_id=284245595]
-position = Vector2(4, 249.99997)
-scale = Vector2(1.7499995, 1.7499995)
+[node name="boss_end" type="AnimatedSprite2D" parent="boss"]
+position = Vector2(4, 250)
+scale = Vector2(1.75, 1.75)
 sprite_frames = SubResource("SpriteFrames_w7kf5")
 animation = &"idle"
 
-[node name="boss_devil" type="AnimatedSprite2D" parent="boss" unique_id=1808251034]
+[node name="boss_devil" type="AnimatedSprite2D" parent="boss"]
 visible = false
-position = Vector2(695.00006, 231)
+position = Vector2(695, 231)
 scale = Vector2(3.71875, 3.71875)
 sprite_frames = SubResource("SpriteFrames_nsd54")
 animation = &"idle"
-frame_progress = 0.029200288
+frame_progress = 0.0292003
 
-[node name="change_effect2" type="AnimatedSprite2D" parent="boss" unique_id=2097253118]
-position = Vector2(718.25006, 248.25005)
-scale = Vector2(3.7450008, 3.7450008)
+[node name="change_effect2" type="AnimatedSprite2D" parent="boss"]
+position = Vector2(532, 214)
+scale = Vector2(3.745, 3.745)
 sprite_frames = SubResource("SpriteFrames_fhwen")
 animation = &"spin"
 frame = 27
-frame_progress = 0.5377314
+frame_progress = 0.537731
 
-[node name="change_effect" type="AnimatedSprite2D" parent="boss" unique_id=1087737817]
-position = Vector2(696, 240)
-scale = Vector2(3.7450008, 3.7450008)
+[node name="change_effect" type="AnimatedSprite2D" parent="boss"]
+position = Vector2(496, 210)
+scale = Vector2(3.745, 3.745)
 sprite_frames = SubResource("SpriteFrames_mbvku")
 animation = &"spin"
 frame = 22
-frame_progress = 0.3110268
+frame_progress = 0.311027
 
-[node name="mainchar" type="Node2D" parent="." unique_id=1210563883]
+[node name="mainchar" type="Node2D" parent="."]
 position = Vector2(-851, 1)
 script = ExtResource("9_ysl61")
 
-[node name="player" type="AnimatedSprite2D" parent="mainchar" unique_id=1810398590]
-position = Vector2(2.999999, 272)
+[node name="player" type="AnimatedSprite2D" parent="mainchar"]
+position = Vector2(3, 272)
 scale = Vector2(1.75, 1.75)
 sprite_frames = SubResource("SpriteFrames_62c4e")
 animation = &"idle"
-frame_progress = 0.18821265
+frame_progress = 0.188213
 
-[node name="portal" type="AnimatedSprite2D" parent="mainchar" unique_id=1349771911]
-visible = false
-position = Vector2(552, 284)
-scale = Vector2(2.1264646, 2.1264646)
+[node name="portal" type="AnimatedSprite2D" parent="mainchar"]
+position = Vector2(1086, 119)
+scale = Vector2(2.12646, 2.12646)
 sprite_frames = SubResource("SpriteFrames_d6fmt")
 animation = &"spin"
 
-[node name="lady" type="Node2D" parent="." unique_id=1339150487]
+[node name="lady" type="Node2D" parent="."]
 position = Vector2(-932, 7)
 
-[node name="lucy" type="AnimatedSprite2D" parent="lady" unique_id=1236199354]
+[node name="lucy" type="AnimatedSprite2D" parent="lady"]
 position = Vector2(8, 274)
-scale = Vector2(1.640625, 1.640625)
+scale = Vector2(1.64063, 1.64063)
 sprite_frames = SubResource("SpriteFrames_ktvgq")
 animation = &"idle"
-frame_progress = 0.8947679
+frame_progress = 0.894768
