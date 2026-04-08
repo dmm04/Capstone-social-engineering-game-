@@ -1,4 +1,4 @@
-[gd_scene load_steps=136 format=4 uid="uid://cd1djwowsf6r"]
+[gd_scene load_steps=137 format=4 uid="uid://cd1djwowsf6r"]
 
 [ext_resource type="Script" uid="uid://dvtdiw6ffqwa6" path="res://Scripts/game.gd" id="1_78awf"]
 [ext_resource type="PackedScene" uid="uid://bccfl7ha5r13n" path="res://Scenes/Player.tscn" id="2_s0nni"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://di3pxmru463qu" path="res://Scenes/enemy_2.tscn" id="8_400sg"]
 [ext_resource type="Texture2D" uid="uid://co38fwh518qt4" path="res://Assets/cutscene.png" id="9_g4kob"]
 [ext_resource type="PackedScene" uid="uid://chli3ec0o4ts1" path="res://Scenes/endzone.tscn" id="10_qy1jj"]
+[ext_resource type="AudioStream" uid="uid://on7h23dlpun2" path="res://Assets/Crown of Ashes.mp3" id="11_3xj3m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g4kob"]
 atlas = ExtResource("9_g4kob")
@@ -1070,3 +1071,7 @@ position = Vector2(215, -4057)
 
 [node name="ENDZONE" parent="." instance=ExtResource("10_qy1jj")]
 position = Vector2(-14, -4335)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_3xj3m")
+autoplay = true

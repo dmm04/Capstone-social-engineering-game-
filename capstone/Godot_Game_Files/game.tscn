@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b5cb8hi831nnt"]
+[gd_scene load_steps=21 format=3 uid="uid://b5cb8hi831nnt"]
 
 [ext_resource type="Script" uid="uid://by34sk16ycs2r" path="res://Godot_Game_Files/event_tree.gd" id="1_eqekq"]
 [ext_resource type="PackedScene" uid="uid://bnpveoij6ge22" path="res://Godot_Game_Files/Assets/Characters/Player.tscn" id="1_l7whm"]
@@ -17,7 +17,6 @@
 [ext_resource type="PackedScene" uid="uid://dvcynifnfhk4c" path="res://Godot_Game_Files/Assets/Buttons/!alert.tscn" id="9_woipg"]
 [ext_resource type="Script" uid="uid://b14l2wwp0qdu3" path="res://Godot_Game_Files/Assets/Characters/Player.gd" id="14_eqekq"]
 [ext_resource type="PackedScene" uid="uid://xq1pobtbqe5g" path="res://Godot_Game_Files/Puzzles/Emily/dowload.tscn" id="17_7nhs0"]
-[ext_resource type="PackedScene" uid="uid://cd1djwowsf6r" path="res://Godot_Game_Files/endlevel scenes/Game.tscn" id="18_hw1hp"]
 
 [sub_resource type="GDScript" id="GDScript_woipg"]
 script/source = "extends Node
@@ -163,10 +162,6 @@ script = ExtResource("9_2npts")
 
 [node name="dowload" parent="." instance=ExtResource("17_7nhs0")]
 position = Vector2(-1, 814)
-
-[node name="endleve" parent="." instance=ExtResource("18_hw1hp")]
-position = Vector2(-2743, 2583)
-script = null
 
 [connection signal="body_entered" from="Event_Tree/Puzzles/EmailAlert" to="Event_Tree/Puzzles/EmailAlert" method="_on_body_entered"]
 [connection signal="body_exited" from="Event_Tree/Puzzles/EmailAlert" to="Event_Tree/Puzzles/EmailAlert" method="_on_body_exited"]
