@@ -1,7 +1,14 @@
+update lucy center
 if {end_step} == 0.0:
 	lucy: Hello.. Thanks for coming up here.. I didn't think you would to be honest..
 	- I wouldn't miss it for the world. Cigarettes are why I started vaping.
 		lucy: Wow, honestly you just get me.. I feel like no one else gets me like you do..
+		- Theres something I want to tell you..
+			lucy: Yes?
+			- I have feelings for you
+				lucy: OH WOW! I FEEL THE SAME WAY FOR YOU!
+			- I spit in your coffee earlier..
+				lucy: oh.. wow.. I thought it tasted extra good..
 	- I don't believe in free will.. It's like I don't exist outside of this..
 		lucy: What do you mean?
 		- It's like this place.. I dont know.. It's like once this is all over I won't exist anymore.. Even this job only felt like I've been here like 10 minutes max..
@@ -25,7 +32,8 @@ elif {end_step} == 2.0:
 		set {end_step} = 3.0
 elif {end_step} == 4.0:
 	- Aww shucks, I really am sorry.. I didn't mean to cause a ruckus.
-		- I only ever wanted to ensure the industry standard cyber-safe practices.
+		- I only ever wanted to ensure the industry standard cyber-safe best practices.
+	lucy: OH MY LANCE!
 	devil: My son, you have been swayed by the wiles of Bathsheba. She has taken your innocence of mind, and for that…
 	devil: .. for that you must die.. I am truely sorry.. You really did bring some value to the shareholders..
 	devil: I am your PUNISHMENT.
