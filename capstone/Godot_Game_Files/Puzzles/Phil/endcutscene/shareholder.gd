@@ -1,5 +1,4 @@
 extends Node2D
-"""
 func _ready():
 	pass
 
@@ -21,4 +20,3 @@ func _process(delta):
 		$member2.play("stand")
 		$member3.play("stand")
 		$member4.play("stand")
-"""

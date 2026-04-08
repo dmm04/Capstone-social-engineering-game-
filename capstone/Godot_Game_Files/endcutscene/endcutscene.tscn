@@ -1,15 +1,15 @@
-[gd_scene load_steps=201 format=3 uid="uid://6nyy4qpqxn23"]
+[gd_scene load_steps=207 format=3 uid="uid://6nyy4qpqxn23"]
 
-[ext_resource type="Texture2D" uid="uid://rvmgoqt5y1fj" path="res://Godot_Game_Files/Assets/Environment/roof.png" id="1_7i3n4"]
-[ext_resource type="Script" uid="uid://raxnyqb87g2e" path="res://Godot_Game_Files/endcutscene/endcutscene.gd" id="1_k8t5x"]
-[ext_resource type="Script" uid="uid://bkorp2cpiig2s" path="res://Godot_Game_Files/endcutscene/end_camera.gd" id="3_4sgef"]
-[ext_resource type="Script" uid="uid://bh0grrh4iixdh" path="res://Godot_Game_Files/endcutscene/shareholder.gd" id="3_6vjul"]
+[ext_resource type="Texture2D" uid="uid://byoqg74lle6la" path="res://Godot_Game_Files/Assets/Environment/roof.png" id="1_7i3n4"]
+[ext_resource type="Script" uid="uid://raxnyqb87g2e" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/endcutscene.gd" id="1_k8t5x"]
+[ext_resource type="Script" uid="uid://bkorp2cpiig2s" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/end_camera.gd" id="3_4sgef"]
+[ext_resource type="Script" uid="uid://bh0grrh4iixdh" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/shareholder.gd" id="3_6vjul"]
 [ext_resource type="Texture2D" uid="uid://bwqy21q0k1mo6" path="res://Godot_Game_Files/endcutscene/walk.png" id="4_twkhn"]
 [ext_resource type="Texture2D" uid="uid://cv1djrm1bfkht" path="res://Godot_Game_Files/endcutscene/boss_end.png" id="5_8w31b"]
 [ext_resource type="Texture2D" uid="uid://d18vhvblxde2b" path="res://Godot_Game_Files/endcutscene/bossidle.png" id="6_ld76v"]
 [ext_resource type="Texture2D" uid="uid://c2antxxmdxkwy" path="res://Godot_Game_Files/endcutscene/effects/16_sunburn_spritesheet.png" id="7_xryrr"]
 [ext_resource type="Texture2D" uid="uid://c5iv5704mdejs" path="res://Godot_Game_Files/endcutscene/effects/12_nebula_spritesheet.png" id="8_qhqcm"]
-[ext_resource type="Script" uid="uid://cde3h80m4x8gv" path="res://Godot_Game_Files/endcutscene/mainchar.gd" id="9_6s4v8"]
+[ext_resource type="Script" uid="uid://cde3h80m4x8gv" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/mainchar.gd" id="9_6s4v8"]
 [ext_resource type="Texture2D" uid="uid://pgxojkea1fot" path="res://Godot_Game_Files/Assets/Characters/character 1.png" id="9_wa5b7"]
 [ext_resource type="Texture2D" uid="uid://bbnf3mnjaxhm3" path="res://Godot_Game_Files/Assets/Characters/character2.png" id="10_5ibhr"]
 [ext_resource type="Texture2D" uid="uid://bv8vulacnw1d8" path="res://Godot_Game_Files/endcutscene/portal/portal1_frame_1.png" id="10_ps0pn"]
@@ -107,7 +107,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 11.0
+"speed": 10.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ah6sk"]
@@ -1077,6 +1077,30 @@ animations = [{
 "speed": 90.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6fmt"]
+atlas = ExtResource("9_wa5b7")
+region = Rect2(320, 1280, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awadk"]
+atlas = ExtResource("9_wa5b7")
+region = Rect2(256, 1280, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7050g"]
+atlas = ExtResource("9_wa5b7")
+region = Rect2(192, 1280, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abq2v"]
+atlas = ExtResource("9_wa5b7")
+region = Rect2(128, 1280, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypqlt"]
+atlas = ExtResource("9_wa5b7")
+region = Rect2(64, 1280, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_piucb"]
+atlas = ExtResource("9_wa5b7")
+region = Rect2(0, 1280, 64, 64)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_6uua2"]
 atlas = ExtResource("9_wa5b7")
 region = Rect2(0, 1472, 64, 64)
@@ -1123,6 +1147,35 @@ region = Rect2(512, 704, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_62c4e"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6fmt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6fmt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6fmt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_awadk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7050g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abq2v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypqlt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_piucb")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6uua2")
@@ -1335,101 +1388,98 @@ position = Vector2(-26, -332)
 shape = SubResource("WorldBoundaryShape2D_7i3n4")
 
 [node name="Left Wall" type="CollisionShape2D" parent="Floor_Walls"]
-position = Vector2(-669.0001, 75)
+position = Vector2(-669, 75)
 shape = SubResource("SegmentShape2D_k8t5x")
 
 [node name="Right Wall" type="CollisionShape2D" parent="Floor_Walls"]
-position = Vector2(1107.25, 108.250046)
+position = Vector2(1107.25, 108.25)
 shape = SubResource("SegmentShape2D_k8t5x")
 
 [node name="shareholder" type="Node2D" parent="."]
 script = ExtResource("3_6vjul")
 
 [node name="member4" type="AnimatedSprite2D" parent="shareholder"]
-position = Vector2(-1196.0542, 273.4999)
-scale = Vector2(1.685808, 1.685808)
+position = Vector2(-1196.05, 273.5)
+scale = Vector2(1.68581, 1.68581)
 sprite_frames = SubResource("SpriteFrames_ah6sk")
 animation = &"walk"
-frame = 1
-frame_progress = 0.87991786
+frame_progress = 0.998631
 
 [node name="member3" type="AnimatedSprite2D" parent="shareholder"]
-position = Vector2(-1154.845, 273.49994)
-scale = Vector2(1.7220458, 1.7220458)
+position = Vector2(-1154.84, 273.5)
+scale = Vector2(1.72205, 1.72205)
 sprite_frames = SubResource("SpriteFrames_ah6sk")
 animation = &"walk"
 frame = 1
-frame_progress = 0.87991786
+frame_progress = 0.879918
 
 [node name="member2" type="AnimatedSprite2D" parent="shareholder"]
-position = Vector2(-1112.7499, 273.49997)
-scale = Vector2(1.7590625, 1.7590625)
+position = Vector2(-1112.75, 273.5)
+scale = Vector2(1.75906, 1.75906)
 sprite_frames = SubResource("SpriteFrames_ah6sk")
 animation = &"walk"
 frame = 1
-frame_progress = 0.87991786
+frame_progress = 0.879918
 
 [node name="member" type="AnimatedSprite2D" parent="shareholder"]
-position = Vector2(-1069.7499, 273.5)
-scale = Vector2(1.796875, 1.796875)
+position = Vector2(-1069.75, 273.5)
+scale = Vector2(1.79688, 1.79688)
 sprite_frames = SubResource("SpriteFrames_ah6sk")
 animation = &"walk"
 frame = 1
-frame_progress = 0.87991786
+frame_progress = 0.879918
 
 [node name="boss" type="Node2D" parent="."]
 
 [node name="boss_end" type="AnimatedSprite2D" parent="boss"]
+visible = false
 position = Vector2(712, 272)
-scale = Vector2(1.7499995, 1.7499995)
+scale = Vector2(1.75, 1.75)
 sprite_frames = SubResource("SpriteFrames_w7kf5")
 animation = &"idle"
 
 [node name="boss_devil" type="AnimatedSprite2D" parent="boss"]
-visible = false
-position = Vector2(695.00006, 231)
+position = Vector2(695, 231)
 scale = Vector2(3.71875, 3.71875)
 sprite_frames = SubResource("SpriteFrames_nsd54")
 animation = &"idle"
-frame_progress = 0.52933145
+frame_progress = 0.529331
 
 [node name="change_effect2" type="AnimatedSprite2D" parent="boss"]
 visible = false
-position = Vector2(718.25006, 248.25005)
-scale = Vector2(3.7450008, 3.7450008)
+position = Vector2(718.25, 248.25)
+scale = Vector2(3.745, 3.745)
 sprite_frames = SubResource("SpriteFrames_fhwen")
-frame_progress = 0.7918236
+frame_progress = 0.791824
 
 [node name="change_effect" type="AnimatedSprite2D" parent="boss"]
 visible = false
 position = Vector2(696, 240)
-scale = Vector2(3.7450008, 3.7450008)
+scale = Vector2(3.745, 3.745)
 sprite_frames = SubResource("SpriteFrames_mbvku")
 animation = &"spin"
-frame_progress = 0.40206233
+frame_progress = 0.402062
 
 [node name="mainchar" type="Node2D" parent="."]
 script = ExtResource("9_6s4v8")
 
 [node name="player" type="AnimatedSprite2D" parent="mainchar"]
-position = Vector2(575, 271.00003)
+position = Vector2(552, 303)
 scale = Vector2(1.75, 1.75)
 sprite_frames = SubResource("SpriteFrames_62c4e")
 animation = &"idle"
-frame_progress = 0.3842691
 
 [node name="portal" type="AnimatedSprite2D" parent="mainchar"]
-visible = false
-position = Vector2(552, 284)
-scale = Vector2(2.1264646, 2.1264646)
+position = Vector2(557, 141.477)
+scale = Vector2(2.12646, 2.04761)
 sprite_frames = SubResource("SpriteFrames_d6fmt")
-frame_progress = 0.7078873
+frame_progress = 0.195096
 
 [node name="lady" type="Node2D" parent="."]
 
 [node name="lucy" type="AnimatedSprite2D" parent="lady"]
-position = Vector2(508, 276)
-scale = Vector2(1.640625, 1.640625)
+position = Vector2(381, 287)
+scale = Vector2(1.64063, 1.64063)
 sprite_frames = SubResource("SpriteFrames_ktvgq")
 animation = &"idle"
-frame_progress = 0.99664956
+frame_progress = 0.99665
