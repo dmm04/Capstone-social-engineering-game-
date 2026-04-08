@@ -1382,18 +1382,14 @@ sprite_frames = SubResource("SpriteFrames_w7kf5")
 animation = &"idle"
 
 [node name="boss_devil" type="AnimatedSprite2D" parent="boss" unique_id=1808251034]
-visible = false
-position = Vector2(0, 204.99998)
-scale = Vector2(3.328127, 3.328127)
+position = Vector2(695.00006, 231)
+scale = Vector2(3.71875, 3.71875)
 sprite_frames = SubResource("SpriteFrames_nsd54")
 animation = &"idle"
 frame_progress = 0.029200288
 
 [node name="change_effect2" type="AnimatedSprite2D" parent="boss" unique_id=2097253118]
-visible = false
-light_mask = 0
-z_index = 1
-position = Vector2(18, 226)
+position = Vector2(718.25006, 248.25005)
 scale = Vector2(3.7450008, 3.7450008)
 sprite_frames = SubResource("SpriteFrames_fhwen")
 animation = &"spin"
@@ -1401,8 +1397,7 @@ frame = 27
 frame_progress = 0.5377314
 
 [node name="change_effect" type="AnimatedSprite2D" parent="boss" unique_id=1087737817]
-visible = false
-position = Vector2(-5, 215)
+position = Vector2(696, 240)
 scale = Vector2(3.7450008, 3.7450008)
 sprite_frames = SubResource("SpriteFrames_mbvku")
 animation = &"spin"
@@ -1421,7 +1416,8 @@ animation = &"idle"
 frame_progress = 0.18821265
 
 [node name="portal" type="AnimatedSprite2D" parent="mainchar" unique_id=1349771911]
-position = Vector2(1307, 287)
+visible = false
+position = Vector2(552, 284)
 scale = Vector2(2.1264646, 2.1264646)
 sprite_frames = SubResource("SpriteFrames_d6fmt")
 animation = &"spin"
@@ -1437,5 +1433,5 @@ animation = &"idle"
 frame_progress = 0.8947679
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=29109799]
-position = Vector2(45, 75)
+position = Vector2(-265, 88)
 script = ExtResource("19_vm0ta")

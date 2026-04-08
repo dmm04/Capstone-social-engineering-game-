@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://raxnyqb87g2e" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/endcutscene.gd" id="1_cw3nr"]
 [ext_resource type="Texture2D" uid="uid://byoqg74lle6la" path="res://Godot_Game_Files/Assets/Environment/roof.png" id="2_i4w64"]
+[ext_resource type="Script" uid="uid://bkorp2cpiig2s" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/end_camera.gd" id="3_vm0ta"]
 [ext_resource type="Script" uid="uid://bh0grrh4iixdh" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/shareholder.gd" id="3_xoog6"]
 [ext_resource type="Texture2D" uid="uid://bwqy21q0k1mo6" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/walk.png" id="4_ypasg"]
 [ext_resource type="Texture2D" uid="uid://cv1djrm1bfkht" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/boss_end.png" id="5_ag7p5"]
@@ -18,7 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://0vimkwxe3r6" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/portal/portal1_frame_5.png" id="15_njple"]
 [ext_resource type="Texture2D" uid="uid://s4eebrgrwe86" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/portal/portal1_frame_6.png" id="16_gndo0"]
 [ext_resource type="Texture2D" uid="uid://c5bfgu88hor8e" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/portal/portal1_frame_7.png" id="17_a038d"]
-[ext_resource type="Script" uid="uid://m76nshhbjym7" path="res://Godot_Game_Files/endcutscene/moving_camera.gd" id="19_vm0ta"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7i3n4"]
 distance = -354.0
@@ -1321,6 +1321,12 @@ script = ExtResource("1_cw3nr")
 position = Vector2(144, 113)
 texture = ExtResource("2_i4w64")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2044027878]
+position = Vector2(-36, 121)
+offset = Vector2(0, -7.835)
+zoom = Vector2(0.765, 0.89)
+script = ExtResource("3_vm0ta")
+
 [node name="Floor_Walls" type="StaticBody2D" parent="." unique_id=260504564]
 position = Vector2(-316, 303)
 
@@ -1383,17 +1389,14 @@ animation = &"idle"
 
 [node name="boss_devil" type="AnimatedSprite2D" parent="boss" unique_id=1808251034]
 visible = false
-position = Vector2(0, 204.99998)
-scale = Vector2(3.328127, 3.328127)
+position = Vector2(695.00006, 231)
+scale = Vector2(3.71875, 3.71875)
 sprite_frames = SubResource("SpriteFrames_nsd54")
 animation = &"idle"
 frame_progress = 0.029200288
 
 [node name="change_effect2" type="AnimatedSprite2D" parent="boss" unique_id=2097253118]
-visible = false
-light_mask = 0
-z_index = 1
-position = Vector2(18, 226)
+position = Vector2(718.25006, 248.25005)
 scale = Vector2(3.7450008, 3.7450008)
 sprite_frames = SubResource("SpriteFrames_fhwen")
 animation = &"spin"
@@ -1401,8 +1404,7 @@ frame = 27
 frame_progress = 0.5377314
 
 [node name="change_effect" type="AnimatedSprite2D" parent="boss" unique_id=1087737817]
-visible = false
-position = Vector2(-5, 215)
+position = Vector2(696, 240)
 scale = Vector2(3.7450008, 3.7450008)
 sprite_frames = SubResource("SpriteFrames_mbvku")
 animation = &"spin"
@@ -1421,7 +1423,8 @@ animation = &"idle"
 frame_progress = 0.18821265
 
 [node name="portal" type="AnimatedSprite2D" parent="mainchar" unique_id=1349771911]
-position = Vector2(1307, 287)
+visible = false
+position = Vector2(552, 284)
 scale = Vector2(2.1264646, 2.1264646)
 sprite_frames = SubResource("SpriteFrames_d6fmt")
 animation = &"spin"
@@ -1435,7 +1438,3 @@ scale = Vector2(1.640625, 1.640625)
 sprite_frames = SubResource("SpriteFrames_ktvgq")
 animation = &"idle"
 frame_progress = 0.8947679
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=29109799]
-position = Vector2(45, 75)
-script = ExtResource("19_vm0ta")
