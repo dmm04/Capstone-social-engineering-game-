@@ -1,7 +1,7 @@
 extends Node2D
 func _ready():
 	pass
-
+"""
 func walk():
 	$member.play("walk")
 	$member2.play("walk")
@@ -20,3 +20,4 @@ func _process(delta):
 		$member2.play("stand")
 		$member3.play("stand")
 		$member4.play("stand")
+"""

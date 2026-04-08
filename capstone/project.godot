@@ -31,6 +31,7 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Characters/devil": "res://Godot_Game_Files/Assets/Characters/devil.dch",
 "boss": "res://Godot_Game_Files/chats/boss.dch",
 "devil": "res://Godot_Game_Files/chats/devil.dch",
 "elbow": "res://Godot_Game_Files/chats/elbow.dch",
@@ -39,6 +40,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "Godot_Game_Files/endcutscene/timeline": "res://Godot_Game_Files/endcutscene/timeline.dtl",
+"emilyendscene": "res://Godot_Game_Files/endcutscene/emilyendscene.dtl",
 "timeline": "res://Godot_Game_Files/Puzzles/Phil/endcutscene/timeline.dtl"
 }
 layout/style_directory={

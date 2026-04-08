@@ -26,7 +26,7 @@ elif {end_step} == 2.0:
 elif {end_step} == 4.0:
 	- Aww shucks, I really am sorry.. I didn't mean to cause a ruckus.
 		- I only ever wanted to ensure the industry standard cyber-safe practices.
-	boss: My son, you have been swayed by the wiles of Bathsheba. She has taken your innocence of mind, and for that…
-	boss: .. for that you must die.. I am truely sorry.. You really did bring some value to the shareholders..
-	boss: I am your PUNISHMENT.
+	devil: My son, you have been swayed by the wiles of Bathsheba. She has taken your innocence of mind, and for that…
+	devil: .. for that you must die.. I am truely sorry.. You really did bring some value to the shareholders..
+	devil: I am your PUNISHMENT.
 	set {end_step} = 5.0
