@@ -14,7 +14,7 @@ func _process(_delta: float):
 			open_puzzle_scene()
 		elif Global.counter == 4:
 			open_emilys_puzzle()
-		elif Global.counter == 6:
+		elif Global.counter == 5:
 			open_emilys_puzzle()
 		elif Global.counter == 8:
 			pass

@@ -1,7 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://b5cb8hi831nnt"]
+[gd_scene format=3 uid="uid://b5cb8hi831nnt"]
 
-[ext_resource type="Script" uid="uid://c26pmv4exr7o4" path="res://Godot_Game_Files/Puzzles/Trey/USB/usb_puzzle.gd" id="1_dxc75"]
 [ext_resource type="Script" uid="uid://by34sk16ycs2r" path="res://Godot_Game_Files/event_tree.gd" id="1_eqekq"]
+[ext_resource type="Script" uid="uid://dj6n08ls0wyde" path="res://Godot_Game_Files/officalgamescript(DONOTCHANGE).gd" id="1_hw1hp"]
 [ext_resource type="PackedScene" uid="uid://bnpveoij6ge22" path="res://Godot_Game_Files/Assets/Characters/Player.tscn" id="1_l7whm"]
 [ext_resource type="PackedScene" uid="uid://cdcolqdy3j16q" path="res://Godot_Game_Files/Updated_Game_Scene/password_reset.tscn" id="2_7nhs0"]
 [ext_resource type="Texture2D" uid="uid://dsuhcbcpm4ryw" path="res://Godot_Game_Files/Assets/Characters/office background.png" id="2_60j76"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://nnlmyeh6m0oq" path="res://Godot_Game_Files/Assets/Characters/npc_boss.tscn" id="3_2s8f0"]
 [ext_resource type="FontFile" uid="uid://spynjnwq75ou" path="res://Godot_Game_Files/Assets/Fonts/Tokyo.ttf" id="3_prroa"]
 [ext_resource type="PackedScene" uid="uid://c2d6ehiuccdsh" path="res://Godot_Game_Files/Assets/Characters/npc_1.tscn" id="4_1og58"]
+[ext_resource type="PackedScene" uid="uid://decr23hfmiurp" path="res://Godot_Game_Files/Puzzles/Trey/USB/usb_puzzle.tscn" id="4_dxc75"]
 [ext_resource type="PackedScene" uid="uid://r1agwgfqfbg4" path="res://Godot_Game_Files/Assets/Music_Sounds/Radio.tscn" id="5_60j76"]
 [ext_resource type="PackedScene" uid="uid://c78uxvq3ytj03" path="res://Godot_Game_Files/Assets/Characters/npc_2.tscn" id="6_w2jga"]
 [ext_resource type="PackedScene" uid="uid://15rwt1q3ccjm" path="res://Godot_Game_Files/chats/chat_1.tscn" id="7_hw1hp"]
@@ -25,81 +26,84 @@ distance = -354.0
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_l7whm"]
 b = Vector2(-1, -510)
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node2D" unique_id=310961227]
 position = Vector2(17, 23)
-script = ExtResource("1_dxc75")
+script = ExtResource("1_hw1hp")
 
-[node name="PhisingEmail" parent="." instance=ExtResource("2_hw1hp")]
+[node name="PhisingEmail" parent="." unique_id=2053920242 instance=ExtResource("2_hw1hp")]
 position = Vector2(-9.435, -604.19)
 
-[node name="password_reset" parent="." instance=ExtResource("2_7nhs0")]
+[node name="password_reset" parent="." unique_id=633258872 instance=ExtResource("2_7nhs0")]
 position = Vector2(-1667, -114)
 
-[node name="malicious_files" parent="." instance=ExtResource("16_eqekq")]
+[node name="UsbPuzzle" parent="." unique_id=860305661 instance=ExtResource("4_dxc75")]
+position = Vector2(1099, 1018)
+
+[node name="malicious_files" parent="." unique_id=1217505239 instance=ExtResource("16_eqekq")]
 position = Vector2(106, 766)
 
-[node name="Event_Tree" type="Node" parent="."]
+[node name="Event_Tree" type="Node" parent="." unique_id=1304010977]
 script = ExtResource("1_eqekq")
 
-[node name="Puzzles" type="Node" parent="Event_Tree"]
+[node name="Puzzles" type="Node" parent="Event_Tree" unique_id=101657103]
 
-[node name="EmailAlert" parent="Event_Tree/Puzzles" instance=ExtResource("9_woipg")]
+[node name="EmailAlert" parent="Event_Tree/Puzzles" unique_id=1225950312 instance=ExtResource("9_woipg")]
 position = Vector2(109, 371)
 monitorable = false
 
-[node name="Chats" type="Node" parent="Event_Tree"]
+[node name="Chats" type="Node" parent="Event_Tree" unique_id=312439228]
 
-[node name="Chat1" parent="Event_Tree/Chats" instance=ExtResource("7_hw1hp")]
+[node name="Chat1" parent="Event_Tree/Chats" unique_id=932046472 instance=ExtResource("7_hw1hp")]
 
-[node name="NPC\'s" type="Node" parent="."]
+[node name="NPC\'s" type="Node" parent="." unique_id=790132695]
 
-[node name="NPC BOSS" parent="NPC\'s" instance=ExtResource("3_2s8f0")]
+[node name="NPC BOSS" parent="NPC\'s" unique_id=1726144368 instance=ExtResource("3_2s8f0")]
 position = Vector2(804, 407)
 
-[node name="npc_4" parent="NPC\'s" instance=ExtResource("8_prroa")]
+[node name="npc_4" parent="NPC\'s" unique_id=1819741983 instance=ExtResource("8_prroa")]
 position = Vector2(235, 400)
 
-[node name="npc_3" parent="NPC\'s" instance=ExtResource("7_woipg")]
+[node name="npc_3" parent="NPC\'s" unique_id=489068047 instance=ExtResource("7_woipg")]
 position = Vector2(354, 394)
 
-[node name="npc_2" parent="NPC\'s" instance=ExtResource("6_w2jga")]
+[node name="npc_2" parent="NPC\'s" unique_id=878002506 instance=ExtResource("6_w2jga")]
 position = Vector2(109, 411)
 
-[node name="NPC1" parent="NPC\'s" instance=ExtResource("4_1og58")]
+[node name="NPC1" parent="NPC\'s" unique_id=1102358392 instance=ExtResource("4_1og58")]
 position = Vector2(-12, 400)
 
-[node name="Background" type="Node" parent="."]
+[node name="Background" type="Node" parent="." unique_id=508415944]
 
-[node name="OfficeBackground" type="Sprite2D" parent="Background"]
+[node name="OfficeBackground" type="Sprite2D" parent="Background" unique_id=1441538492]
 z_index = -1
 position = Vector2(386, 289)
 scale = Vector2(0.635231, 0.635231)
 texture = ExtResource("2_60j76")
 
-[node name="Floor_Walls" type="StaticBody2D" parent="Background"]
+[node name="Floor_Walls" type="StaticBody2D" parent="Background" unique_id=207549955]
 position = Vector2(333, 421)
 
-[node name="Floor" type="CollisionShape2D" parent="Background/Floor_Walls"]
+[node name="Floor" type="CollisionShape2D" parent="Background/Floor_Walls" unique_id=826818676]
 position = Vector2(-26, -332)
 shape = SubResource("WorldBoundaryShape2D_e2o6t")
 
-[node name="Left Wall" type="CollisionShape2D" parent="Background/Floor_Walls"]
+[node name="Left Wall" type="CollisionShape2D" parent="Background/Floor_Walls" unique_id=893107337]
 position = Vector2(-446, 79)
 shape = SubResource("SegmentShape2D_l7whm")
 
-[node name="Right Wall" type="CollisionShape2D" parent="Background/Floor_Walls"]
+[node name="Right Wall" type="CollisionShape2D" parent="Background/Floor_Walls" unique_id=1231970570]
 position = Vector2(434, 97)
 shape = SubResource("SegmentShape2D_l7whm")
 
-[node name="Radio" parent="Background" instance=ExtResource("5_60j76")]
+[node name="Radio" parent="Background" unique_id=1300580869 instance=ExtResource("5_60j76")]
 position = Vector2(405, 396)
 
-[node name="Player" parent="." instance=ExtResource("1_l7whm")]
+[node name="Player" parent="." unique_id=1049933128 instance=ExtResource("1_l7whm")]
 z_index = 5
 position = Vector2(235, 399)
 script = ExtResource("14_eqekq")
 
-[node name="score" type="Label" parent="Player"]
+[node name="score" type="Label" parent="Player" unique_id=513340392]
 z_index = 7
 offset_left = -281.0
 offset_top = -252.0

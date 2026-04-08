@@ -1,3 +1,6 @@
-res://Godot_Game_Files/endcutscene/lucy-player-boss-prehates.tscn
+res://Godot_Game_Files/game.tscn
 res://Godot_Game_Files/chats/ChatProfile.tres
-res://Godot_Game_Files/endcutscene/timeline.dtl
+res://node_2d.gd
+res://Godot_Game_Files/officalgamescript(DONOTCHANGE).gd
+res://Godot_Game_Files/Puzzles/Trey/USB/usb_puzzle.gd
+res://Godot_Game_Files/Assets/Buttons/!alert.gd

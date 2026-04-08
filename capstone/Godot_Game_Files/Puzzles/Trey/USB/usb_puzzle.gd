@@ -1,8 +1,5 @@
 extends Area2D
 
-# NOTIFYING : notification visible, countdown already running
-# REVEALED  : notification dismissed, USB visible in world, countdown running
-# EXTRACTING: player is holding E, hold bar filling
 enum State { IDLE, NOTIFYING, REVEALED, EXTRACTING, DONE }
 
 const COUNTDOWN_TIME := 30.0
@@ -12,6 +9,7 @@ var state := State.IDLE
 var player_in_area := false
 var countdown_remaining := COUNTDOWN_TIME
 var hold_progress := 0.0
+var has_run := false  # ✅ prevents multiple runs
 
 @onready var usb_label: Label = $UsbLabel
 @onready var proximity_label: Label = $ProximityLabel
@@ -33,10 +31,14 @@ func _ready() -> void:
 	timer_bar.value = COUNTDOWN_TIME
 	hold_bar.max_value = HOLD_TIME
 	hold_bar.value = 0.0
+	set_process(false)
 
-# Called by game.tscn's random USB timer (up to 3 times per playthrough).
-# Starts the countdown immediately and shows the Windows notification.
+# ✅ CALL THIS ONCE TO START
 func activate() -> void:
+	if has_run:
+		return
+	has_run = true
+
 	state = State.NOTIFYING
 	countdown_remaining = COUNTDOWN_TIME
 	hold_progress = 0.0
@@ -54,7 +56,6 @@ func _process(delta: float) -> void:
 		State.EXTRACTING:
 			_handle_extracting(delta)
 
-# Decrements the shared countdown. Returns true when time is up.
 func _tick_countdown(delta: float) -> bool:
 	countdown_remaining -= delta
 	return countdown_remaining <= 0.0
@@ -70,7 +71,7 @@ func _handle_revealed(delta: float) -> void:
 		_on_timeout()
 		return
 	if player_in_area:
-		proximity_label.text = "Malicious USB! Hold E  (%ds)" % int(ceil(countdown_remaining))
+		proximity_label.text = "Malicious USB! Hold E (%ds)" % int(ceil(countdown_remaining))
 	if player_in_area and Input.is_action_just_pressed("interact"):
 		_start_extraction()
 
@@ -92,6 +93,7 @@ func _handle_extracting(delta: float) -> void:
 		return
 	timer_bar.value = countdown_remaining
 	timer_label.text = "Time remaining: %d" % int(ceil(countdown_remaining))
+
 	if player_in_area and Input.is_action_pressed("interact"):
 		hold_progress = min(hold_progress + delta, HOLD_TIME)
 		hold_bar.value = hold_progress
@@ -101,17 +103,14 @@ func _handle_extracting(delta: float) -> void:
 		hold_progress = 0.0
 		hold_bar.value = 0.0
 
-# Notification dismiss — countdown is already running, just reveal the USB object.
 func _on_dismiss_pressed() -> void:
 	win_notification.visible = false
 	usb_label.visible = true
 	state = State.REVEALED
 	if player_in_area:
-		proximity_label.text = "Malicious USB! Hold E  (%ds)" % int(ceil(countdown_remaining))
+		proximity_label.text = "Malicious USB! Hold E (%ds)" % int(ceil(countdown_remaining))
 		proximity_label.visible = true
 
-# Shows the result message in the centre-screen UI panel regardless of which
-# state the timeout/success happened in.
 func _show_result(message: String) -> void:
 	win_notification.visible = false
 	proximity_label.visible = false
@@ -124,18 +123,20 @@ func _show_result(message: String) -> void:
 	result_label.visible = true
 
 func _on_success() -> void:
+	if state == State.DONE:
+		return
 	state = State.DONE
 	Global.score += 100
 	_show_result("USB extracted! +$100")
-	print("USB puzzle: success. Score:", Global.score)
 	await get_tree().create_timer(2.0).timeout
 	_finish()
 
 func _on_timeout() -> void:
+	if state == State.DONE:
+		return
 	state = State.DONE
 	Global.score -= 100
 	_show_result("The USB uploaded malware! -$100")
-	print("USB puzzle: timed out. Score:", Global.score)
 	await get_tree().create_timer(2.0).timeout
 	_finish()
 
@@ -143,24 +144,25 @@ func _finish() -> void:
 	usb_ui.visible = false
 	usb_label.visible = false
 	proximity_label.visible = false
-	# Restore child visibility so the next trigger starts clean.
+
 	timer_label.visible = true
 	timer_bar.visible = true
 	hold_label.visible = true
 	hold_bar.visible = true
 	result_label.visible = false
-	Global.usb_trigger_count += 1
+
 	Global.puzzle_active = false
 	state = State.IDLE
-	print("USB puzzle complete. Trigger count:", Global.usb_trigger_count)
 	set_process(false)
 
 func _on_body_entered(_body) -> void:
 	player_in_area = true
 	if state == State.REVEALED:
-		proximity_label.text = "Malicious USB! Hold E  (%ds)" % int(ceil(countdown_remaining))
+		proximity_label.text = "Malicious USB! Hold E (%ds)" % int(ceil(countdown_remaining))
 		proximity_label.visible = true
 
 func _on_body_exited(_body) -> void:
 	player_in_area = false
 	proximity_label.visible = false
+	hold_progress = 0.0
+	hold_bar.value = 0.0

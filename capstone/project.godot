@@ -31,17 +31,17 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"Characters/devil": "res://Godot_Game_Files/Assets/Characters/devil.dch",
 "boss": "res://Godot_Game_Files/chats/boss.dch",
-"devil": "res://Godot_Game_Files/chats/devil.dch",
+"chats/devil": "res://Godot_Game_Files/chats/devil.dch",
+"devil": "res://Godot_Game_Files/Assets/Characters/devil.dch",
 "elbow": "res://Godot_Game_Files/chats/elbow.dch",
 "lucy": "res://Godot_Game_Files/chats/lucy.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"Godot_Game_Files/endcutscene/timeline": "res://Godot_Game_Files/endcutscene/timeline.dtl",
+"Phil/endcutscene/timeline": "res://Godot_Game_Files/timeline.dtl",
 "emilyendscene": "res://Godot_Game_Files/endcutscene/emilyendscene.dtl",
-"timeline": "res://Godot_Game_Files/Puzzles/Phil/endcutscene/timeline.dtl"
+"endcutscene/timeline": "res://Godot_Game_Files/endcutscene/timeline.dtl"
 }
 layout/style_directory={
 "ChatProfile": "res://Godot_Game_Files/chats/ChatProfile.tres"
