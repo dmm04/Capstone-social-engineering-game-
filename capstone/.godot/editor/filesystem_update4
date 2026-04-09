@@ -1,6 +1,12 @@
 res://Godot_Game_Files/game.tscn
 res://Godot_Game_Files/chats/ChatProfile.tres
-res://node_2d.gd
 res://Godot_Game_Files/officalgamescript(DONOTCHANGE).gd
-res://Godot_Game_Files/Puzzles/Trey/USB/usb_puzzle.gd
+res://Godot_Game_Files/timeline.dtl
 res://Godot_Game_Files/Assets/Buttons/!alert.gd
+res://Godot_Game_Files/Assets/Buttons/!alert.tscn
+res://Godot_Game_Files/Updated_Game_Scene/password_reset.gd
+res://Godot_Game_Files/Updated_Game_Scene/password_reset.tscn
+res://Godot_Game_Files/Assets/Music_Sounds/Radio.tscn
+res://Godot_Game_Files/Puzzles/Trey/USB/usb_puzzle.gd
+res://global.gd
+res://Godot_Game_Files/endcutscene/lucy-player-boss-prehates.tscn

@@ -12,14 +12,13 @@ func _process(_delta: float):
 	if player_in_area and Input.is_action_just_pressed("interact"):
 		if Global.counter < 3:
 			open_puzzle_scene()
-		elif Global.counter == 4:
-			open_emilys_puzzle()
 		elif Global.counter == 5:
 			open_emilys_puzzle()
-		elif Global.counter == 8:
-			pass
-		elif Global.counter == 9:
-			pass
+		elif Global.counter == 6:
+			open_emilys_puzzle()
+		elif Global.counter == 7:
+			open_password_puzzle()
+			
 			
 			
 			

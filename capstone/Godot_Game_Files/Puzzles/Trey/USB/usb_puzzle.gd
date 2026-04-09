@@ -39,13 +39,24 @@ func activate() -> void:
 		return
 	has_run = true
 
-	state = State.NOTIFYING
+	# Skip NOTIFYING, go straight to revealed
+	state = State.REVEALED
 	countdown_remaining = COUNTDOWN_TIME
 	hold_progress = 0.0
-	notif_timer_label.text = "Time remaining: %d" % int(COUNTDOWN_TIME)
-	win_notification.visible = true
+
+	# Show the USB immediately
+	usb_label.visible = true
+	proximity_label.visible = true
+	proximity_label.text = "Malicious USB detected!"
+	usb_ui.visible = true
+	timer_bar.value = countdown_remaining
+	hold_bar.value = 0.0
 	Global.puzzle_active = true
 	set_process(true)
+
+	# Optional: start extraction immediately if HOLD_TIME = 0
+	if HOLD_TIME <= 0.0:
+		_start_extraction()
 
 func _process(delta: float) -> void:
 	match state:
@@ -154,13 +165,21 @@ func _finish() -> void:
 	Global.puzzle_active = false
 	state = State.IDLE
 	set_process(false)
-
+	run_timeline()
+	
 func _on_body_entered(_body) -> void:
 	player_in_area = true
 	if state == State.REVEALED:
 		proximity_label.text = "Malicious USB! Hold E (%ds)" % int(ceil(countdown_remaining))
 		proximity_label.visible = true
-
+		
+func run_timeline():
+	Global.chatstep = 5
+	print("chatstep: ", Global.chatstep)
+	Dialogic.start("res://Godot_Game_Files/timeline.dtl")
+	Global.counter += 1
+	print("event counter: ", Global.counter)
+	
 func _on_body_exited(_body) -> void:
 	player_in_area = false
 	proximity_label.visible = false

@@ -17,6 +17,18 @@ func _on_dialogic_signal(argument: String):
 		$Event_Tree/Puzzles/EmailAlert.set_process(true)
 		$Event_Tree/Puzzles/EmailAlert.visible = true
 		$Event_Tree/Puzzles/EmailAlert.position = Vector2(357, 371)
+	elif argument == "complete_chat3":
+		$Event_Tree/Puzzles/EmailAlert.set_process(true)
+		$Event_Tree/Puzzles/EmailAlert.visible = true
+		$Event_Tree/Puzzles/EmailAlert.position = Vector2(237, 371)
+	elif argument == "complete_chat4":
+		$Event_Tree/Puzzles/EmailAlert.set_process(true)
+		$Event_Tree/Puzzles/EmailAlert.visible = true
+		$Event_Tree/Puzzles/EmailAlert.position = Vector2(-12, 371)
+	elif argument == "complete_chat5":
+		$"UsbPuzzle".activate()
+	elif argument == "complete_chat6":
+		get_tree().change_scene("res://Godot_Game_Files/endcutscene/lucy-player-boss-prehates.tscn")
 		
 		
 func _process(_delta: float) -> void:
@@ -25,6 +37,7 @@ func _process(_delta: float) -> void:
 		$Event_Tree/Puzzles/EmailAlert.visible = false
 		$PhisingEmail.set_process(false)
 		run_timeline()
+		
 	elif Global.counter == 3:
 		$Event_Tree/Puzzles/EmailAlert.set_process(false)
 		$Event_Tree/Puzzles/EmailAlert.visible = false
@@ -37,6 +50,18 @@ func _process(_delta: float) -> void:
 		$PhisingEmail.set_process(false)
 		run_timeline()
 		
+	elif Global.counter == 6:
+		$Event_Tree/Puzzles/EmailAlert.set_process(false)
+		$Event_Tree/Puzzles/EmailAlert.visible = false
+		$PhisingEmail.set_process(false)
+		run_timeline()
+		
+	elif Global.counter == 8:
+		$Event_Tree/Puzzles/EmailAlert.set_process(false)
+		$Event_Tree/Puzzles/EmailAlert.visible = false
+		$PhisingEmail.set_process(false)
+		run_timeline()
+	
 func run_timeline():
 	Dialogic.start("res://Godot_Game_Files/timeline.dtl")
 	Global.counter += 1

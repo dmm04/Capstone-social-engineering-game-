@@ -38,18 +38,21 @@ elif {chatstep} == 1.0:
 	boss: May the shareholders guide your hands.
 	[signal arg="complete_chat2"]
 elif {chatstep} == 2.0:
-	boss: Wow! Thanks for checking that out. I really appreciate that.
-	boss: I leslie is having trouble with her computer files..
-	boss: I'm always telling her to not download random crap she finds, but she's not the brightest bulb in a power outage if you know what I mean.
+	(You hear some rustling in the window)
+	(You look out the window and see a blue cone sticking out of the bushes.. wierd)
 	boss: Go check her computer out. May the shareholder light the way.
+	- I saw a blue cone sticking out of the bushes.. it had stars on it..
+		boss: Huh.. That sure is out of the ordinary.
+	- okay
+		boss: Okay.. Go.
 	[signal arg="complete_chat3"]
 elif {chatstep} == 3.0:
 	lucy: Wow, I like how you handled Sarah..
-	lucy: Any chance you can come check out my computer and get rid of any suspecious downloads?
+	lucy: I was just trying to win a free purse and it asked me to log in.
+	lucy: Any chance you can come check out my computer and help me?
 	- Yes of course.. But I have to warn you I am a little bit shy and I may cry..
 		lucy: *Lucy Liked That*
 		lucy: Awesome! See you at my computer Big Boy!
-		[signal arg="complete_chat4"]
 	- No thanks "ol' chump"
 		lucy: *Lucy Didn't Liked That - and went and told her husband on you...*
 		boss: Hey I overheard you and my wife talking, and well.. You do work here after all..
@@ -58,7 +61,7 @@ elif {chatstep} == 3.0:
 		boss: Run along now.
 		boss: And remember..
 		boss: The shareholders are always watching...
-		[signal arg="complete_chat4"]
+	[signal arg="complete_chat4"]
 elif {chatstep} == 4.0:
 	lucy: Oh my goodness.. I can't believe you were able to do that..
 	lucy: I've been asking my husband to do that for so long.. He's not a good person..
@@ -102,4 +105,18 @@ elif {chatstep} == 4.0:
 			And as quickly as he came, the wizard elbow was gone.. Never to be seen or heard from again hopefully..
 	[signal arg="complete_chat5"]
 elif {chatstep} == 5.0:
+	CONGRATULATIONS!
+	You completed your first day.
+	Would you like to meet lucy on the roof?
+	- No, I'm alright..
+		Really? I feel like that might sit well with her.
+		I mean you were all buddy buddy with her earlier, but NOW you're "alright"?
+		I just think it's funny how "some people" play with the hearts of others..
+		- okay, okay, I'll go, geez
+	- YES!
+		Careful tiger, there is an old saying about love.
+		Love is like a kitten...
+		Warm and cuddley...
+		Until it eats your face after you fall off a ladder.
+	[signal arg="complete_chat6"]
 [end_timeline]

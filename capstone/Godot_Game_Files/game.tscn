@@ -31,13 +31,13 @@ position = Vector2(17, 23)
 script = ExtResource("1_hw1hp")
 
 [node name="PhisingEmail" parent="." unique_id=2053920242 instance=ExtResource("2_hw1hp")]
-position = Vector2(-9.435, -604.19)
+position = Vector2(-637, -573)
 
 [node name="password_reset" parent="." unique_id=633258872 instance=ExtResource("2_7nhs0")]
-position = Vector2(-1667, -114)
+position = Vector2(557, -752)
 
 [node name="UsbPuzzle" parent="." unique_id=860305661 instance=ExtResource("4_dxc75")]
-position = Vector2(1099, 1018)
+position = Vector2(722, 382)
 
 [node name="malicious_files" parent="." unique_id=1217505239 instance=ExtResource("16_eqekq")]
 position = Vector2(106, 766)
@@ -48,6 +48,7 @@ script = ExtResource("1_eqekq")
 [node name="Puzzles" type="Node" parent="Event_Tree" unique_id=101657103]
 
 [node name="EmailAlert" parent="Event_Tree/Puzzles" unique_id=1225950312 instance=ExtResource("9_woipg")]
+visible = false
 position = Vector2(109, 371)
 monitorable = false
 
@@ -96,7 +97,8 @@ position = Vector2(434, 97)
 shape = SubResource("SegmentShape2D_l7whm")
 
 [node name="Radio" parent="Background" unique_id=1300580869 instance=ExtResource("5_60j76")]
-position = Vector2(405, 396)
+position = Vector2(412, 404.00003)
+scale = Vector2(0.759025, 0.759025)
 
 [node name="Player" parent="." unique_id=1049933128 instance=ExtResource("1_l7whm")]
 z_index = 5

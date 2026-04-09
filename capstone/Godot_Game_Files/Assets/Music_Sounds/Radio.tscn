@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://r1agwgfqfbg4"]
+[gd_scene format=3 uid="uid://r1agwgfqfbg4"]
 
 [ext_resource type="Texture2D" uid="uid://dm6j00xhfrwgb" path="res://Godot_Game_Files/Assets/Music_Sounds/Radio.png" id="2_6itx7"]
 [ext_resource type="Script" uid="uid://c18ac21jm875j" path="res://Godot_Game_Files/Assets/Music_Sounds/character_body_2d.gd" id="2_n3c28"]
@@ -72,19 +72,19 @@ animations = [{
 "speed": 2.0
 }]
 
-[node name="Radio" type="StaticBody2D"]
+[node name="Radio" type="StaticBody2D" unique_id=2088578516]
 script = SubResource("GDScript_tsqcv")
 
-[node name="RadioPlayer" type="AudioStreamPlayer2D" parent="."]
+[node name="RadioPlayer" type="AudioStreamPlayer2D" parent="." unique_id=443295663]
 position = Vector2(1, 0)
 volume_db = -2.862
 autoplay = true
-max_distance = 875.0
+max_distance = 1300.0
 attenuation = 1.1021904
 
-[node name="InteractionZone" type="Area2D" parent="."]
+[node name="InteractionZone" type="Area2D" parent="." unique_id=675836117]
 
-[node name="Label" type="Label" parent="InteractionZone"]
+[node name="Label" type="Label" parent="InteractionZone" unique_id=341936936]
 visible = false
 offset_left = -38.0
 offset_top = -57.0
@@ -93,15 +93,15 @@ offset_bottom = -8.0
 text = "E: Skip | R: On/Off"
 horizontal_alignment = 1
 
-[node name="Radiounit" type="Sprite2D" parent="."]
+[node name="Radiounit" type="Sprite2D" parent="." unique_id=1772395389]
 position = Vector2(1, 0)
 texture = ExtResource("2_nvqlg")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=507149441]
 position = Vector2(1, 0)
 script = ExtResource("2_n3c28")
 
-[node name="RadioBop" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="RadioBop" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=847167490]
 z_index = 1
 position = Vector2(-12, -9)
 sprite_frames = SubResource("SpriteFrames_6itx7")

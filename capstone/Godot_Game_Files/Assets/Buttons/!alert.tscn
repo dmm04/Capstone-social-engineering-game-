@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dvcynifnfhk4c"]
+[gd_scene format=3 uid="uid://dvcynifnfhk4c"]
 
 [ext_resource type="Texture2D" uid="uid://5uxvwx0uubex" path="res://Godot_Game_Files/Assets/Buttons/AlertIcon.png" id="1_8hu5k"]
 [ext_resource type="Script" uid="uid://cnypm7dlt5b66" path="res://Godot_Game_Files/Assets/Buttons/!alert.gd" id="1_aovb1"]
@@ -92,10 +92,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yhow6"]
 size = Vector2(56, 67)
 
-[node name="Area2D" type="Area2D"]
+[node name="Area2D" type="Area2D" unique_id=678728389]
 script = ExtResource("1_aovb1")
 
-[node name="AlertLabel" type="Label" parent="."]
+[node name="AlertLabel" type="Label" parent="." unique_id=994981141]
 visible = false
 offset_left = 7.0
 offset_top = -4.0
@@ -105,13 +105,13 @@ theme_override_fonts/font = ExtResource("2_7c81x")
 theme_override_font_sizes/font_size = 8
 text = "[E] Interact"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=18623505]
 sprite_frames = SubResource("SpriteFrames_fjcxa")
 animation = &"float"
 frame_progress = 0.194332
 script = SubResource("GDScript_tj4ug")
 
-[node name="emailalertcollisionshape" type="CollisionShape2D" parent="."]
+[node name="emailalertcollisionshape" type="CollisionShape2D" parent="." unique_id=129494367]
 visibility_layer = 2
 position = Vector2(0, 41.5)
 shape = SubResource("RectangleShape2D_yhow6")

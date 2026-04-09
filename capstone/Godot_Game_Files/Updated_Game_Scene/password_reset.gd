@@ -223,3 +223,5 @@ func _on_FinalPopup_Continue_pressed():
 	Dialogic.VAR.chatstep += 1
 	print("chat step: ",Dialogic.VAR.chatstep)
 	$"../Player/CharacterBody2D/Playercamera2d".make_current()
+	$Control/FinalPopup.visible = false
+	$".".set_process(false)
