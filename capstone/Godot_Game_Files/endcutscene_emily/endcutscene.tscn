@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://6nyy4qpqxn23"]
 
+[ext_resource type="Script" uid="uid://b2n0t7oas211w" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/emily_endscene.gd" id="1_4sgef"]
 [ext_resource type="Texture2D" uid="uid://byoqg74lle6la" path="res://Godot_Game_Files/Assets/Environment/roof.png" id="1_7i3n4"]
-[ext_resource type="Script" uid="uid://raxnyqb87g2e" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/endcutscene.gd" id="1_k8t5x"]
 [ext_resource type="Script" uid="uid://bkorp2cpiig2s" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/end_camera.gd" id="3_4sgef"]
 [ext_resource type="Script" uid="uid://bh0grrh4iixdh" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/shareholder.gd" id="3_6vjul"]
 [ext_resource type="Texture2D" uid="uid://bwqy21q0k1mo6" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/walk.png" id="4_twkhn"]
@@ -1368,10 +1368,10 @@ animations = [{
 }]
 
 [node name="Node2D" type="Node2D" unique_id=824828913]
-script = ExtResource("1_k8t5x")
+script = ExtResource("1_4sgef")
 
 [node name="Roof" type="Sprite2D" parent="." unique_id=2007335430]
-position = Vector2(382, 112)
+position = Vector2(409, 112)
 texture = ExtResource("1_7i3n4")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=246513167]
