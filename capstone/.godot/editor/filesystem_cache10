@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1775680071
+::res://::1776097395
 chat_1.tscn::PackedScene::1734689874983663939::1769017181::0::1::::<><><>0<>0<><>::uid://cpuynfm4fhv7c::::res://node_2d.gd
 global.gd::GDScript::7084319685921171026::1769017181::0::1::::<>Node<><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::2861348676250027155::1769017181::1774835568::1::::<><><>0<>0<>f02d8857271d44842dc7b0e5643eea8f<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
@@ -714,7 +714,7 @@ ChatProfile.tres::Resource/DialogicStyle::3846369230267136174::1775650473::0::1:
 chat_1.tscn::PackedScene::1887913782426605846::1769017180::0::1::::<><><>0<>0<><>::uid://cpuynfm4fhv7c::::res://node_2d.gd
 Love_Interest.dch::Resource/DialogicCharacter::2315626333484448060::1774013106::0::1::::<><>uid://bbea0efx0ybu7<>0<>0<><>::res://Godot_Game_Files/chats/Lucy.png
 Lucy.png::CompressedTexture2D/CompressedTexture2D::6827358054693980257::1774013106::1774835569::1::::<><><>0<>0<>69dfeff54160ef23404f809856ac704e<>res://.godot/imported/Lucy.png-98ccee4bdcf67488a3508e3cc6d5a2b0.ctex::
-::res://Godot_Game_Files/endlevel assets/::1775679966
+::res://Godot_Game_Files/endlevel assets/::1775680073
 AAAAH.png::CompressedTexture2D::1228839279283834098::1774013106::1775680072::1::::<><><>0<>0<>3efb30b6e157825a9f66bfc5a9cbf1f2<>res://.godot/imported/AAAAH.png-f81add4e191d48ea7752d0432e655212.ctex::
 background.png::CompressedTexture2D::6537831276351690992::1774013106::1775680072::1::::<><><>0<>0<>f7f214087212bd558b01c1303b397dfe<>res://.godot/imported/background.png-7f58633871a4dfc2191b16416e20de75.ctex::
 beast2.png::CompressedTexture2D::7597442715699881436::1774013106::1775680072::1::::<><><>0<>0<>8f868ff285e03e4e5004b2ecfbc6f665<>res://.godot/imported/beast2.png-f6f35da12a2878f903d6b9751e401f80.ctex::
