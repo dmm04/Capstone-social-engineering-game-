@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://6nyy4qpqxn23"]
 
+[ext_resource type="Script" uid="uid://b2n0t7oas211w" path="res://Godot_Game_Files/endcutscene_emily/emily_endscene.gd" id="1_4sgef"]
 [ext_resource type="Texture2D" uid="uid://byoqg74lle6la" path="res://Godot_Game_Files/Assets/Environment/roof.png" id="1_7i3n4"]
-[ext_resource type="Script" uid="uid://raxnyqb87g2e" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/endcutscene.gd" id="1_k8t5x"]
 [ext_resource type="Script" uid="uid://bkorp2cpiig2s" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/end_camera.gd" id="3_4sgef"]
-[ext_resource type="Script" uid="uid://bh0grrh4iixdh" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/shareholder.gd" id="3_6vjul"]
+[ext_resource type="Script" uid="uid://b86712ne03k3y" path="res://Godot_Game_Files/endcutscene_emily/shareholder.gd" id="4_e4bbt"]
 [ext_resource type="Texture2D" uid="uid://bwqy21q0k1mo6" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/walk.png" id="4_twkhn"]
 [ext_resource type="Texture2D" uid="uid://cv1djrm1bfkht" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/boss_end.png" id="5_8w31b"]
 [ext_resource type="Texture2D" uid="uid://d18vhvblxde2b" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/bossidle.png" id="6_ld76v"]
@@ -1368,10 +1368,10 @@ animations = [{
 }]
 
 [node name="Node2D" type="Node2D" unique_id=824828913]
-script = ExtResource("1_k8t5x")
+script = ExtResource("1_4sgef")
 
 [node name="Roof" type="Sprite2D" parent="." unique_id=2007335430]
-position = Vector2(382, 112)
+position = Vector2(409, 112)
 texture = ExtResource("1_7i3n4")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=246513167]
@@ -1396,7 +1396,7 @@ position = Vector2(1107.25, 108.25)
 shape = SubResource("SegmentShape2D_k8t5x")
 
 [node name="shareholder" type="Node2D" parent="." unique_id=1974283472]
-script = ExtResource("3_6vjul")
+script = ExtResource("4_e4bbt")
 
 [node name="member4" type="AnimatedSprite2D" parent="shareholder" unique_id=8786682]
 position = Vector2(-1196.05, 273.5)
@@ -1409,8 +1409,7 @@ position = Vector2(-1154.84, 273.5)
 scale = Vector2(1.72205, 1.72205)
 sprite_frames = SubResource("SpriteFrames_ah6sk")
 animation = &"walk"
-frame = 1
-frame_progress = 0.879918
+frame_progress = 0.075906575
 
 [node name="member2" type="AnimatedSprite2D" parent="shareholder" unique_id=1087942037]
 position = Vector2(-1112.75, 273.5)
@@ -1466,7 +1465,9 @@ script = ExtResource("9_6s4v8")
 position = Vector2(580, 150.00005)
 scale = Vector2(1.75, 1.75)
 sprite_frames = SubResource("SpriteFrames_62c4e")
-animation = &"fall"
+animation = &"walk"
+frame = 6
+frame_progress = 0.54817355
 
 [node name="portal" type="AnimatedSprite2D" parent="mainchar" unique_id=2000639316]
 position = Vector2(585, 183)

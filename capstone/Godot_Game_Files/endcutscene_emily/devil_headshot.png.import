@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dy8l4o145yoc7"
-path="res://.godot/imported/devil_headshot.png-3a3bfc59025d244b716a2b828615dfc4.ctex"
+path="res://.godot/imported/devil_headshot.png-c743bdbed2d82f034586af1646fd339d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Godot_Game_Files/Assets/Characters/devil_headshot.png"
-dest_files=["res://.godot/imported/devil_headshot.png-3a3bfc59025d244b716a2b828615dfc4.ctex"]
+source_file="res://Godot_Game_Files/endcutscene_emily/devil_headshot.png"
+dest_files=["res://.godot/imported/devil_headshot.png-c743bdbed2d82f034586af1646fd339d.ctex"]
 
 [params]
 
