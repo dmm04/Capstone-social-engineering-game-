@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://l1xgg6rfiao3"]
+
+[ext_resource type="Texture2D" path="res://Godot_Game_Files/Assets/Characters/character 1 - Copy.png" id="2_5a716"]
+[ext_resource type="AudioStream" uid="uid://coiigwiwwi620" path="res://Godot_Game_Files/Assets/Music_Sounds/song1.mp3" id="2_aggjr"]
+[ext_resource type="Texture2D" uid="uid://l32btty3feb5" path="res://Godot_Game_Files/Assets/Characters/character2copy single.png" id="3_68kyt"]
+[ext_resource type="Texture2D" uid="uid://cny5dmiuth65s" path="res://Godot_Game_Files/Assets/Characters/Copilot_20260414_214417.png" id="4_3x28v"]
+[ext_resource type="Texture2D" uid="uid://bhv0svwqcsqcm" path="res://Godot_Game_Files/endcutscene/bossdead.png" id="5_68kyt"]
+
+[node name="EndCredits" type="Node2D" unique_id=867841861]
+
+[node name="Title" type="Label" parent="." unique_id=435437601]
+modulate = Color(0, 0, 0.39607844, 1)
+offset_left = -30.0
+offset_top = -286.0
+offset_right = 245.0
+offset_bottom = -255.0
+theme_override_colors/font_color = Color(0.20008531, 0.014562705, 0.18841088, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.23137255)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 22
+text = "THANK YOU FOR PLAYING"
+
+[node name="Heros" type="Label" parent="." unique_id=285149095]
+offset_left = -827.0
+offset_top = -229.0
+offset_right = -50.0
+offset_bottom = 378.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.23137255)
+theme_override_colors/font_outline_color = Color(0.15568897, 0.0009691608, 0.13304338, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 22
+text = "CYBERSECURITY GUARDS TEAM:
+
+EMILY THARP
+Password Puzzle • Virus Detection
+  • Various Assets • Final Scene
+
+DYLAN McDADE
+Final Boss Level • Various Assets
+
+PHIL GONZALES
+Main Hub • Rooftop Scene • Music
+ • Email Puzzle • Credits • Various Assets
+
+TREY AKERS
+USB Puzzle System • Various Assets
+
+
+
+"
+
+[node name="Assets" type="Label" parent="." unique_id=54534651]
+offset_left = -326.0
+offset_top = -57.0
+offset_right = 248.0
+offset_bottom = 198.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.23137255)
+theme_override_colors/font_outline_color = Color(0.15568897, 0.0009691608, 0.13304338, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 22
+text = "ASSET ATTRIBUTIONS
+
+LPC Character Base - OpenGameArt (multiple authors)
+Fonts: Tokyo 3, Pixel Operator, Snegos Pixel Style
+Effects: Pixel Effect Pack (Public Domain)
+Frostwindz Portal Assets (itch.io license)
+
+All assets used under their respective licenses."
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=26485451]
+stream = ExtResource("2_aggjr")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1388034291]
+position = Vector2(-314, 8)
+
+[node name="Character1Copy" type="Sprite2D" parent="." unique_id=1389279923]
+z_index = 3
+position = Vector2(27, -139)
+texture = ExtResource("2_5a716")
+
+[node name="Character2CopySingle" type="Sprite2D" parent="." unique_id=821056319]
+z_index = 3
+position = Vector2(49, -140)
+texture = ExtResource("3_68kyt")
+
+[node name="office new" type="Sprite2D" parent="." unique_id=2055537206]
+z_index = -4
+position = Vector2(-312.12497, 6.75)
+scale = Vector2(0.7566732, 0.64501953)
+texture = ExtResource("4_3x28v")
+
+[node name="Bossdead" type="Sprite2D" parent="." unique_id=347034507]
+position = Vector2(56.999996, 284)
+scale = Vector2(1.7709566, 1.8225063)
+texture = ExtResource("5_68kyt")

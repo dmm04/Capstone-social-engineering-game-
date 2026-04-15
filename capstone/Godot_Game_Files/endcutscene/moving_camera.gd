@@ -71,4 +71,4 @@ func _step5_final_portal() -> void:
 	portal.visible = true
 	portal.play("spin")
 	await get_tree().create_timer(3).timeout
-	get_tree().change_scene("res://NextScene.tscn")
+	get_tree().change_scene_to_file("res://Godot_Game_Files/endlevel scenes/Game.tscn")

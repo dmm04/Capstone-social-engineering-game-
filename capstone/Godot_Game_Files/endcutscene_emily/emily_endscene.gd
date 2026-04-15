@@ -23,7 +23,7 @@ func _ready():
 	await get_tree().create_timer(5.5).timeout
 	$shareholder.is_pre_dialogue = false
 
-	Dialogic.start("emilyendscene")
+	Dialogic.start("res://Godot_Game_Files/endcutscene_emily/emilyendscene.dtl")
 	
 func _on_dialogic_timeline_ended():
 	_start_throw_sequence()
@@ -31,3 +31,5 @@ func _on_dialogic_timeline_ended():
 func _start_throw_sequence():
 	# Tell the shareholder script to begin the throw
 	$shareholder.throw_devil($boss/boss_devil)
+	Dialogic.start("res://Godot_Game_Files/endcutscene_emily/lastchat.dtl")
+	

@@ -1,0 +1,40 @@
+(A cold chill comes over you)
+shareholders: Now.. What do we do with you?
+- Let me go?
+	shareholders: We have.. Bigger plans for you..
+	shareholders: How would you like to be the new acting CEO of the company?
+	- Actually.. I'd rather remain as the Cybersecurity guy.
+		shareholders: Really? Well that sure is a choice..
+		- I do know someone who would be perfect for that role though..
+			shareholders: And who might that be?
+			- A man, by the name of Elbow.
+				shareholders: Very well.. We will contact him with the relevent information.
+	- YES!
+		shareholders: Very well.
+		shareholders: From this point on you are now acting CEO of our business office! Congratulations!
+- Kill me?
+	shareholders: How about we make you the acting CEO of the company instead?
+	- Actually.. I'd rather remain as the Cybersecurity guy.
+		shareholders: Really? Well that sure is a choice..
+		- I do know someone who would be perfect for that role though..
+			shareholders: And who might that be?
+			- A man, by the name of Elbow.
+				shareholders: Very well.. We will contact him with the relevent information.
+	- YES!
+		shareholders: Very well.
+		shareholders: From this point on you are now acting CEO of our business office! Congratulations!
+lucy: WOW! I knew you could do it...
+- No.
+	- WE did it..
+lucy: Ya know, I never did catch your name..
+[text_input text="What should we call you?" var="name" allow_empty="true"]
+lucy: Oh.. I don't like that.. We'll have to change that later..
+You and lucy embrace as the sun continues to set..
+While you may never have actually shared a cigarette..
+You still shared something special..
+A kiss.
+You both on to live a happy life,
+The business office went bankrupt 6 days after these events took place,
+It turns out the old boss was money laundering.. YIKES!
+The End
+do Global.endcredits()

@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://di3pxmru463qu"]
 
-[ext_resource type="Texture2D" path="res://assets/AAAAH.png" id="1_fi5i3"]
+[ext_resource type="Texture2D" uid="uid://rri2kyurl7pm" path="res://Godot_Game_Files/endlevel assets/AAAAH.png" id="1_fi5i3"]
 [ext_resource type="Script" uid="uid://cyvqdqtu1tvhn" path="res://Godot_Game_Files/Puzzles/Dylan/dylan_game/Scripts/enemy_2.gd" id="1_oh86k"]
 [ext_resource type="Script" uid="uid://bg4ttwoh1o03u" path="res://Godot_Game_Files/Puzzles/Dylan/dylan_game/Scripts/area_2d.gd" id="2_oh86k"]
+
 
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a4ywr"]

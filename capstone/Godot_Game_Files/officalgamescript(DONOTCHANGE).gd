@@ -28,7 +28,7 @@ func _on_dialogic_signal(argument: String):
 	elif argument == "complete_chat5":
 		$"UsbPuzzle".activate()
 	elif argument == "complete_chat6":
-		get_tree().change_scene("res://Godot_Game_Files/endcutscene/lucy-player-boss-prehates.tscn")
+		get_tree().change_scene_to_file("res://Godot_Game_Files/endcutscene/lucy-player-boss-prehates.tscn")
 		
 		
 func _process(_delta: float) -> void:

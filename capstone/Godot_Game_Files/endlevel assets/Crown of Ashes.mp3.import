@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://on7h23dlpun2"
-path="res://.godot/imported/Crown of Ashes.mp3-09e28bb9bc141a754a392df192f0bb8a.mp3str"
+path="res://.godot/imported/Crown of Ashes.mp3-bf3cfec2a9faf38a54d3401fb51b6d91.mp3str"
 
 [deps]
 
-source_file="res://Assets/Crown of Ashes.mp3"
-dest_files=["res://.godot/imported/Crown of Ashes.mp3-09e28bb9bc141a754a392df192f0bb8a.mp3str"]
+source_file="res://Godot_Game_Files/endlevel assets/Crown of Ashes.mp3"
+dest_files=["res://.godot/imported/Crown of Ashes.mp3-bf3cfec2a9faf38a54d3401fb51b6d91.mp3str"]
 
 [params]
 

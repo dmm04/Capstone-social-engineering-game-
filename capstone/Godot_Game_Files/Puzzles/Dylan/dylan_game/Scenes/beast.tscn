@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://bsjlidcibkqxw"]
 
 [ext_resource type="Script" uid="uid://cvtcljmmbmxw3" path="res://Godot_Game_Files/Puzzles/Dylan/dylan_game/Scripts/beast.gd" id="1_nfgux"]
-[ext_resource type="Texture2D" path="res://assets/beast2.png" id="2_nfgux"]
+[ext_resource type="Texture2D" uid="uid://dgii1h5dyhiqe" path="res://Godot_Game_Files/endlevel assets/beast2.png" id="2_nfgux"]
+
 
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_10t74"]

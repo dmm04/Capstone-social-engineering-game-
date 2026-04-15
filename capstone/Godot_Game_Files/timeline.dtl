@@ -8,6 +8,7 @@ if {chatstep} == 0.0:
 	boss: Remeber our company motto\: SHAREHOLDER VALUE > I
 	[signal arg="complete_chat1"]
 elif {chatstep} == 1.0:
+	Your boss walks up to you with a smirky smirk..
 	boss: Welp thanks for that. But it looks like Henry is having some trouble too..
 	boss: Seems pretty onvious to me, but give him some guidance on his email.
 	lucy: Hey there... I'm Lucy.. You can call me Loo!
@@ -47,6 +48,7 @@ elif {chatstep} == 2.0:
 		boss: Okay.. Go.
 	[signal arg="complete_chat3"]
 elif {chatstep} == 3.0:
+	(You feel ultra confident +10 aura)
 	lucy: Wow, I like how you handled Sarah..
 	lucy: I was just trying to win a free purse and it asked me to log in.
 	lucy: Any chance you can come check out my computer and help me?
@@ -63,6 +65,7 @@ elif {chatstep} == 3.0:
 		boss: The shareholders are always watching...
 	[signal arg="complete_chat4"]
 elif {chatstep} == 4.0:
+	(Lucy walks up to you, she has some ash in her teeth..)
 	lucy: Oh my goodness.. I can't believe you were able to do that..
 	lucy: I've been asking my husband to do that for so long.. He's not a good person..
 	lucy: Honeslty.. He's the devil.. He's just awful.. All he cares about is the shareholders..

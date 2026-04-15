@@ -38,14 +38,13 @@ directories/dch_directory={
 "elbow": "res://Godot_Game_Files/chats/elbow.dch",
 "endcutscene_emily/devil": "res://Godot_Game_Files/endcutscene_emily/devil.dch",
 "lucy": "res://Godot_Game_Files/chats/lucy.dch",
-"shareholders": "res://Godot_Game_Files/endcutscene_emily/shareholders.dch",
-"unit_test_character": "res://Tests/Resources/unit_test_character.dch"
+"shareholders": "res://Godot_Game_Files/endcutscene_emily/shareholders.dch"
 }
 directories/dtl_directory={
 "Phil/endcutscene/timeline": "res://Godot_Game_Files/timeline.dtl",
-"emilyendscene": "res://Godot_Game_Files/endcutscene/emilyendscene.dtl",
 "endcutscene/timeline": "res://Godot_Game_Files/endcutscene/timeline.dtl",
-"endcutscene_emily/emilyendscene": "res://Godot_Game_Files/endcutscene_emily/emilyendscene.dtl"
+"endcutscene_emily/emilyendscene": "res://Godot_Game_Files/endcutscene_emily/emilyendscene.dtl",
+"lastchat": "res://Godot_Game_Files/endcutscene_emily/lastchat.dtl"
 }
 layout/style_directory={
 "ChatProfile": "res://Godot_Game_Files/chats/ChatProfile.tres"

@@ -164,8 +164,9 @@ func _finish() -> void:
 
 	Global.puzzle_active = false
 	state = State.IDLE
-	set_process(false)
 	run_timeline()
+	set_process(false)
+	
 	
 func _on_body_entered(_body) -> void:
 	player_in_area = true
@@ -174,11 +175,17 @@ func _on_body_entered(_body) -> void:
 		proximity_label.visible = true
 		
 func run_timeline():
-	Global.chatstep = 5
-	print("chatstep: ", Global.chatstep)
-	Dialogic.start("res://Godot_Game_Files/timeline.dtl")
+	Dialogic.VAR.chatstep += 1
 	Global.counter += 1
-	print("event counter: ", Global.counter)
+
+	print("chatstep:", Global.chatstep)
+
+	Dialogic.end_timeline()
+	await get_tree().process_frame
+
+	Dialogic.start("res://Godot_Game_Files/timeline.dtl")
+
+	print("started timeline")
 	
 func _on_body_exited(_body) -> void:
 	player_in_area = false
