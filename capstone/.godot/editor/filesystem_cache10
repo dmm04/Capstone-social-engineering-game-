@@ -1,7 +1,7 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1776220629
+::res://::1776222429
 chat_1.tscn::PackedScene::1734689874983663939::1776208456::0::1::::<><><>0<>0<><>::uid://cpuynfm4fhv7c::::res://node_2d.gd
-export_presets.cfg::TextFile::-1::1776214206::0::1::::<><><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1776220959::0::1::::<><><>0<>0<><>::
 global.gd::GDScript::7084319685921171026::1776220482::0::1::::<>Node<><>0<>0<><>::
 HackAttack.apple-touch-icon.png::CompressedTexture2D::5149649407154877594::1776214207::1776214238::1::::<><><>0<>0<>e3334e0ca98fbee8f5e0b6148fcf0095<>res://.godot/imported/HackAttack.apple-touch-icon.png-1577eeafb4bea94ef031210cc9509ded.ctex::
 HackAttack.icon.png::CompressedTexture2D::6450010995025877230::1776214207::1776214238::1::::<><><>0<>0<>633fbbcb9ac13fd34a08e0bf50b08ebc<>res://.godot/imported/HackAttack.icon.png-c949c039ca4fc9aadd4eb0022defd060.ctex::
@@ -10,7 +10,7 @@ icon.svg::CompressedTexture2D/CompressedTexture2D::2861348676250027155::17631431
 node_2d.gd::GDScript::5868442282664055358::1776209099::0::1::::<>Node2D<><>0<>0<><>::
 README.md::TextFile::-1::1776208455::0::1::::<><><>0<>0<><>::
 end_credits.gd::GDScript::7581762184925097680::1776216767::0::1::::<>Node2D<><>0<>0<><>::
-end_credits.tscn::PackedScene::827158671029405032::1776220629::0::1::::<><><>0<>0<><>::res://Godot_Game_Files/Assets/Characters/character 1 - Copy.png<>uid://coiigwiwwi620::::res://Godot_Game_Files/Assets/Music_Sounds/song1.mp3<>uid://l32btty3feb5::::res://Godot_Game_Files/Assets/Characters/character2copy single.png<>uid://cny5dmiuth65s::::res://Godot_Game_Files/Assets/Characters/Copilot_20260414_214417.png
+end_credits.tscn::PackedScene::827158671029405032::1776222429::0::1::::<><><>0<>0<><>::res://Godot_Game_Files/Assets/Characters/character 1 - Copy.png<>uid://coiigwiwwi620::::res://Godot_Game_Files/Assets/Music_Sounds/song1.mp3<>uid://l32btty3feb5::::res://Godot_Game_Files/Assets/Characters/character2copy single.png<>uid://cny5dmiuth65s::::res://Godot_Game_Files/Assets/Characters/Copilot_20260414_214417.png<>uid://bhv0svwqcsqcm::::res://Godot_Game_Files/endcutscene/bossdead.png
 ::res://addons/::1776208455
 ::res://addons/dialogic/::1776208456
 plugin.cfg::TextFile::-1::1776208456::0::1::::<><><>0<>0<><>::
@@ -659,7 +659,7 @@ alter2.tscn::PackedScene::5314573909045526377::1776208455::0::1::::<><><>0<>0<><
 altermovement.gd::GDScript::5055898027446569915::1763143160::0::1::::<>CharacterBody2D<><>0<>0<><>::
 alter_2.gd::GDScript::1542262920673436585::1776208455::0::1::::<>Area2D<><>0<>0<><>::
 reject button.png::CompressedTexture2D/CompressedTexture2D::6093783708605276213::1763143160::1776208250::1::::<><><>0<>0<>b1520c9337a69a75ff545662b453e0ad<>res://.godot/imported/reject button.png-573632ecfdb867de2303baddffff1ddc.ctex::
-::res://Godot_Game_Files/Assets/Characters/::1776217525
+::res://Godot_Game_Files/Assets/Characters/::1776222524
 accept button.png::CompressedTexture2D/CompressedTexture2D::6572363027638708222::1763143160::1776208250::1::::<><><>0<>0<>3dc2eb957e025157d6def5aa9fffc498<>res://.godot/imported/accept button.png-0769b21e46e29a143f668585243b129c.ctex::
 animated_sprite_2d.gd::GDScript::9055779254693541207::1776208455::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
 boss headshot.png::CompressedTexture2D::8468594078309153239::1776209099::1776208505::1::::<><><>0<>0<>241f89d22700027fd11c4e8d0f0b7489<>res://.godot/imported/boss headshot.png-38b28c38938d241943fa61a46e4f8494.ctex::
@@ -676,6 +676,7 @@ character_body_2d.gd::GDScript::6345940885985611599::1776208455::0::1::::<>Chara
 character_sprite_trey.png::CompressedTexture2D/CompressedTexture2D::6223818371075269200::1763143160::1776208250::1::::<><><>0<>0<>8064d788dc19a73c5f4a3b33161c3dbb<>res://.godot/imported/character_sprite_trey.png-02fe3406968b675fb1d968f68cda5793.ctex::
 computer puzzle example.png::CompressedTexture2D/CompressedTexture2D::2063380582145502140::1763143160::1776208250::1::::<><><>0<>0<>86481082bd05e002f2f0d5cf3678373f<>res://.godot/imported/computer puzzle example.png-684d8036ff1d700a1b9553000b876717.ctex::
 Copilot_20260414_214417.png::CompressedTexture2D::5736668911515814258::1776217525::1776217525::1::::<><><>0<>0<>25250f2e1c23cfef49286d3ef0dac152<>res://.godot/imported/Copilot_20260414_214417.png-6419e2bf3731b7513e6de99ec6c2641a.ctex::
+copy char1.png::CompressedTexture2D::5231815447519555174::1776222524::1776222530::1::::<><><>0<>0<>861f454ee3c45272e533948f2a421689<>res://.godot/imported/copy char1.png-2b7cb518c57a4e00734f186fb47046a7.ctex::
 devil.dch::Resource/DialogicCharacter::-1::1776209099::0::1::::<><>uid://bbea0efx0ybu7<>0<>0<><>::
 node_2d.tscn::PackedScene::6060074794564068837::1776208455::0::1::::<><><>0<>0<><>::uid://bpognu288fpnf::::res://Godot_Game_Files/Assets/Characters/npc_idle.gd<>uid://ccxds4e0q4q06::::res://Godot_Game_Files/Assets/Characters/Worker-Emily.png
 npc_1.tscn::PackedScene::6676023029759985959::1776208455::0::1::::<><><>0<>0<><>::uid://bpognu288fpnf::::res://Godot_Game_Files/Assets/Characters/npc_idle.gd<>uid://bbnf3mnjaxhm3::::res://Godot_Game_Files/Assets/Characters/character2.png
@@ -727,7 +728,7 @@ elbow.dch::Resource/DialogicCharacter::2832742141079235415::1776218120::0::1::::
 Elbow.png::CompressedTexture2D::3731030526904144001::1776209099::1776209131::1::::<><><>0<>0<>a21236b08e1de78821ef3c914fc628a1<>res://.godot/imported/Elbow.png-0f7c4f931a4b89c8c108c40ad679e397.ctex::
 lucy.dch::Resource/DialogicCharacter::7548446280767338732::1776219092::0::1::::<><>uid://bbea0efx0ybu7<>0<>0<><>::res://Godot_Game_Files/chats/Lucy.png
 Lucy.png::CompressedTexture2D::5301690693497819952::1776209099::1776209131::1::::<><><>0<>0<>0d230e9894a817538ca2f00536261350<>res://.godot/imported/Lucy.png-98ccee4bdcf67488a3508e3cc6d5a2b0.ctex::
-::res://Godot_Game_Files/endcutscene/::1776220695
+::res://Godot_Game_Files/endcutscene/::1776220837
 bossdead.png::CompressedTexture2D::2922645728810448448::1776220825::1776220837::1::::<><><>0<>0<>75526d4eecddd6f917e99491055511ad<>res://.godot/imported/bossdead.png-da7f0509e932cb14e24c64670cb0de85.ctex::
 bossidle.png::CompressedTexture2D::9053585114023354063::1776209099::1776209099::1::::<><><>0<>0<>d93d617af34d98e596ee22d8943ae2b8<>res://.godot/imported/bossidle.png-6c91ccee85ca6bb047e9806f71547a74.ctex::
 boss_end.png::CompressedTexture2D::6300680041131350945::1776209099::1776209099::1::::<><><>0<>0<>bd748643116a057c5025d68317ef9c62<>res://.godot/imported/boss_end.png-8ef4e968999f5519c602b98d86b314cd.ctex::
