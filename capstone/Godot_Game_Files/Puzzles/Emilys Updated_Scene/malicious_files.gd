@@ -42,6 +42,8 @@ var incorrect_flags = 0
 @onready var final_label = $FinalScore/ScoreLabel
 @onready var quit_button = $FinalScore/Quit
 
+@onready var continue_button2 = $Continue
+
 # -----------------------------------------
 # 3. Scene setup
 # -----------------------------------------
@@ -83,6 +85,15 @@ func initialize():
 		button.connect("pressed", Callable(self, "_on_file_pressed").bind(button))
 
 	generate_random_file_list()
+
+func _on_Help_pressed():
+	help_label.visible = !help_label.visible
+
+func _on_intro_continue_pressed():
+	intro_popup.hide()
+
+func _on_feedback_continue_pressed():
+	popup.hide()
 
 # -----------------------------------------
 # 4. Random file list generator
