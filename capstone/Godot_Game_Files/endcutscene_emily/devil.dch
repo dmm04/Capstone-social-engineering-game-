@@ -10,16 +10,16 @@
 "style": "ChatProfile",
 "suffix": ""
 },
-&"default_portrait": "devil_headshot",
+&"default_portrait": "",
 &"description": "",
 &"display_name": "Devil",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
-"devil_headshot": {
+"": {
 "export_overrides": {
-"image": "\"res://Godot_Game_Files/Assets/Characters/devil_headshot.png\""
+"image": "\"res://Godot_Game_Files/endcutscene_emily/devil_headshot.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
