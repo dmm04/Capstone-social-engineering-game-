@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://s4eebrgrwe86" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/portal/portal1_frame_6.png" id="16_gndo0"]
 [ext_resource type="Texture2D" uid="uid://c5bfgu88hor8e" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/portal/portal1_frame_7.png" id="17_a038d"]
 [ext_resource type="Script" uid="uid://m76nshhbjym7" path="res://Godot_Game_Files/endcutscene/moving_camera.gd" id="19_vm0ta"]
+[ext_resource type="AudioStream" uid="uid://bh1tpppnbx3qf" path="res://Godot_Game_Files/Assets/Music_Sounds/Signal in the Static.mp3" id="20_oxw0d"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7i3n4"]
 distance = -354.0
@@ -1439,3 +1440,7 @@ frame_progress = 0.8947679
 [node name="Camera2D" type="Camera2D" parent="." unique_id=29109799]
 position = Vector2(45, 75)
 script = ExtResource("19_vm0ta")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=764718745]
+stream = ExtResource("20_oxw0d")
+autoplay = true

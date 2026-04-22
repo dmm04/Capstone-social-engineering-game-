@@ -1,0 +1,43 @@
+update lucy center
+if {end_step} == 0.0:
+	(Theres a thick blanket of fog in the air. The night feels energetic)
+	lucy: Hello.. Thanks for coming up here.. I didn't think you would to be honest..
+	- I wouldn't miss it for the world. Cigarettes are why I started vaping.
+		lucy: Wow, honestly you just get me.. I feel like no one else gets me like you do..
+		- Theres something I want to tell you..
+			lucy: Yes?
+			- I have feelings for you
+				lucy: OH WOW! I FEEL THE SAME WAY FOR YOU!
+			- I spit in your coffee earlier..
+				lucy: oh.. wow.. I thought it tasted extra good..
+	- I don't believe in free will.. It's like I don't exist outside of this..
+		lucy: What do you mean?
+		- It's like this place.. I dont know.. It's like once this is all over I won't exist anymore.. Even this job only felt like I've been here like 10 minutes max..
+			lucy: Don't talk like that.. Just hold me..
+			- (hold her)
+	set {end_step} = 1.0
+elif {end_step} == 2.0:
+	(Wheres elbow when you need him)
+	boss: Well would you look at this.. Seems a poor time for me to come up here and smoke a doobie..
+	lucy: It's not what it looks like..
+	boss: Ya know you're right.. None of this is what it looks like.. We are all at the whims of the great cosmic creature..
+	boss: Moving us about..
+	boss: I, yes even I, with all my power, am powerless to alter fate.. it is unceasing and unchanging..
+	boss: We no more control our fate than the shareholders control this company..
+	- Well gee.. I didn't know they were even real..
+		boss: It's all real!
+		boss: .. Shareholders..
+		boss: .. Synthetic Equity..
+		boss: .. Tulip Mania..
+		boss: .. and even.. THE DEVIL.
+		boss: It's time you know something about me..
+		set {end_step} = 3.0
+elif {end_step} == 4.0:
+	(You really caused a ruckus)
+	- Aww shucks, I really am sorry.. I didn't mean to cause a ruckus.
+		- I only ever wanted to ensure the industry standard cyber-safe best practices.
+	lucy: OH MY LANCE!
+	chats/devil: My son, you have been swayed by the wiles of Bathsheba. She has taken your innocence of mind, and for that…
+	chats/devil: .. for that you must die.. I am truely sorry.. You really did bring some value to the shareholders..
+	chats/devil: I am your PUNISHMENT.
+	set {end_step} = 5.0

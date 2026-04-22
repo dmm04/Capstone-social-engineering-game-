@@ -35,7 +35,7 @@ func _process(delta):
 			moving_camera = false
 			Dialogic.VAR.set("end_step", 2)
 			await get_tree().process_frame
-			Dialogic.start("res://Godot_Game_Files/endcutscene/timeline.dtl")  # replace with your dialog name
+			Dialogic.start("res://Godot_Game_Files/endcutscene/timeline2.dtl")  # replace with your dialog name
 
 	# Step 3: Boss transformation
 	if step == 3:
@@ -64,7 +64,7 @@ func _step3_boss_transform() -> void:
 	boss_devil.visible = true
 	boss_devil.play("idle")
 	Dialogic.VAR.set("end_step", 4)
-	Dialogic.start("res://Godot_Game_Files/endcutscene/timeline.dtl")
+	Dialogic.start("res://Godot_Game_Files/endcutscene/timeline2.dtl")
 
 # Final portal animation
 func _step5_final_portal() -> void:

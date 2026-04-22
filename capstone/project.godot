@@ -42,7 +42,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "Phil/endcutscene/timeline": "res://Godot_Game_Files/timeline.dtl",
-"endcutscene/timeline": "res://Godot_Game_Files/endcutscene/timeline.dtl",
+"endcutscene/timeline": "res://Godot_Game_Files/endcutscene/timeline2.dtl",
 "endcutscene_emily/emilyendscene": "res://Godot_Game_Files/endcutscene_emily/emilyendscene.dtl",
 "lastchat": "res://Godot_Game_Files/endcutscene_emily/lastchat.dtl"
 }

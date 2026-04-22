@@ -1,17 +1,9 @@
-res://Godot_Game_Files/game.tscn
-res://Godot_Game_Files/chats/ChatProfile.tres
-res://Godot_Game_Files/officalgamescript(DONOTCHANGE).gd
-res://Godot_Game_Files/timeline.dtl
-res://Godot_Game_Files/endcutscene/timeline.dtl
-res://Godot_Game_Files/chats/lucy.dch
-res://Godot_Game_Files/chats/boss.dch
-res://Godot_Game_Files/endcutscene/lucy-player-boss-prehates.tscn
-res://Godot_Game_Files/chats/devil.dch
-res://end_credits.gd
 res://end_credits.tscn
-res://Godot_Game_Files/chats/elbow.dch
-res://Godot_Game_Files/endcutscene_emily/emilyendscene.dtl
+res://Godot_Game_Files/chats/ChatProfile.tres
+res://Godot_Game_Files/endcutscene/lucy-player-boss-prehates.tscn
 res://Godot_Game_Files/endcutscene_emily/endcutscene.tscn
-res://Godot_Game_Files/endcutscene_emily/emily_endscene.gd
-res://Godot_Game_Files/endcutscene_emily/lastchat.dtl
-res://global.gd
+res://Godot_Game_Files/Puzzles/Phil/endcutscene/endcutscene.gd
+res://Godot_Game_Files/endcutscene/moving_camera.gd
+res://endbutton.gd
+res://Godot_Game_Files/game.tscn
+res://Godot_Game_Files/Puzzles/Phil/phising emails/phising_email.tscn

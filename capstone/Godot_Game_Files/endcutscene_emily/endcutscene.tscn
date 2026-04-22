@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://0vimkwxe3r6" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/portal/portal1_frame_5.png" id="14_ex6bb"]
 [ext_resource type="Texture2D" uid="uid://s4eebrgrwe86" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/portal/portal1_frame_6.png" id="15_avw7p"]
 [ext_resource type="Texture2D" uid="uid://c5bfgu88hor8e" path="res://Godot_Game_Files/Puzzles/Phil/endcutscene/portal/portal1_frame_7.png" id="16_n4nqs"]
+[ext_resource type="AudioStream" uid="uid://bu1qwighd7wqo" path="res://Godot_Game_Files/Assets/Music_Sounds/On the Fly.mp3" id="20_nmp1a"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7i3n4"]
 distance = -354.0
@@ -1484,3 +1485,7 @@ scale = Vector2(1.64063, 1.64063)
 sprite_frames = SubResource("SpriteFrames_ktvgq")
 animation = &"idle"
 frame_progress = 0.4578951
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=353607176]
+stream = ExtResource("20_nmp1a")
+autoplay = true

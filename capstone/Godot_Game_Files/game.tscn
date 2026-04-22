@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://by34sk16ycs2r" path="res://Godot_Game_Files/event_tree.gd" id="1_eqekq"]
 [ext_resource type="Script" uid="uid://dj6n08ls0wyde" path="res://Godot_Game_Files/officalgamescript(DONOTCHANGE).gd" id="1_hw1hp"]
 [ext_resource type="PackedScene" uid="uid://bnpveoij6ge22" path="res://Godot_Game_Files/Assets/Characters/Player.tscn" id="1_l7whm"]
-[ext_resource type="PackedScene" path="res://Godot_Game_Files/Updated_Game_Scene/password_reset.tscn" id="2_7nhs0"]
+[ext_resource type="PackedScene" uid="uid://cdcolqdy3j16q" path="res://Godot_Game_Files/Updated_Game_Scene/password_reset.tscn" id="2_7nhs0"]
 [ext_resource type="Texture2D" uid="uid://dsuhcbcpm4ryw" path="res://Godot_Game_Files/Assets/Characters/office background.png" id="2_60j76"]
 [ext_resource type="PackedScene" uid="uid://dk2cmsxd8bsft" path="res://Godot_Game_Files/Puzzles/Phil/phising emails/phising_email.tscn" id="2_hw1hp"]
 [ext_resource type="PackedScene" uid="uid://nnlmyeh6m0oq" path="res://Godot_Game_Files/Assets/Characters/npc_boss.tscn" id="3_2s8f0"]
@@ -19,6 +19,9 @@
 [ext_resource type="PackedScene" uid="uid://dvcynifnfhk4c" path="res://Godot_Game_Files/Assets/Buttons/!alert.tscn" id="9_woipg"]
 [ext_resource type="Script" uid="uid://b14l2wwp0qdu3" path="res://Godot_Game_Files/Assets/Characters/Player.gd" id="14_eqekq"]
 [ext_resource type="PackedScene" uid="uid://c2bu84kx4jb8p" path="res://Godot_Game_Files/Puzzles/Emilys Updated_Scene/malicious_files.tscn" id="16_eqekq"]
+[ext_resource type="Texture2D" uid="uid://coj6xd585ccfl" path="res://Godot_Game_Files/Assets/Environment/poster.png" id="16_hpssu"]
+[ext_resource type="Texture2D" uid="uid://bi7rvweophm1r" path="res://Godot_Game_Files/Assets/Environment/pillar.png" id="20_k4kdb"]
+[ext_resource type="Texture2D" uid="uid://mboxjpw8u8i5" path="res://Godot_Game_Files/Assets/Environment/pexels-pixabay-207142.jpg" id="22_unp3j"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_e2o6t"]
 distance = -354.0
@@ -100,6 +103,13 @@ shape = SubResource("SegmentShape2D_l7whm")
 position = Vector2(412, 404.00003)
 scale = Vector2(0.759025, 0.759025)
 
+[node name="Poster2" type="Sprite2D" parent="Background" unique_id=556881035]
+z_index = 1
+position = Vector2(759.7826, 242.18817)
+rotation = -0.07210234
+scale = Vector2(0.24797128, 0.24797128)
+texture = ExtResource("16_hpssu")
+
 [node name="Player" parent="." unique_id=1049933128 instance=ExtResource("1_l7whm")]
 z_index = 5
 position = Vector2(235, 399)
@@ -117,6 +127,18 @@ theme_override_font_sizes/font_size = 27
 text = "SCORE: 0"
 horizontal_alignment = 1
 script = ExtResource("9_2npts")
+
+[node name="Pillar" type="Sprite2D" parent="." unique_id=1065340370]
+z_index = 30
+position = Vector2(597.81555, 386.82355)
+scale = Vector2(0.62881637, 0.63967973)
+texture = ExtResource("20_k4kdb")
+
+[node name="PexelsPixabay207142" type="Sprite2D" parent="." unique_id=695310252]
+z_index = -50
+position = Vector2(404.2564, 275.05127)
+scale = Vector2(0.36958587, 0.30443466)
+texture = ExtResource("22_unp3j")
 
 [connection signal="body_entered" from="Event_Tree/Puzzles/EmailAlert" to="Event_Tree/Puzzles/EmailAlert" method="_on_body_entered"]
 [connection signal="body_exited" from="Event_Tree/Puzzles/EmailAlert" to="Event_Tree/Puzzles/EmailAlert" method="_on_body_exited"]
