@@ -34,7 +34,7 @@ position = Vector2(17, 23)
 script = ExtResource("1_hw1hp")
 
 [node name="PhisingEmail" parent="." unique_id=2053920242 instance=ExtResource("2_hw1hp")]
-position = Vector2(-637, -573)
+position = Vector2(-627.56824, -622.5169)
 
 [node name="password_reset" parent="." unique_id=633258872 instance=ExtResource("2_7nhs0")]
 position = Vector2(557, -752)

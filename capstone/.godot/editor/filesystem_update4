@@ -1,9 +1,7 @@
-res://end_credits.tscn
+res://Godot_Game_Files/Puzzles/Trey/USB/usb_puzzle.tscn
 res://Godot_Game_Files/chats/ChatProfile.tres
-res://Godot_Game_Files/endcutscene/lucy-player-boss-prehates.tscn
-res://Godot_Game_Files/endcutscene_emily/endcutscene.tscn
-res://Godot_Game_Files/Puzzles/Phil/endcutscene/endcutscene.gd
-res://Godot_Game_Files/endcutscene/moving_camera.gd
-res://endbutton.gd
+res://Godot_Game_Files/endlevel scenes/Game.tscn
+res://Godot_Game_Files/Puzzles/Dylan/dylan_game/Scripts/beast.gd
+res://Godot_Game_Files/Puzzles/Emilys Updated_Scene/malicious_files.tscn
 res://Godot_Game_Files/game.tscn
 res://Godot_Game_Files/Puzzles/Phil/phising emails/phising_email.tscn

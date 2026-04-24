@@ -110,48 +110,48 @@ res://addons/dialogic/Modules/Text/character_settings/character_moods_settings.t
 res://addons/dialogic/Modules/Text/character_settings/character_portrait_mood_settings.tscn::a38cae9522816fb97ce9bd9f54486f33::1776702653::res://.godot/exported/133200997/export-37c35566857061453231ad11bc175413-character_portrait_mood_settings.scn
 res://addons/dialogic/Modules/Text/settings_text.tscn::05970b04caa5fc0ae5ea022f2def2372::1776702653::res://.godot/exported/133200997/export-67100a9f8a5726886cf8dbc525c7a035-settings_text.scn
 res://addons/dialogic/Modules/Variable/variables_editor/variables_editor.tscn::3b0756fd6ec66bda0a9fc54ed098bbb9::1776702653::res://.godot/exported/133200997/export-81d6117e9fbfcc345d9d0dd8f77e3c55-variables_editor.scn
-res://Godot_Game_Files/Assets/Buttons/!alert.tscn::fb5a47128700e4e3dc50e422515a1ca8::1776702639::res://.godot/exported/133200997/export-7f55efcf0d1328fa22b40fcc4437fe8d-!alert.scn
+res://Godot_Game_Files/Assets/Buttons/!alert.tscn::fb5a47128700e4e3dc50e422515a1ca8::1777045947::res://.godot/exported/133200997/export-7f55efcf0d1328fa22b40fcc4437fe8d-!alert.scn
 res://Godot_Game_Files/Assets/Buttons/alter2.tscn::721249a08e8eefb8c4b53601fcc039ff::1776702639::res://.godot/exported/133200997/export-ccd79cd636cc0961ee70d345471345c1-alter2.scn
 res://Godot_Game_Files/Assets/Characters/node_2d.tscn::d37f58b17145640ded9887e77195fd58::1776702639::res://.godot/exported/133200997/export-5a1f9aaddb33c7bdd3ba0e0370194d9f-node_2d.scn
 res://Godot_Game_Files/Assets/Characters/npc_1.tscn::4e26e2b99c67b422e609052d1b7b2e91::1776702639::res://.godot/exported/133200997/export-bbc535f194646879517727ab311c34dc-npc_1.scn
 res://Godot_Game_Files/Assets/Characters/npc_2.tscn::a2a3645ac25e621a1fa5f60550a0e378::1776702639::res://.godot/exported/133200997/export-91e93c7a3eeb68e47951b24c453bf547-npc_2.scn
 res://Godot_Game_Files/Assets/Characters/npc_3.tscn::3ac24ba226bd55dd94ca06a9e9693938::1776702639::res://.godot/exported/133200997/export-43f9a3b70b0b6a3bf3d2da048ccf82e5-npc_3.scn
 res://Godot_Game_Files/Assets/Characters/npc_boss.tscn::94c341818df765814b380ec3bc6ba433::1776702639::res://.godot/exported/133200997/export-1cc4086d01e497a30a31cbfce55ccc38-npc_boss.scn
-res://Godot_Game_Files/Assets/Characters/Player.tscn::26f6a6c68a86519906520344b272db52::1776702639::res://.godot/exported/133200997/export-b2ee6dedba96fbb493ab3ec403747484-Player.scn
+res://Godot_Game_Files/Assets/Characters/Player.tscn::26f6a6c68a86519906520344b272db52::1777045947::res://.godot/exported/133200997/export-b2ee6dedba96fbb493ab3ec403747484-Player.scn
 res://Godot_Game_Files/Assets/Fonts/New_File.tres::d01b5736dcab4d32e98def98c205fa4d::1776702639::res://.godot/exported/133200997/export-9c4fea1231ef37c3ef5d1d0a1e806627-New_File.res
-res://Godot_Game_Files/Assets/Music_Sounds/Radio.tscn::89e8c0af3a8c88365068dcf0b8414a35::1776702639::res://.godot/exported/133200997/export-b48e52d5689e2fbeadf13743c80c661a-Radio.scn
-res://Godot_Game_Files/chats/ChatProfile.tres::086769d3a395f3b7ba1f115620632bc7::1776870723::res://.godot/exported/133200997/export-51c5e745e780ec804dd9c090be962dbd-ChatProfile.res
+res://Godot_Game_Files/Assets/Music_Sounds/Radio.tscn::89e8c0af3a8c88365068dcf0b8414a35::1777045948::res://.godot/exported/133200997/export-b48e52d5689e2fbeadf13743c80c661a-Radio.scn
+res://Godot_Game_Files/chats/ChatProfile.tres::086769d3a395f3b7ba1f115620632bc7::1777046225::res://.godot/exported/133200997/export-51c5e745e780ec804dd9c090be962dbd-ChatProfile.res
 res://Godot_Game_Files/chats/chat_1.tscn::22ca34e16f97bca57e58f1df2b464ae8::1776702646::res://.godot/exported/133200997/export-e090d0ea176426471e85e05a3b212226-chat_1.scn
-res://Godot_Game_Files/endcutscene/lucy-player-boss-prehates.tscn::3da915b7033aac7c6171b9b5bc50043b::1776871719::res://.godot/exported/133200997/export-9fc2ee508291a5c89f975f86e553a94c-lucy-player-boss-prehates.scn
-res://Godot_Game_Files/endcutscene_emily/ChatProfile.tres::2957a8772103f3bfc814a7bd0b252c1a::1776098656::res://.godot/exported/133200997/export-c71f87986ea58f12596615a98887ee38-ChatProfile.res
-res://Godot_Game_Files/endcutscene_emily/endcutscene.tscn::e371e4a007cff881381bdcf0f354fdb7::1776871391::res://.godot/exported/133200997/export-7f0a09913d82d6638b8f40467bb17258-endcutscene.scn
+res://Godot_Game_Files/endcutscene/lucy-player-boss-prehates.tscn::ba255f16609d4c50aeebc516819819fd::1777045949::res://.godot/exported/133200997/export-9fc2ee508291a5c89f975f86e553a94c-lucy-player-boss-prehates.scn
+res://Godot_Game_Files/endcutscene_emily/ChatProfile.tres::2957a8772103f3bfc814a7bd0b252c1a::1777045949::res://.godot/exported/133200997/export-c71f87986ea58f12596615a98887ee38-ChatProfile.res
+res://Godot_Game_Files/endcutscene_emily/endcutscene.tscn::87ce193e5bdca6dd828e4364852609dc::1777045950::res://.godot/exported/133200997/export-7f0a09913d82d6638b8f40467bb17258-endcutscene.scn
 res://Godot_Game_Files/endlevel scenes/beast.tscn::8918bb3078fdaacf6dcc15e39a30d1b7::1776702648::res://.godot/exported/133200997/export-b6a0a76d75e8a9fd1af00d2d090bde76-beast.scn
-res://Godot_Game_Files/endlevel scenes/endzone.tscn::676acc9ccc634d26e164adc72a959ddf::1776702922::res://.godot/exported/133200997/export-24296ec7c008ce2b410812afbed2b0f2-endzone.scn
+res://Godot_Game_Files/endlevel scenes/endzone.tscn::676acc9ccc634d26e164adc72a959ddf::1777045950::res://.godot/exported/133200997/export-24296ec7c008ce2b410812afbed2b0f2-endzone.scn
 res://Godot_Game_Files/endlevel scenes/enemy.tscn::3f76350fc03c98209d17dac69f83a08b::1776702648::res://.godot/exported/133200997/export-3299f38d3cbe68c71dab7ad4ab172d89-enemy.scn
 res://Godot_Game_Files/endlevel scenes/enemy_2.tscn::7500336722184b17ab96540bd5302558::1776702648::res://.godot/exported/133200997/export-28b862bc77de96648fa038a157299fb4-enemy_2.scn
-res://Godot_Game_Files/endlevel scenes/Game.tscn::f43a81ea831e40d9ec41099a45a3de70::1776702922::res://.godot/exported/133200997/export-737ed8011f9f8d7d9d8e8dcd6319f736-Game.scn
+res://Godot_Game_Files/endlevel scenes/Game.tscn::72ab5e2000ff3091ca2714b53aa0c754::1777046318::res://.godot/exported/133200997/export-737ed8011f9f8d7d9d8e8dcd6319f736-Game.scn
 res://Godot_Game_Files/endlevel scenes/intro.tscn::abf2922e8931c386770022102101f157::1776702649::res://.godot/exported/133200997/export-29697d9c88556db8c128d8529c474d80-intro.scn
 res://Godot_Game_Files/endlevel scenes/platform.tscn::a598565af81fac02d490bb309d9f9c51::1776702649::res://.godot/exported/133200997/export-37d71ed3459df345d16870d55df23857-platform.scn
 res://Godot_Game_Files/endlevel scenes/Player.tscn::6f8234612a6a5504ac438a6f096ab9bd::1776702648::res://.godot/exported/133200997/export-5fdf7042c06a84337af3a5dc77237cad-Player.scn
 res://Godot_Game_Files/endlevel scenes/RisingHazard.tscn::e7ffa74cf21d4b2adf337b068f02be5c::1776702648::res://.godot/exported/133200997/export-b34131375013f72301de6ed54dd0f1b1-RisingHazard.scn
-res://Godot_Game_Files/Puzzles/Dylan/dylan_game/Scenes/beast.tscn::de6f4b99e033ba2c6ab68b3e997108f8::1776702921::res://.godot/exported/133200997/export-6f3295a53cf1b60851dc7b07b027fdbd-beast.scn
-res://Godot_Game_Files/Puzzles/Dylan/dylan_game/Scenes/enemy.tscn::017b57db703d65646c964046433cb3fe::1776702921::res://.godot/exported/133200997/export-fd84267514bac0a6728578a60f9905a0-enemy.scn
-res://Godot_Game_Files/Puzzles/Dylan/dylan_game/Scenes/enemy_2.tscn::b3f811d70262b45a680d0df2e7907093::1776702921::res://.godot/exported/133200997/export-f5fa07b49c00a08756ecdc535b95650e-enemy_2.scn
-res://Godot_Game_Files/Puzzles/Dylan/dylan_game/Scenes/Game.tscn::68681e4b5aa4fa59f6428fd4269dbc22::1776702639::res://.godot/exported/133200997/export-b5ef79e1632642890351de7314e8f8b0-Game.scn
-res://Godot_Game_Files/Puzzles/Dylan/dylan_game/Scenes/intro.tscn::d26f9cb90c8bdca511a6afe1c4eb6fe1::1776702639::res://.godot/exported/133200997/export-0cc15a47890889e8882ca403b8d92442-intro.scn
-res://Godot_Game_Files/Puzzles/Dylan/dylan_game/Scenes/platform.tscn::ae9c4d0c6c0129988c64f4759a953b4b::1776702921::res://.godot/exported/133200997/export-40a8a693c7e78d489cdaabdf1832854d-platform.scn
-res://Godot_Game_Files/Puzzles/Dylan/dylan_game/Scenes/Player.tscn::28c173830762284cb506986ea00928cc::1776702921::res://.godot/exported/133200997/export-6eefd55d1d4abab0950e69cf5263c2d8-Player.scn
-res://Godot_Game_Files/Puzzles/Dylan/dylan_game/Scenes/RisingHazard.tscn::977dd330e7532355932eb88426d58d8d::1776702639::res://.godot/exported/133200997/export-cbef67e9947dc0700e66f2a358bf60aa-RisingHazard.scn
-res://Godot_Game_Files/Puzzles/Emilys Updated_Scene/malicious_files.tscn::e46fa36bde681d493930144398d29c58::1776870475::res://.godot/exported/133200997/export-4ea5589006b107ab9075b216c8263079-malicious_files.scn
-res://Godot_Game_Files/Puzzles/Phil/endcutscene/endcutscene.tscn::174dae3016265208469a63c7192847aa::1776702645::res://.godot/exported/133200997/export-0efc3465317215aab1e872211c11fc8e-endcutscene.scn
-res://Godot_Game_Files/Puzzles/Phil/endcutscene/lucy-player-boss-prehates.tscn::a46fb102344f99dca2faa845cae12f4b::1776702645::res://.godot/exported/133200997/export-fc8e6e902028d29ad99960ce90be3682-lucy-player-boss-prehates.scn
-res://Godot_Game_Files/Puzzles/Phil/phising emails/phising_email.tscn::4d54185f0ec0a33ca1767c242fdefcdd::1776873484::res://.godot/exported/133200997/export-4894c56935277eacc45e97630f11a06e-phising_email.scn
-res://Godot_Game_Files/Puzzles/Trey/USB/usb_puzzle.tscn::d46418804a576ff19d09955d60ec8847::1776702645::res://.godot/exported/133200997/export-6f44b434efdd9d1c5b1a8e5b5385f4c1-usb_puzzle.scn
-res://Godot_Game_Files/Puzzles/pc_display.tscn::244091f0e5926cbe6202b73c28baa8c1::1776702921::res://.godot/exported/133200997/export-479c025167164df23587a871091da462-pc_display.scn
-res://Godot_Game_Files/Puzzles/Placeholder.tscn::c4392fc6605c037490472737bb71e04a::1776702645::res://.godot/exported/133200997/export-6229606cbabef5b605a790a0d8719cc8-Placeholder.scn
+res://Godot_Game_Files/Puzzles/Dylan/dylan_game/Scenes/beast.tscn::de6f4b99e033ba2c6ab68b3e997108f8::1777045948::res://.godot/exported/133200997/export-6f3295a53cf1b60851dc7b07b027fdbd-beast.scn
+res://Godot_Game_Files/Puzzles/Dylan/dylan_game/Scenes/enemy.tscn::017b57db703d65646c964046433cb3fe::1777045948::res://.godot/exported/133200997/export-fd84267514bac0a6728578a60f9905a0-enemy.scn
+res://Godot_Game_Files/Puzzles/Dylan/dylan_game/Scenes/enemy_2.tscn::b3f811d70262b45a680d0df2e7907093::1777045948::res://.godot/exported/133200997/export-f5fa07b49c00a08756ecdc535b95650e-enemy_2.scn
+res://Godot_Game_Files/Puzzles/Dylan/dylan_game/Scenes/Game.tscn::68681e4b5aa4fa59f6428fd4269dbc22::1777045948::res://.godot/exported/133200997/export-b5ef79e1632642890351de7314e8f8b0-Game.scn
+res://Godot_Game_Files/Puzzles/Dylan/dylan_game/Scenes/intro.tscn::d26f9cb90c8bdca511a6afe1c4eb6fe1::1777045948::res://.godot/exported/133200997/export-0cc15a47890889e8882ca403b8d92442-intro.scn
+res://Godot_Game_Files/Puzzles/Dylan/dylan_game/Scenes/platform.tscn::ae9c4d0c6c0129988c64f4759a953b4b::1777045948::res://.godot/exported/133200997/export-40a8a693c7e78d489cdaabdf1832854d-platform.scn
+res://Godot_Game_Files/Puzzles/Dylan/dylan_game/Scenes/Player.tscn::28c173830762284cb506986ea00928cc::1777045948::res://.godot/exported/133200997/export-6eefd55d1d4abab0950e69cf5263c2d8-Player.scn
+res://Godot_Game_Files/Puzzles/Dylan/dylan_game/Scenes/RisingHazard.tscn::977dd330e7532355932eb88426d58d8d::1777045948::res://.godot/exported/133200997/export-cbef67e9947dc0700e66f2a358bf60aa-RisingHazard.scn
+res://Godot_Game_Files/Puzzles/Emilys Updated_Scene/malicious_files.tscn::a5634665ee4708b9dfa06541b665c680::1777046480::res://.godot/exported/133200997/export-4ea5589006b107ab9075b216c8263079-malicious_files.scn
+res://Godot_Game_Files/Puzzles/Phil/endcutscene/endcutscene.tscn::174dae3016265208469a63c7192847aa::1777045949::res://.godot/exported/133200997/export-0efc3465317215aab1e872211c11fc8e-endcutscene.scn
+res://Godot_Game_Files/Puzzles/Phil/endcutscene/lucy-player-boss-prehates.tscn::a46fb102344f99dca2faa845cae12f4b::1777045949::res://.godot/exported/133200997/export-fc8e6e902028d29ad99960ce90be3682-lucy-player-boss-prehates.scn
+res://Godot_Game_Files/Puzzles/Phil/phising emails/phising_email.tscn::400dfbc23009b345ae2a5ad007daaf43::1777046799::res://.godot/exported/133200997/export-4894c56935277eacc45e97630f11a06e-phising_email.scn
+res://Godot_Game_Files/Puzzles/Trey/USB/usb_puzzle.tscn::4acbf56a084c87f3647d6a16faf0d239::1777046517::res://.godot/exported/133200997/export-6f44b434efdd9d1c5b1a8e5b5385f4c1-usb_puzzle.scn
+res://Godot_Game_Files/Puzzles/pc_display.tscn::244091f0e5926cbe6202b73c28baa8c1::1777045949::res://.godot/exported/133200997/export-479c025167164df23587a871091da462-pc_display.scn
+res://Godot_Game_Files/Puzzles/Placeholder.tscn::c4392fc6605c037490472737bb71e04a::1777045949::res://.godot/exported/133200997/export-6229606cbabef5b605a790a0d8719cc8-Placeholder.scn
 res://Godot_Game_Files/Updated_Game_Scene/game.tscn::3e68c82beafe8bb97a73bc2a9def471b::1762355606::res://.godot/exported/133200997/export-23a17c2c7984ded110adf773d5de2dad-game.scn
-res://Godot_Game_Files/Updated_Game_Scene/password_reset.tscn::a40558303e80e4599cfb9e4da45d8483::1776870475::res://.godot/exported/133200997/export-969cb31c2cb88ea8059f88ea3754c15a-password_reset.scn
-res://Godot_Game_Files/game.tscn::1ec3919bde0d6cd4a77701219a921e95::1776873467::res://.godot/exported/133200997/export-419f0de3fec5fea192f3e25782d3959b-game.scn
+res://Godot_Game_Files/Updated_Game_Scene/password_reset.tscn::a40558303e80e4599cfb9e4da45d8483::1777045949::res://.godot/exported/133200997/export-969cb31c2cb88ea8059f88ea3754c15a-password_reset.scn
+res://Godot_Game_Files/game.tscn::bd40eed3beeae2c4abd21d1338d66da6::1777046404::res://.godot/exported/133200997/export-419f0de3fec5fea192f3e25782d3959b-game.scn
 res://Godot_Game_Files/main_menu.tscn::5a22091a6d610db3199cae95ce9e37f9::1776702650::res://.godot/exported/133200997/export-b96a2544dcbbfd618caa762ec9725637-main_menu.scn
 res://chat_1.tscn::7330d0387ab4494926742d53977fc747::1776702653::res://.godot/exported/133200997/export-0320700349077910c9073e39c7ae8d88-chat_1.scn
-res://end_credits.tscn::542a7a0480c249b66529cb16dad87026::1776872062::res://.godot/exported/133200997/export-c140be01dd5c2e38356ac8fe66bdbddc-end_credits.scn
+res://end_credits.tscn::da2c277cbf377525d1dc121b4a4bfc0d::1777045950::res://.godot/exported/133200997/export-c140be01dd5c2e38356ac8fe66bdbddc-end_credits.scn
